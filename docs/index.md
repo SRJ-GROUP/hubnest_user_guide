@@ -161,13 +161,14 @@ HubNest relies on an enterprise microservice and federated identity architecture
 ```mermaid
 graph TD
     Client[HubNest OS Desktop & Web Clients] -->|Single Sign-On| KC[Keycloak Central IAM]
-    Client -->|API Gateway| PlatApi[Platform API :4500]
+    Client -->|API Gateway| PlatApi[Platform API]
     
     subgraph Multi-Hub Ecosystem
-        PlatApi --> CRM[HubCRM Engine :5000]
-        PlatApi --> HRMS[HubHRMS Spring Engine :8080]
-        PlatApi --> Meet[HubMeet & LiveKit RTC :8081]
-        PlatApi --> VoIP[Calling Hub :8001]
+        PlatApi --> CRM[HubCRM Engine]
+        PlatApi --> HRMS[HubHRMS Spring Engine]
+        PlatApi --> Meet[HubMeet & LiveKit RTC]
+        PlatApi --> Calling[Calling Hub]
+        PlatApi --> Notification[Notification Gateway]
     end
     
     subgraph Enterprise Data Layer
