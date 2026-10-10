@@ -34,18 +34,8 @@ Every critical navigation action in HubNest OS is mapped to a native Windows key
 
 The **Command Palette Dialog** (`CommandPaletteDialog`) is an instant keyboard-driven search interface accessible anywhere in the workspace:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ 🔍 Type a command or search workspace hubs... (Ctrl + K)    │
-├─────────────────────────────────────────────────────────────┤
-│  [📊] Hub CRM                    Deal pipelines & leads     │  <- Active
-│  [👥] Hub HRMS                   Employee registry & payroll │
-│  [🪪] Hub Recruiter              AI candidate hiring        │
-│  [📞] Hub Calling                Cloud voice dialer         │
-│  [📹] Hub Meet                   Video meetings & classes   │
-│  [🔔] Hub Notification           Alerts & WhatsApp dispatch │
-└─────────────────────────────────────────────────────────────┘
-```
+![Universal Command Palette Dialog](../assets/images/command_palette_modal.svg){ width="100%" }
+
 
 ### How to Use the Command Palette
 1. Press <kbd>Ctrl</kbd> + <kbd>K</kbd> or click the **magnifying glass icon** in the top title bar.
@@ -99,20 +89,14 @@ If a background web session expires or redirects to `/login`, HubNest OS detects
 
 If your internet drops or a microservice restarts while viewing a hub, HubNest OS does not show raw browser error screens (`ERR_INTERNET_DISCONNECTED`). Instead, it displays the branded **Desktop Recovery Screen**:
 
-```
-┌──────────────────────────────────────────────────────────┐
-│                      ⚠️                                 │
-│          Connection Temporarily Disrupted               │
-│                                                          │
-│  Unable to reach Hub CRM at crm.srjhubnest.com.          │
-│  Your local desktop session is safe and preserved.       │
-│                                                          │
-│   [ ↻ Retry Connection ]    [ ⚡ Quick Reconnect ]       │
-└──────────────────────────────────────────────────────────┘
-```
+!!! warning "Connection Temporarily Disrupted (Desktop Recovery Mode)"
+    **Unable to reach Hub origin (e.g., `crm.srjhubnest.com`).**
+    
+    Your local desktop session is safely preserved in memory. HubNest OS gives you two one-click recovery actions directly inside the workspace viewport:
+    
+    * **↻ Retry Connection**: Executes `_handleRetryRecovery()`, safely recreating and re-bootstrapping the underlying WebView2 controller with a newly minted SSO token.
+    * **⚡ Quick Reconnect**: Executes `_handleQuickReconnect()`, performing a soft ping to the hub origin and restoring the existing session without clearing cached state.
 
-* **Retry Connection**: Executes `_handleRetryRecovery()`, destroying and re-bootstrapping the underlying WebView2 controller with a fresh SSO token.
-* **Quick Reconnect**: Executes `_handleQuickReconnect()`, soft-pinging the hub origin and restoring the existing session without clearing cached data.
 
 ---
 

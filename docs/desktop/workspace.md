@@ -79,26 +79,8 @@ graph TD
 
 The desktop shell is divided into three primary functional zones designed for uninterrupted multitasking:
 
-```
-┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ [≡] [Logo] HubNest OS — Central Workspace Dashboard     🟢 Connected      [🔍 Ctrl+K] [↻] [⎋] [—] [□] [✕] │  <- 1. Title Bar (44px)
-├──────────────────────┬───────────────────────────────────────────────────────────────────────────┤
-│  WORKSPACE           │                                                                           │
-│  [❖] App Dashboard   │  ┌─────────────────────────────────────────────────────────────────────┐  │
-│                      │  │ 🛡️ Keycloak SSO Active  |  Enterprise Suite                         │  │
-│  ENTERPRISE HUBS     │  │ Welcome back, Enterprise User 👋                                    │  │
-│  [👥] Hub HRMS       │  │ HubNest Central Command • Launch business hubs & automate workflows.│  │
-│  [📊] Hub CRM        │  └─────────────────────────────────────────────────────────────────────┘  │
-│  [🪪] Hub Recruiter   │                                                                           │
-│  [🎓] College Campus │  [Connected Hubs: 7] [Identity: SSO Active] [Cloud: Online] [Ping: <35ms] │  <- 3. Central Viewport
-│  [📞] Hub Calling    │                                                                           │
-│  [🔔] Notification   │  ┌───────────────┐ ┌───────────────┐ ┌───────────────┐                    │
-│  [📹] Hub Meet       │  │ Hub HRMS      │ │ Hub CRM       │ │ Hub Recruiter │                    │
-│                      │  │ [Launch Hub]  │ │ [Launch Hub]  │ │ [Launch Hub]  │                    │
-│  (Width: 230px/68px) │  └───────────────┘ └───────────────┘ └───────────────┘                    │
-└──────────────────────┴───────────────────────────────────────────────────────────────────────────┘
-   ^ 2. Collapsible Sidebar
-```
+![HubNest OS Workspace Layout & Anatomy](../assets/images/desktop_layout_wireframe.svg){ width="100%" }
+
 
 ### 1. Enterprise Title Bar (`DesktopTitleBarWidget`)
 Running along the top of the application at a fixed height of `44px`:

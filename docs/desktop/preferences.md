@@ -90,19 +90,20 @@ Organizations can choose between three distinct deployment channels:
 
 HubNest OS safeguards sensitive corporate session tokens using Microsoft Windows **Data Protection API (DPAPI)**:
 
+```mermaid
+graph TD
+    AppLayer[HubNest OS Application Layer - Dart & Flutter]
+    Bridge[flutter_secure_storage Windows Native Bridge]
+    DPAPI[Windows CryptProtectData API - DPAPI]
+    HardwareKey[Windows User Logon Key & TPM Hardware Module]
+    Storage[Encrypted Token Vault on Disk - %LOCALAPPDATA%\HubNestOS\SecureStorage]
+
+    AppLayer --> Bridge
+    Bridge --> DPAPI
+    HardwareKey -.->|Protects| DPAPI
+    DPAPI --> Storage
 ```
-┌────────────────────────────────────────────────────────┐
-│ HubNest OS Application Layer (Dart / Flutter)           │
-├────────────────────────────────────────────────────────┤
-│ flutter_secure_storage Windows Native Bridge            │
-├────────────────────────────────────────────────────────┤
-│ Windows CryptProtectData API (DPAPI)                   │
-│   ↳ Uses Windows User Logon Key & TPM Hardware Module │
-├────────────────────────────────────────────────────────┤
-│ Encrypted Token Storage on Disk                        │
-│   (%LOCALAPPDATA%\HubNestOS\SecureStorage)             │
-└────────────────────────────────────────────────────────┘
-```
+
 
 ### Security Guarantees
 * **Hardware-Backed Encryption**: Tokens encrypted on one Windows user account cannot be decrypted by other user accounts on the same computer, even by local administrators.
