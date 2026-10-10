@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 880" width="100%" height="auto" style="border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
+  <defs>
+    <linearGradient id="sidebarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B0F19"/>
+    </linearGradient>
+    <linearGradient id="activeItem" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9C27B0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#9C27B0" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect x="0" y="0" width="420" height="880" rx="14" fill="url(#sidebarGrad)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Brand Header -->
+  <rect x="18" y="18" width="36" height="36" rx="9" fill="#9C27B0"/>
+  <circle cx="36" cy="36" r="9" fill="#FFFFFF" fill-opacity="0.9"/>
+  <circle cx="36" cy="36" r="5" fill="#9C27B0"/>
+  <text x="64" y="36" fill="#FFFFFF" font-size="15" font-weight="800" letter-spacing="-0.3">Hub HRMS</text>
+  <text x="64" y="50" fill="#A855F7" font-size="10.5" font-weight="700" letter-spacing="0.5">COMPANY ADMIN SUITE</text>
+
+  <line x1="18" y1="68" x2="402" y2="68" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- ================= GROUP 1: CORE WORKSPACE ================= -->
+  <text x="24" y="88" fill="#64748B" font-size="9.5" font-weight="800" letter-spacing="1">CORE WORKSPACE</text>
+
+  <!-- 1. Dashboard (Active) -->
+  <rect x="18" y="98" width="384" height="34" rx="8" fill="url(#activeItem)" stroke="#9C27B0" stroke-width="1"/>
+  <circle cx="36" cy="115" r="7" fill="#9C27B0"/>
+  <text x="52" y="119" fill="#FFFFFF" font-size="12" font-weight="700">Company Dashboard</text>
+  <text x="360" y="119" fill="#C084FC" font-size="9.5" font-weight="700">ACTIVE</text>
+
+  <!-- 2. Manage Employees -->
+  <rect x="18" y="136" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="152" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="156" fill="#E2E8F0" font-size="12" font-weight="500">Manage Employees</text>
+  <text x="352" y="156" fill="#94A3B8" font-size="10">/employees</text>
+
+  <!-- 3. Onboarding -->
+  <rect x="18" y="170" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="186" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="190" fill="#E2E8F0" font-size="12" font-weight="500">Onboarding (BGV &amp; eSign)</text>
+  <text x="342" y="190" fill="#94A3B8" font-size="10">/onboarding</text>
+
+  <!-- 4. Employee Directory -->
+  <rect x="18" y="204" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="220" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="224" fill="#E2E8F0" font-size="12" font-weight="500">Employee Directory</text>
+  <text x="325" y="224" fill="#94A3B8" font-size="10">/employees-list</text>
+
+  <!-- ================= GROUP 2: ORGANIZATION SETUP ================= -->
+  <text x="24" y="254" fill="#64748B" font-size="9.5" font-weight="800" letter-spacing="1">ORGANIZATION ARCHITECTURE</text>
+
+  <!-- 5. Branches -->
+  <rect x="18" y="264" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="280" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="284" fill="#E2E8F0" font-size="12" font-weight="500">Manage Branches</text>
+  <text x="358" y="284" fill="#94A3B8" font-size="10">/branches</text>
+
+  <!-- 6. Departments -->
+  <rect x="18" y="298" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="314" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="318" fill="#E2E8F0" font-size="12" font-weight="500">Departments</text>
+  <text x="342" y="318" fill="#94A3B8" font-size="10">/departments</text>
+
+  <!-- 7. Designations -->
+  <rect x="18" y="332" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="348" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="352" fill="#E2E8F0" font-size="12" font-weight="500">Designations</text>
+  <text x="340" y="352" fill="#94A3B8" font-size="10">/designations</text>
+
+  <!-- ================= GROUP 3: OPERATIONS & PAYROLL ================= -->
+  <text x="24" y="382" fill="#64748B" font-size="9.5" font-weight="800" letter-spacing="1">OPERATIONS &amp; PAYROLL</text>
+
+  <!-- 8. Attendance -->
+  <rect x="18" y="392" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="408" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="412" fill="#E2E8F0" font-size="12" font-weight="500">Attendance &amp; Geo-Fence</text>
+  <text x="345" y="412" fill="#94A3B8" font-size="10">/attendance</text>
+
+  <!-- 9. Leave Management -->
+  <rect x="18" y="426" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="442" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="446" fill="#E2E8F0" font-size="12" font-weight="500">Leave Management</text>
+  <text x="370" y="446" fill="#94A3B8" font-size="10">/leaves</text>
+
+  <!-- 10. Payroll -->
+  <rect x="18" y="460" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="476" r="6" fill="#10B981" fill-opacity="0.5"/>
+  <text x="52" y="480" fill="#E2E8F0" font-size="12" font-weight="500">Payroll Engine (PF/ESI/TDS)</text>
+  <rect x="330" y="467" width="58" height="18" rx="4" fill="#10B981" fill-opacity="0.15"/>
+  <text x="338" y="480" fill="#34D399" font-size="9" font-weight="700">GROWTH+</text>
+
+  <!-- 11. Tasks & Projects -->
+  <rect x="18" y="494" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="510" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="514" fill="#E2E8F0" font-size="12" font-weight="500">Tasks &amp; Projects</text>
+  <text x="374" y="514" fill="#94A3B8" font-size="10">/tasks</text>
+
+  <!-- ================= GROUP 4: TALENT & LEARNING ================= -->
+  <text x="24" y="544" fill="#64748B" font-size="9.5" font-weight="800" letter-spacing="1">GROWTH &amp; TALENT</text>
+
+  <!-- 12. Performance -->
+  <rect x="18" y="554" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="570" r="6" fill="#F59E0B" fill-opacity="0.4"/>
+  <text x="52" y="574" fill="#E2E8F0" font-size="12" font-weight="500">Performance (360° &amp; OKRs)</text>
+  <text x="332" y="574" fill="#94A3B8" font-size="10">/performance</text>
+
+  <!-- 13. Learning (LMS) -->
+  <rect x="18" y="588" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="604" r="6" fill="#6366F1" fill-opacity="0.4"/>
+  <text x="52" y="608" fill="#E2E8F0" font-size="12" font-weight="500">Learning (LMS Academy)</text>
+  <text x="380" y="608" fill="#94A3B8" font-size="10">/lms</text>
+
+  <!-- 14. Assets -->
+  <rect x="18" y="622" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="638" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="642" fill="#E2E8F0" font-size="12" font-weight="500">Asset Management</text>
+  <text x="368" y="642" fill="#94A3B8" font-size="10">/assets</text>
+
+  <!-- 15. Documents -->
+  <rect x="18" y="656" width="384" height="32" rx="7" fill="transparent"/>
+  <circle cx="36" cy="672" r="6" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="676" fill="#E2E8F0" font-size="12" font-weight="500">Documents Vault</text>
+  <text x="348" y="676" fill="#94A3B8" font-size="10">/documents</text>
+
+  <!-- ================= GROUP 5: INTELLIGENCE & SYSTEM ================= -->
+  <text x="24" y="706" fill="#64748B" font-size="9.5" font-weight="800" letter-spacing="1">ANALYTICS &amp; GOVERNANCE</text>
+
+  <!-- 16. Company Reports -->
+  <rect x="18" y="716" width="384" height="30" rx="7" fill="transparent"/>
+  <circle cx="36" cy="731" r="5" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="735" fill="#E2E8F0" font-size="11.5" font-weight="500">Company Reports</text>
+  <text x="364" y="735" fill="#94A3B8" font-size="10">/reports</text>
+
+  <!-- 17. Messages & Chat -->
+  <rect x="18" y="748" width="384" height="30" rx="7" fill="transparent"/>
+  <circle cx="36" cy="763" r="5" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="767" fill="#E2E8F0" font-size="11.5" font-weight="500">Team Chat (WebSocket)</text>
+  <text x="350" y="767" fill="#94A3B8" font-size="10">/messages</text>
+
+  <!-- 18. Company Settings -->
+  <rect x="18" y="780" width="384" height="30" rx="7" fill="transparent"/>
+  <circle cx="36" cy="795" r="5" fill="#64748B" fill-opacity="0.4"/>
+  <text x="52" y="799" fill="#E2E8F0" font-size="11.5" font-weight="500">Company Settings &amp; Security</text>
+  <text x="356" y="799" fill="#94A3B8" font-size="10">/settings</text>
+
+  <!-- Footer Profile Bar -->
+  <line x1="18" y1="822" x2="402" y2="822" stroke="#1E293B" stroke-width="1"/>
+  <rect x="18" y="830" width="384" height="38" rx="8" fill="#1E293B" fill-opacity="0.6"/>
+  <circle cx="38" cy="849" r="12" fill="#9C27B0" fill-opacity="0.3"/>
+  <text x="38" y="853" fill="#C084FC" font-size="11" font-weight="700" text-anchor="middle">A</text>
+  <text x="58" y="845" fill="#FFFFFF" font-size="12" font-weight="600">Company Administrator</text>
+  <text x="58" y="858" fill="#94A3B8" font-size="10">admin@company.com • Full Tenant Scope</text>
+</svg>
