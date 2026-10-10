@@ -1,0 +1,104 @@
+site_name: HubNest User Guide
+site_description: Official End-User and Administrator Guide for HubNest Workspace, HubMeet, HubCRM, HubHRMS, and VoIP Calling.
+site_author: SRJ HubNest Enterprise
+site_url: https://docs.srjhubnest.com
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Introduction: getting-started/index.md
+      - Installing Desktop App: getting-started/installing-desktop-app.md
+      - Account & First Login: getting-started/login-and-setup.md
+  - HubNest OS (Desktop):
+      - Workspace Overview: desktop/workspace.md
+      - Multi-Hub Navigation: desktop/navigation.md
+      - Preferences & Auto-Update: desktop/preferences.md
+  - HubMeet (Video & Audio):
+      - Overview: hubmeet/index.md
+      - Instant & Scheduled Meetings: hubmeet/scheduling.md
+      - In-Call Controls: hubmeet/in-call-controls.md
+      - Screen Sharing & Whiteboard: hubmeet/collaboration.md
+      - Cloud Recording & AI Summaries: hubmeet/recordings-ai.md
+  - HubCRM:
+      - Overview: hubcrm/index.md
+      - Leads & Pipeline: hubcrm/leads-pipeline.md
+      - Contacts & Accounts: hubcrm/contacts.md
+      - Deals & Quotations: hubcrm/deals.md
+      - Reports & Dashboards: hubcrm/reports.md
+  - HubHRMS:
+      - Overview: hrms/index.md
+      - Employee Management: hrms/employees.md
+      - Attendance & Shifts: hrms/attendance.md
+      - Leaves & Approvals: hrms/leaves.md
+      - Payroll & Payslips: hrms/payroll.md
+  - Calling Hub (VoIP):
+      - Overview: calling/index.md
+      - Softphone & Dialpad: calling/dialer.md
+      - Call Logs & Recordings: calling/logs.md
+  - HubNotification:
+      - Overview: notification/index.md
+      - Campaigns & Templates: notification/campaigns.md
+  - Billing & Administration:
+      - Plans & Invoices: billing/plans-invoices.md
+      - Team Management & Roles: billing/team-management.md
+  - Help & FAQs:
+      - Troubleshooting: help/troubleshooting.md
+      - Contact Support: help/support.md
