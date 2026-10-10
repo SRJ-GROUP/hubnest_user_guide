@@ -64,9 +64,15 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
-      - Introduction: getting-started/index.md
-      - Installing Desktop App: getting-started/installing-desktop-app.md
-      - Account & First Login: getting-started/login-and-setup.md
+      - 01. Quick Start: getting-started/index.md
+      - 02. Installing Desktop App: getting-started/installing-desktop-app.md
+      - 03. Account Setup & Onboarding: getting-started/account-setup.md
+      - 04. Login & Account Security: getting-started/login-security.md
+      - 05. Roles & Permissions (RBAC): getting-started/roles-permissions.md
+      - 06. Dashboard Tour: getting-started/dashboard-tour.md
+      - 07. Integrations & Configuration: getting-started/integrations.md
+      - 08. First Task Checklist: getting-started/first-tasks.md
+      - 09. Common Setup Problems: getting-started/common-problems.md
   - HubNest OS (Desktop):
       - Workspace Overview: desktop/workspace.md
       - Multi-Hub Navigation: desktop/navigation.md
