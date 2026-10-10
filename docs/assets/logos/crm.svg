@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="40" fill="url(#crm_grad)"/>
+  <path d="M60 140V110M100 140V80M140 140V60" stroke="white" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="60" cy="90" r="12" fill="#38BDF8"/>
+  <circle cx="100" cy="60" r="12" fill="#38BDF8"/>
+  <circle cx="140" cy="40" r="12" fill="#38BDF8"/>
+  <path d="M60 90L100 60L140 40" stroke="#38BDF8" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 8"/>
+  <defs>
+    <linearGradient id="crm_grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#465FFF"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+</svg>

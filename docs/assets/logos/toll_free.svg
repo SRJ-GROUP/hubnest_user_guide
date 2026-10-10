@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold_grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E5C887"/>
+      <stop offset="1" stop-color="#B38E46"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Cloud Double Outline -->
+  <path d="M 40 125 C 15 125 10 85 35 70 C 40 40 85 30 110 50 C 135 30 175 55 170 85 C 190 105 180 145 150 145 Z" stroke="url(#gold_grad)" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M 50 115 C 30 115 25 85 45 75 C 50 50 85 40 105 60 C 125 45 160 65 155 90 C 170 105 160 135 140 135 Z" stroke="url(#gold_grad)" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+  <!-- Phone Handset -->
+  <path d="M 45 80 C 40 70 55 55 70 70 C 80 80 75 95 90 110 C 105 125 120 120 130 130 C 145 145 130 160 120 155 C 95 145 60 110 45 80 Z" fill="url(#gold_grad)"/>
+
+  <!-- 3x3 Keypad Dots Grid -->
+  <circle cx="100" cy="80" r="4.5" fill="url(#gold_grad)"/>
+  <circle cx="115" cy="80" r="4.5" fill="url(#gold_grad)"/>
+  <circle cx="130" cy="80" r="4.5" fill="url(#gold_grad)"/>
+  <circle cx="100" cy="95" r="4.5" fill="url(#gold_grad)"/>
+  <circle cx="115" cy="95" r="4.5" fill="url(#gold_grad)"/>
+  <circle cx="130" cy="95" r="4.5" fill="url(#gold_grad)"/>
+  <circle cx="115" cy="110" r="4.5" fill="url(#gold_grad)"/>
+
+  <!-- Top-Right Orb Dot -->
+  <circle cx="150" cy="45" r="10" fill="url(#gold_grad)"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="calling_grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D98A6C"/>
+      <stop offset="1" stop-color="#B25E41"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Headset / Cloud Arc -->
+  <path d="M 50 120 C 25 110 20 70 45 50 C 70 25 130 15 165 45 C 190 70 195 125 170 150" stroke="url(#calling_grad)" stroke-width="16" stroke-linecap="round" fill="none"/>
+
+  <!-- Phone Handset -->
+  <path d="M 60 90 C 50 80 50 65 65 55 C 75 48 88 58 82 72 C 78 80 92 105 105 105 C 115 95 130 110 120 122 C 110 135 90 150 70 130 C 50 110 55 95 60 90 Z" fill="url(#calling_grad)" transform="rotate(-15 90 90)"/>
+
+  <!-- Concentric Signal Arcs -->
+  <circle cx="110" cy="100" r="10" fill="url(#calling_grad)"/>
+  <path d="M 115 80 A 25 25 0 0 1 135 100" stroke="url(#calling_grad)" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M 125 65 A 45 45 0 0 1 160 100" stroke="url(#calling_grad)" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M 90 55 A 25 25 0 0 1 105 45" stroke="url(#calling_grad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+</svg>

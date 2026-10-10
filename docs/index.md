@@ -5,9 +5,18 @@ description: Official End-User and Administrator Guide for HubNest Workspace, Hu
 
 # Welcome to HubNest
 
+<div align="center" style="margin: 1.5rem 0 2rem 0;">
+  <img src="assets/logos/hubnest_heaader_logo.png" alt="HubNest Official Logo" width="340">
+</div>
+
 ![HubNest Unified Operating Platform](assets/images/landing_page.png){ align=center style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); margin-bottom: 2rem;" }
 
 **SRJ HubNest** is an enterprise-grade, all-in-one operating platform built to streamline and connect your core business operations. Instead of paying for and juggling 10 different fragmented SaaS tools, HubNest unifies video conferencing, customer relationship management, workforce HR operations, cloud telephony, notification engines, and billing into **one seamless desktop and cloud ecosystem**.
+
+<div align="center" style="margin: 1.5rem 0;">
+  <img src="assets/logos/meta-tech-provider.png" alt="Official Meta Tech Provider" width="190">
+  <p style="font-size: 0.85rem; color: #888; margin-top: 4px;">Official Meta Business Technology Provider for WhatsApp Campaigns & Automation</p>
+</div>
 
 ---
 
@@ -41,7 +50,7 @@ Explore the specialized hubs that power the HubNest ecosystem:
 
 <div class="grid cards" markdown>
 
--   :material-account-tie: **[HubNest CRM / Sales](hubcrm/index.md)**
+-   <img src="assets/logos/crm.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[HubNest CRM / Sales](hubcrm/index.md)**
 
     ---
 
@@ -50,7 +59,7 @@ Explore the specialized hubs that power the HubNest ecosystem:
     * **Target Users**: Sales Executives, Account Managers, VP of Sales.
     * [Explore HubCRM Guide :octicons-arrow-right-24:](hubcrm/index.md)
 
--   :material-card-account-details: **[HubNest HRMS](hrms/index.md)**
+-   <img src="assets/logos/hrms.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[HubNest HRMS](hrms/index.md)**
 
     ---
 
@@ -59,7 +68,7 @@ Explore the specialized hubs that power the HubNest ecosystem:
     * **Target Users**: HR Managers, People Operations, Employees.
     * [Explore HubHRMS Guide :octicons-arrow-right-24:](hrms/index.md)
 
--   :material-briefcase-search: **[JobNest / Hub Recruiter](hubcrm/leads-pipeline.md)**
+-   <img src="assets/logos/Hubrecruiter.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[JobNest / Hub Recruiter](hubcrm/leads-pipeline.md)**
 
     ---
 
@@ -68,7 +77,7 @@ Explore the specialized hubs that power the HubNest ecosystem:
     * **Target Users**: Talent Acquisition Specialists, Recruiters.
     * [Explore Recruiter Hub :octicons-arrow-right-24:](hubcrm/leads-pipeline.md)
 
--   :material-video: **[NestMeet AI / HubMeet](hubmeet/index.md)**
+-   <img src="assets/logos/hubmeet_logo.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[NestMeet AI / HubMeet](hubmeet/index.md)**
 
     ---
 
@@ -77,7 +86,7 @@ Explore the specialized hubs that power the HubNest ecosystem:
     * **Target Users**: Cross-functional Teams, Executives, External Clients.
     * [Explore HubMeet Guide :octicons-arrow-right-24:](hubmeet/index.md)
 
--   :material-bell-ring: **[Notification Gateway](notification/index.md)**
+-   <img src="assets/logos/notification.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[Notification Gateway](notification/index.md)**
 
     ---
 
@@ -86,7 +95,7 @@ Explore the specialized hubs that power the HubNest ecosystem:
     * **Target Users**: Marketing Teams, Customer Support, DevOps.
     * [Explore Notifications :octicons-arrow-right-24:](notification/index.md)
 
--   :material-credit-card-outline: **[HubNest Pay & Billing](billing/plans-invoices.md)**
+-   <img src="assets/logos/toll-free.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[HubNest Pay & Billing](billing/plans-invoices.md)**
 
     ---
 
@@ -95,7 +104,7 @@ Explore the specialized hubs that power the HubNest ecosystem:
     * **Target Users**: Finance Officers, CFOs, Company Owners.
     * [Explore Billing Guide :octicons-arrow-right-24:](billing/plans-invoices.md)
 
--   :material-phone-in-talk: **[Calling Hub (VoIP)](calling/index.md)**
+-   <img src="assets/logos/hub_calling.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[Calling Hub (VoIP)](calling/index.md)**
 
     ---
 

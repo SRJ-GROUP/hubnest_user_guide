@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hrms_grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6B98B7"/>
+      <stop offset="1" stop-color="#4A7593"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer left arc interlocking -->
+  <path d="M 100 20 A 80 80 0 1 0 160 156 A 65 65 0 0 1 100 35 A 65 65 0 0 1 40 100 A 65 65 0 0 1 100 165 A 80 80 0 0 1 100 20 Z" fill="url(#hrms_grad)"/>
+  
+  <!-- Right overlapping loop -->
+  <path d="M 100 35 A 65 65 0 1 1 40 144 A 80 80 0 0 0 100 180 A 80 80 0 1 0 100 20 A 80 80 0 0 0 40 44 A 65 65 0 0 1 100 35 Z" fill="url(#hrms_grad)"/>
+  
+  <!-- Center Horizontal Crossbar of 'H' -->
+  <rect x="68" y="90" width="64" height="20" rx="3" fill="url(#hrms_grad)"/>
+</svg>

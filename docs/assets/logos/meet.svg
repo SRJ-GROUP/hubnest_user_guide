@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="meet_grad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F79009"/>
+      <stop offset="1" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" rx="40" fill="url(#meet_grad)"/>
+  
+  <!-- Video Camera Icon -->
+  <rect x="40" y="60" width="85" height="80" rx="16" fill="white"/>
+  <path d="M 135 85 L 165 65 V 135 L 135 115 Z" fill="white"/>
+  <circle cx="82.5" cy="100" r="16" fill="#F79009"/>
+</svg>
