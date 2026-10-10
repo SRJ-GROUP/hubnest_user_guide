@@ -120,6 +120,47 @@ nav:
       - 20. Help & Support: hrms/support.md
       - 21. Company Settings: hrms/settings.md
       - 22. Profile: hrms/profile.md
+  - HubHRMS (HR Specialist):
+      - 01. Overview & Operations: hrms-hr/index.md
+      - 02. HR Dashboard: hrms-hr/dashboard.md
+      - 03. Talent Acquisition & Recruitment: hrms-hr/recruitment.md
+      - 04. Employee Management: hrms-hr/employees.md
+      - 05. Attendance Tracking: hrms-hr/attendance.md
+      - 06. Leave Management: hrms-hr/leaves.md
+      - 07. Payroll Processing: hrms-hr/payroll.md
+      - 08. Tasks & Milestones: hrms-hr/tasks.md
+      - 09. Performance Reviews: hrms-hr/performance.md
+      - 10. HR Reports & Analytics: hrms-hr/reports.md
+      - 11. Company Documentation: hrms-hr/documentation.md
+      - 12. AI HR Assistant: hrms-hr/ai.md
+      - 13. Messages: hrms-hr/messages.md
+      - 14. HR Profile & Settings: hrms-hr/profile.md
+  - HubHRMS (Department Manager):
+      - 01. Overview & Team Oversight: hrms-manager/index.md
+      - 02. Manager Dashboard: hrms-manager/dashboard.md
+      - 03. Team Roster: hrms-manager/team.md
+      - 04. Task & Project Allocation: hrms-manager/tasks.md
+      - 05. Team Attendance: hrms-manager/attendance.md
+      - 06. Leave Approvals: hrms-manager/leaves.md
+      - 07. Team Performance & Reports: hrms-manager/reports.md
+      - 08. Team Communication: hrms-manager/messages.md
+      - 09. Support & Grievances: hrms-manager/support.md
+      - 10. Manager Profile: hrms-manager/profile.md
+  - HubHRMS (Employee Self-Service):
+      - 01. Overview & Portal Guide: hrms-employee/index.md
+      - 02. Employee Dashboard: hrms-employee/dashboard.md
+      - 03. Daily Attendance & Check-In: hrms-employee/attendance.md
+      - 04. My Assigned Tasks: hrms-employee/tasks.md
+      - 05. Leave Applications & Balance: hrms-employee/leaves.md
+      - 06. Payslips & Salary Structure: hrms-employee/salary.md
+      - 07. Goals & Performance Reviews: hrms-employee/performance.md
+      - 08. Digital Onboarding: hrms-employee/onboarding.md
+      - 09. Document Vault: hrms-employee/documents.md
+      - 10. My Attendance & Task Reports: hrms-employee/reports.md
+      - 11. Internal Messages: hrms-employee/messages.md
+      - 12. Helpdesk & Support: hrms-employee/support.md
+      - 13. My Profile & Security: hrms-employee/profile.md
+
 
   - Calling Hub (VoIP):
       - Overview: calling/index.md
