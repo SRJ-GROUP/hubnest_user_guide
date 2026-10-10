@@ -1,216 +1,300 @@
 ---
-title: Welcome to HubNest Documentation
-description: Official End-User and Administrator Guide for HubNest Workspace, HubMeet, HubCRM, HubHRMS, Calling Hub, and Notifications.
+title: HubNest User Guide — Unified Documentation Portal
+description: Master documentation portal and direct navigation index for all HubNest platforms — HubHRMS (Admin, HR, Manager, Employee), HubMeet, HubCRM, Calling Hub, and Desktop App.
 ---
 
-# Welcome to HubNest
+# 🌐 HubNest Unified Documentation Portal
 
 <div align="center" style="margin: 1.5rem 0 2rem 0;">
-  <img src="assets/logos/hubnest_heaader_logo.png" alt="HubNest Official Logo" width="340">
-</div>
-
-![HubNest Unified Operating Platform](assets/images/landing_page.png){ align=center style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); margin-bottom: 2rem;" }
-
-**SRJ HubNest** is an enterprise-grade, all-in-one operating platform built to streamline and connect your core business operations. Instead of paying for and juggling 10 different fragmented SaaS tools, HubNest unifies video conferencing, customer relationship management, workforce HR operations, cloud telephony, notification engines, and billing into **one seamless desktop and cloud ecosystem**.
-
-<div align="center" style="margin: 1.5rem 0;">
-  <img src="assets/logos/meta-tech-provider.png" alt="Official Meta Tech Provider" width="190">
-  <p style="font-size: 0.85rem; color: #888; margin-top: 4px;">Official Meta Business Technology Provider for WhatsApp Campaigns & Automation</p>
+  <img src="assets/logos/hubnest_heaader_logo.png" alt="HubNest Official Logo" width="360">
+  <p style="font-size: 1.1rem; color: var(--md-default-fg-color--light); margin-top: 10px; font-weight: 500;">
+    The Complete Knowledge Base, User Manuals & Interactive Technical Guides for SRJ HubNest Ecosystem.
+  </p>
 </div>
 
 ---
 
-## 1. Platform Introduction & Value Proposition
+## ⚡ Direct Role Portals & Fast Jump
 
-### What is HubNest?
-HubNest is a multi-tenant business operating system designed for modern companies. It provides native Windows desktop apps, responsive web interfaces, and centralized Single Sign-On (SSO) to eliminate silos between departments.
-
-### Mission & Vision
-* **Mission**: To democratize enterprise-grade operational software by providing high-performance, cost-effective tools for businesses of all scales.
-* **Vision**: A unified workplace where an employee can transition from a video conference, update a CRM deal, approve an employee leave request, and trigger a client WhatsApp campaign—all without switching windows or authenticating twice.
-
-### Problems HubNest Solves
-| Problem in Traditional Workplaces | How HubNest Solves It |
-| :--- | :--- |
-| **Tool Sprawl & High Subscription Costs** | Consolidates CRM, HRMS, Video Conferencing, VoIP, and WhatsApp notification tools into a single predictable pricing plan. |
-| **Fragmented Identity & Multiple Passwords** | Centralized Keycloak SSO delivers one-click session authentication across all hubs. |
-| **Data Silos Between Sales and HR** | Shared organizational directories and tenant isolation ensure unified company data flows. |
-| **Complex Desktop Deployments** | Single installer `.msi` package with automated background delta updates. |
-
-### Target Industries & Use Cases
-* **IT & SaaS Enterprises**: Sprint planning video calls, candidate applicant tracking, client proposal pipelines, and developer webhook automations.
-* **Non-IT & Service Businesses**: Retail/Trading sales pipelines, factory worker shift attendance & biometric integration, client quotation delivery, and payment collections.
-* **BPOs & Call Centers**: Softphone dialers, automatic call recordings, customer support tickets, and performance analytics.
-
----
-
-## 2. Product Ecosystem
-
-Explore the specialized hubs that power the HubNest ecosystem:
+Jump directly to your designated operational workspace:
 
 <div class="grid cards" markdown>
 
--   <img src="assets/logos/crm.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[HubNest CRM / Sales](hubcrm/index.md)**
+-   :material-shield-crown:{ .lg .middle style="color: #6366f1;" } **[Company Admin HRMS](hrms/index.md)**
 
     ---
 
-    Complete sales pipeline management with Kanban boards, deal forecasting, client accounts, and automated quotation-to-invoice workflows.
+    Full administrative command: multi-branch controls, 22-module sidebar, enterprise payroll, and RBAC governance.
 
-    * **Target Users**: Sales Executives, Account Managers, VP of Sales.
-    * [Explore HubCRM Guide :octicons-arrow-right-24:](hubcrm/index.md)
+    [:octicons-arrow-right-24: Open Admin Guide (22 Chapters)](hrms/index.md)
 
--   <img src="assets/logos/hrms.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[HubNest HRMS](hrms/index.md)**
-
-    ---
-
-    Full lifecycle workforce management: employee records, clock-in/out attendance, shift rotations, leave approvals, and one-click salary payslips.
-
-    * **Target Users**: HR Managers, People Operations, Employees.
-    * [Explore HubHRMS Guide :octicons-arrow-right-24:](hrms/index.md)
-
--   <img src="assets/logos/Hubrecruiter.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[JobNest / Hub Recruiter](hubcrm/leads-pipeline.md)**
+-   :material-account-tie:{ .lg .middle style="color: #3b82f6;" } **[HR Specialist / Director](hrms-hr/index.md)**
 
     ---
 
-    Automated candidate sourcing, resume parsing, interview scheduling, and recruitment pipeline stages.
+    Daily human resources operations: AI recruitment pipelines, attendance audits, leave quotas, and 9-Box calibration.
 
-    * **Target Users**: Talent Acquisition Specialists, Recruiters.
-    * [Explore Recruiter Hub :octicons-arrow-right-24:](hubcrm/leads-pipeline.md)
+    [:octicons-arrow-right-24: Open HR Guide (14 Chapters)](hrms-hr/index.md)
 
--   <img src="assets/logos/hubmeet_logo.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[NestMeet AI / HubMeet](hubmeet/index.md)**
-
-    ---
-
-    Ultra-HD WebRTC video conferencing with AI noise reduction, live transcription, interactive whiteboard, and automatic AI meeting summaries.
-
-    * **Target Users**: Cross-functional Teams, Executives, External Clients.
-    * [Explore HubMeet Guide :octicons-arrow-right-24:](hubmeet/index.md)
-
--   <img src="assets/logos/notification.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[Notification Gateway](notification/index.md)**
+-   :material-account-supervisor:{ .lg .middle style="color: #10b981;" } **[Department Manager](hrms-manager/index.md)**
 
     ---
 
-    Omni-channel marketing and transactional alert gateway supporting WhatsApp Business API, SMS templates, and automated webhook triggers.
+    Team leadership: roster allocation, project sprints, team attendance, and leave approval workflows.
 
-    * **Target Users**: Marketing Teams, Customer Support, DevOps.
-    * [Explore Notifications :octicons-arrow-right-24:](notification/index.md)
+    [:octicons-arrow-right-24: Open Manager Guide (10 Chapters)](hrms-manager/index.md)
 
--   <img src="assets/logos/toll-free.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[HubNest Pay & Billing](billing/plans-invoices.md)**
-
-    ---
-
-    Unified subscription management, tax invoice downloads, and integrated payment gateways (PhonePe, Razorpay, Offline Bank Transfers).
-
-    * **Target Users**: Finance Officers, CFOs, Company Owners.
-    * [Explore Billing Guide :octicons-arrow-right-24:](billing/plans-invoices.md)
-
--   <img src="assets/logos/hub_calling.png" width="34" height="34" style="vertical-align:middle;margin-right:8px;"> **[Calling Hub (VoIP)](calling/index.md)**
+-   :material-account-circle:{ .lg .middle style="color: #f59e0b;" } **[Employee Self-Service (ESS)](hrms-employee/index.md)**
 
     ---
 
-    Cloud telephony with an in-browser softphone dialpad, call queues, extension routing, and audio recordings.
+    Staff portal: geo-fenced daily check-ins, encrypted PDF payslips, leave applications, and task boards.
 
-    * **Target Users**: Tele-callers, Support Representatives.
-    * [Explore Calling Hub :octicons-arrow-right-24:](calling/index.md)
+    [:octicons-arrow-right-24: Open Employee Guide (13 Chapters)](hrms-employee/index.md)
+
+-   :material-video:{ .lg .middle style="color: #ec4899;" } **[HubMeet (Video Calls)](hubmeet/index.md)**
+
+    ---
+
+    Ultra-HD WebRTC conferencing, AI noise cancellation, instant meeting links, screen sharing, and cloud recordings.
+
+    [:octicons-arrow-right-24: Open HubMeet Guide](hubmeet/index.md)
+
+-   :material-chart-timeline-variant:{ .lg .middle style="color: #8b5cf6;" } **[HubCRM (Sales & Deals)](hubcrm/index.md)**
+
+    ---
+
+    Sales pipelines, client accounts, deal forecasting, quotations, and automated customer communication.
+
+    [:octicons-arrow-right-24: Open HubCRM Guide](hubcrm/index.md)
 
 </div>
 
 ---
 
-## 3. Choose Your Role
+## 🗺️ Master Documentation Directory (Complete Sitemap)
 
-Users do not need to read the entire documentation. Follow the tailored onboarding path designed for your role:
+Click on **any topic or chapter** below to open its dedicated guide directly:
 
-=== "👔 Business Owner / Administrator"
-    **Your Goal:** Set up your company organization, invite staff, configure subscription licenses, and enforce access controls.
-    
-    1. **[Create Organization](getting-started/account-setup.md)**: Finalize company profile and corporate domain.
-    2. **[Subscribe to Hubs](billing/plans-invoices.md)**: Select individual hub licenses or the complete All-in-One enterprise bundle.
-    3. **[Invite Your Team](billing/team-management.md)**: Add employees via email and assign role-based permissions (RBAC).
-    4. **[Enforce Security](getting-started/login-security.md)**: Configure Multi-Factor Authentication (MFA) and review audit logs.
+=== "🏢 HubHRMS (All 4 User Roles)"
 
-=== "👩‍💼 Recruiter & HR Professional"
-    **Your Goal:** Manage hiring pipelines, staff attendance, leave balances, and monthly payroll.
-    
-    1. **[HRMS Setup](hrms/index.md)**: Import your employee directory and set up departments.
-    2. **[Configure Shifts & Policies](hrms/attendance.md)**: Define shift timings, grace periods, and leave quotas.
-    3. **[Run Monthly Payroll](hrms/payroll.md)**: Verify deductions and generate automated employee payslips.
-    4. **[Hiring Workspace](hubcrm/leads-pipeline.md)**: Post job openings and track applicant interview stages.
+    <div class="grid cards" markdown>
 
-=== "💼 Sales & Employee"
-    **Your Goal:** Close customer deals, attend team sync calls, and log daily work logs.
-    
-    1. **[Install HubNest OS](getting-started/installing-desktop-app.md)**: Set up the Windows desktop workspace.
-    2. **[Sales Pipeline](hubcrm/leads-pipeline.md)**: Add leads, create quotations, and move deals across stages.
-    3. **[Join HubMeet](hubmeet/index.md)**: Connect with clients using instant video links and screen sharing.
-    4. **[Self-Service HR](hrms/leaves.md)**: Clock in your daily attendance and submit leave applications.
+    -   **🏢 1. Company Admin (`/admin`)**
 
-=== "💻 Developer & Technical Team"
-    **Your Goal:** Integrate HubNest APIs, automate webhooks, and explore custom hub extensions.
-    
-    1. **[API Authentication](getting-started/integrations.md)**: Retrieve your bearer token and API base URLs.
-    2. **[Webhook Triggers](notification/campaigns.md)**: Subscribe to payment, meeting, or CRM event payloads.
-    3. **[Security Overview](help/troubleshooting.md)**: Review tenant isolation schemas, rate limits, and CORS policies.
+        ---
+
+        * 🚀 **[01. Overview & Architecture](hrms/index.md)**
+        * 📊 **[02. Company Dashboard](hrms/dashboard.md)**
+        * 👥 **[03. Manage Employees](hrms/employees.md)**
+        * 📑 **[04. Digital Onboarding](hrms/onboarding.md)**
+        * 📍 **[05. Manage Branches](hrms/branches.md)**
+        * 🏛️ **[06. Departments](hrms/departments.md)**
+        * 🏷️ **[07. Designations](hrms/designations.md)**
+        * 📖 **[08. Employee Directory](hrms/directory.md)**
+        * ⏰ **[09. Attendance Management](hrms/attendance.md)**
+        * 🏖️ **[10. Leave Management](hrms/leaves.md)**
+        * 💰 **[11. Payroll Processing](hrms/payroll.md)**
+        * 📋 **[12. Tasks & Projects](hrms/tasks.md)**
+        * 🎯 **[13. Performance Reviews](hrms/performance.md)**
+        * 🎓 **[14. Learning (LMS)](hrms/lms.md)**
+        * 💻 **[15. Asset Tracking](hrms/assets.md)**
+        * 📁 **[16. Document Vault](hrms/documents.md)**
+        * 📈 **[17. Company Reports](hrms/reports.md)**
+        * 🔔 **[18. Notifications & Logs](hrms/notifications.md)**
+        * 💬 **[19. Messages & Calls](hrms/messages.md)**
+        * 🎧 **[20. Help & Support](hrms/support.md)**
+        * ⚙️ **[21. Company Settings](hrms/settings.md)**
+        * 👤 **[22. Admin Profile](hrms/profile.md)**
+
+    -   **👩‍💼 2. HR Specialist / Director (`/hr`)**
+
+        ---
+
+        * 🌟 **[01. Operations Overview](hrms-hr/index.md)**
+        * 📊 **[02. HR Dashboard](hrms-hr/dashboard.md)**
+        * 📢 **[03. Talent Acquisition & Recruitment](hrms-hr/recruitment.md)**
+        * 👥 **[04. Employee Management](hrms-hr/employees.md)**
+        * ⏰ **[05. Attendance Tracking](hrms-hr/attendance.md)**
+        * 🏖️ **[06. Leave Administration](hrms-hr/leaves.md)**
+        * 💰 **[07. Payroll & Deductions](hrms-hr/payroll.md)**
+        * 📋 **[08. Tasks & Milestones](hrms-hr/tasks.md)**
+        * 🎯 **[09. Performance & 9-Box Matrix](hrms-hr/performance.md)**
+        * 📈 **[10. HR Reports & Analytics](hrms-hr/reports.md)**
+        * 📜 **[11. Company Documentation & Policies](hrms-hr/documentation.md)**
+        * 🤖 **[12. AI HR Talent Assistant](hrms-hr/ai.md)**
+        * 💬 **[13. Internal Messages](hrms-hr/messages.md)**
+        * 👤 **[14. HR Profile & Security](hrms-hr/profile.md)**
+
+    -   **👔 3. Department Manager (`/manager`)**
+
+        ---
+
+        * 🧭 **[01. Team Oversight Overview](hrms-manager/index.md)**
+        * 📊 **[02. Manager Dashboard](hrms-manager/dashboard.md)**
+        * 👥 **[03. Department Team Roster](hrms-manager/team.md)**
+        * 📋 **[04. Task & Project Allocation](hrms-manager/tasks.md)**
+        * ⏰ **[05. Team Daily Attendance](hrms-manager/attendance.md)**
+        * 🏖️ **[06. Team Leave Approvals](hrms-manager/leaves.md)**
+        * 📈 **[07. Team Performance & Reports](hrms-manager/reports.md)**
+        * 💬 **[08. Team Communication](hrms-manager/messages.md)**
+        * 🎧 **[09. Support & Grievances](hrms-manager/support.md)**
+        * 👤 **[10. Manager Profile](hrms-manager/profile.md)**
+
+    -   **🧑‍💻 4. Employee Self-Service (`/employee`)**
+
+        ---
+
+        * 🧭 **[01. Portal Guide Overview](hrms-employee/index.md)**
+        * 📊 **[02. Employee Dashboard](hrms-employee/dashboard.md)**
+        * ⏰ **[03. Daily Check-In & Attendance](hrms-employee/attendance.md)**
+        * 📋 **[04. My Assigned Tasks](hrms-employee/tasks.md)**
+        * 🏖️ **[05. Apply Leaves & Quotas](hrms-employee/leaves.md)**
+        * 💰 **[06. Payslips & Salary Structure](hrms-employee/salary.md)**
+        * 🎯 **[07. Goals & Performance Appraisals](hrms-employee/performance.md)**
+        * 📑 **[08. Digital Onboarding Checklist](hrms-employee/onboarding.md)**
+        * 📁 **[09. Document Vault & Letters](hrms-employee/documents.md)**
+        * 📈 **[10. My Attendance & Task Reports](hrms-employee/reports.md)**
+        * 💬 **[11. Team Chat & Messages](hrms-employee/messages.md)**
+        * 🎧 **[12. Helpdesk & Grievance Tickets](hrms-employee/support.md)**
+        * 👤 **[13. My Profile & Security Settings](hrms-employee/profile.md)**
+
+    </div>
+
+=== "🚀 Getting Started & Desktop App"
+
+    <div class="grid cards" markdown>
+
+    -   **🚀 Getting Started Manual**
+
+        ---
+
+        * 🏁 **[01. Quick Start Guide](getting-started/index.md)**
+        * 💻 **[02. Installing Windows Desktop App](getting-started/installing-desktop-app.md)**
+        * 🏢 **[03. Account Setup & Company Profile](getting-started/account-setup.md)**
+        * 🔐 **[04. Login & Account Security (SSO / MFA)](getting-started/login-security.md)**
+        * 🛡️ **[05. Roles & Permissions (RBAC Matrix)](getting-started/roles-permissions.md)**
+        * 🧭 **[06. Complete Dashboard Tour](getting-started/dashboard-tour.md)**
+        * 🔌 **[07. Integrations & Configuration](getting-started/integrations.md)**
+        * ✅ **[08. First Day Task Checklist](getting-started/first-tasks.md)**
+        * ⚠️ **[09. Common Setup Problems & Fixes](getting-started/common-problems.md)**
+
+    -   **💻 HubNest OS (Desktop Client)**
+
+        ---
+
+        * 🖥️ **[Workspace Architecture & WebView2](desktop/workspace.md)**
+        * 🗂️ **[Multi-Hub Switching & Navigation](desktop/navigation.md)**
+        * ⚙️ **[Preferences, Performance & Auto-Update](desktop/preferences.md)**
+
+    </div>
+
+=== "🎥 HubMeet & 📊 HubCRM"
+
+    <div class="grid cards" markdown>
+
+    -   **🎥 HubMeet (Video Conferencing)**
+
+        ---
+
+        * 🌐 **[HubMeet Overview & Architecture](hubmeet/index.md)**
+        * 📅 **[Instant & Scheduled Meetings](hubmeet/scheduling.md)**
+        * 🎛️ **[In-Call Controls, Mic & Camera Settings](hubmeet/in-call-controls.md)**
+        * 🖥️ **[Screen Sharing & Collaborative Whiteboard](hubmeet/collaboration.md)**
+        * 🤖 **[Cloud Recording & AI Transcription Summaries](hubmeet/recordings-ai.md)**
+
+    -   **📊 HubCRM (Customer Relationship Management)**
+
+        ---
+
+        * 📈 **[HubCRM Overview & Architecture](hubcrm/index.md)**
+        * 🎯 **[Leads Pipeline & Kanban Stages](hubcrm/leads-pipeline.md)**
+        * 👥 **[Contacts & Organization Accounts](hubcrm/contacts.md)**
+        * 💼 **[Deals, Quotations & Proposals](hubcrm/deals.md)**
+        * 📊 **[Sales Reports & Performance Dashboards](hubcrm/reports.md)**
+
+    </div>
+
+=== "📞 VoIP, 🔔 Notifications & 💳 Billing"
+
+    <div class="grid cards" markdown>
+
+    -   **📞 Calling Hub (VoIP Cloud Telephony)**
+
+        ---
+
+        * 📞 **[Calling Hub Overview](calling/index.md)**
+        * 🔢 **[Softphone Web Dialpad & DTMF](calling/dialer.md)**
+        * 🎙️ **[Call Logs, Recordings & CDR Analytics](calling/logs.md)**
+
+    -   **🔔 HubNotification (WhatsApp & Alerts)**
+
+        ---
+
+        * 📣 **[Notification Gateway Overview](notification/index.md)**
+        * 💬 **[WhatsApp Meta Campaigns & Webhook Templates](notification/campaigns.md)**
+
+    -   **💳 Billing, Invoices & Administration**
+
+        ---
+
+        * 🧾 **[Subscription Plans & GST Tax Invoices](billing/plans-invoices.md)**
+        * 👥 **[Team Seat Management & License Assignments](billing/team-management.md)**
+
+    -   **🛠️ Help, FAQs & Support**
+
+        ---
+
+        * 🔧 **[System Troubleshooting & Error Codes](help/troubleshooting.md)**
+        * 💬 **[Contacting Official Technical Support](help/support.md)**
+
+    </div>
 
 ---
 
-## 4. How HubNest Works
+## 🏛️ System Architecture Overview
 
-HubNest relies on an enterprise microservice and federated identity architecture:
+HubNest connects your teams through a federated Single Sign-On (SSO) identity bus and multi-tenant database microservices:
 
 ```mermaid
 graph TD
-    Client[HubNest OS Desktop & Web Clients] -->|Single Sign-On| KC[Keycloak Central IAM]
-    Client -->|API Gateway| PlatApi[Platform API]
+    Client[HubNest OS Desktop & Web Browsers] -->|Keycloak OAuth2 / OIDC| IAM[Central Keycloak SSO]
+    Client -->|API Gateway| Gateway[Platform Core Gateway]
     
-    subgraph Multi-Hub Ecosystem
-        PlatApi --> CRM[HubCRM Engine]
-        PlatApi --> HRMS[HubHRMS Spring Engine]
-        PlatApi --> Meet[HubMeet & LiveKit RTC]
-        PlatApi --> Calling[Calling Hub]
-        PlatApi --> Notification[Notification Gateway]
+    subgraph Integrated Hub Microservices
+        Gateway --> CRM[HubCRM Engine :5001]
+        Gateway --> HRMS[HubHRMS Java Spring Boot :5009]
+        Gateway --> Meet[HubMeet WebRTC / LiveKit]
+        Gateway --> Call[Calling Hub Asterisk / VoIP]
+        Gateway --> Notif[Notification Gateway :WhatsApp API]
     end
     
-    subgraph Enterprise Data Layer
-        CRM --> CRM_DB[(CRM PostgreSQL)]
-        HRMS --> HRMS_DB[(HRMS PostgreSQL)]
-        PlatApi --> Plat_DB[(Platform Central DB)]
+    subgraph Tenant-Isolated Storage
+        CRM --> DB_CRM[(PostgreSQL CRM)]
+        HRMS --> DB_HRMS[(PostgreSQL HRMS)]
+        Gateway --> DB_PLAT[(Platform Central)]
     end
 ```
 
-* **Federated Single Sign-On (SSO)**: One master identity token grants scoped, one-time 60-second access codes (`/platform/sso/mint`) to each specialized hub.
-* **Strict Tenant Isolation**: Data from different organizations is isolated at database schema and role levels (`withTenantSchema()`).
-* **Cross-Hub Automation**: Converting a lead to "Won" in HubCRM can automatically generate an invoice in HubNest Pay and trigger a welcome WhatsApp message via Notification Gateway.
+---
+
+## 🌐 Live Production Server Credentials & Access
+
+| Resource | Live Production URL | Default Access Port |
+| :--- | :--- | :--- |
+| **🏢 HRMS Portal** | [https://hrms.srjhubnest.com](https://hrms.srjhubnest.com) | Port 443 (HTTPS) |
+| **🔐 Admin Dashboard** | [https://hrms.srjhubnest.com/admin/dashboard](https://hrms.srjhubnest.com/admin/dashboard) | Protected Admin Route |
+| **👩‍💼 HR Portal** | [https://hrms.srjhubnest.com/hr/dashboard](https://hrms.srjhubnest.com/hr/dashboard) | Protected HR Route |
+| **👔 Manager Portal** | [https://hrms.srjhubnest.com/manager/dashboard](https://hrms.srjhubnest.com/manager/dashboard) | Protected Manager Route |
+| **🧑‍💻 Employee Portal** | [https://hrms.srjhubnest.com/employee/dashboard](https://hrms.srjhubnest.com/employee/dashboard) | Protected Staff Route |
+| **🎥 HubMeet** | [https://meet.srjhubnest.com](https://meet.srjhubnest.com) | WebRTC RTC Signaling |
+| **📊 HubCRM** | [https://crm.srjhubnest.com](https://crm.srjhubnest.com) | Client Sales Suite |
 
 ---
 
-## 5. Documentation Resources & Quick Links
+## 📞 Enterprise Helpdesk & Assistance
 
-* 🚀 **[Getting Started Guide](getting-started/index.md)** — Step-by-step onboarding walkthrough.
-* 💻 **[HubNest OS Desktop Manual](desktop/workspace.md)** — Multi-hub tabs, performance, and updates.
-* 🎥 **[HubMeet User Guide](hubmeet/index.md)** — In-call controls, recording, and whiteboard.
-* 📊 **[HubCRM Manual](hubcrm/index.md)** — Pipeline management, quotes, and reports.
-* 👥 **[HubHRMS Manual](hrms/index.md)** — Employees, attendance, leaves, and payroll.
-* 💳 **[Billing & Invoices](billing/plans-invoices.md)** — Subscriptions, tax invoices, and payment gateways.
-* 🔧 **[Troubleshooting & FAQs](help/troubleshooting.md)** — Audio/video diagnostic and common error resolution.
-
----
-
-## 6. Latest Release Notes (v1.7.0)
-
-!!! note "Release Version 1.7.0 Highlights (October 2026)"
-    * **WebRTC Native Fixes**: Resolved Windows WebView2 audio/microphone permissions for HubMeet.
-    * **Cloudflare WAF Protection**: Deployed L7 security rules and bypass optimizations for LiveKit signalling (`rtc.srjhubnest.com`).
-    * **Security Hardening**: Closed path traversal risks, secured S3 storage proxies, and implemented fail-closed payment webhook validation.
-    * **Auto-Update Engine**: Windows client now supports seamless in-app version update detection.
-
----
-
-## 7. Help & Support
-
-Need assistance with onboarding, enterprise licensing, or technical issues?
-
-* 📧 **Email**: `support@srjhubnest.com`
-* 📞 **Phone**: `+918031830008`
-* ⏰ **Support Hours**: Monday to Saturday, 10:00 AM – 7:00 PM IST
-* 🏢 **Headquarters**: SRJ HubNest Enterprise Solutions
+* 📧 **Official Support Email**: `support@srjhubnest.com`
+* 📞 **Helpline**: `+918031830008`
+* ⏰ **Operating Hours**: Monday to Saturday, 10:00 AM – 7:00 PM IST
+* 🏢 **SRJ HubNest Enterprise Solutions Pvt. Ltd.**
