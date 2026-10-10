@@ -38,6 +38,12 @@ theme:
     - content.code.copy
     - content.code.annotate
 
+extra_css:
+  - assets/stylesheets/diagram-zoom.css
+
+extra_javascript:
+  - assets/javascripts/diagram-zoom.js
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -91,12 +97,30 @@ nav:
       - Contacts & Accounts: hubcrm/contacts.md
       - Deals & Quotations: hubcrm/deals.md
       - Reports & Dashboards: hubcrm/reports.md
-  - HubHRMS:
-      - Overview: hrms/index.md
-      - Employee Management: hrms/employees.md
-      - Attendance & Shifts: hrms/attendance.md
-      - Leaves & Approvals: hrms/leaves.md
-      - Payroll & Payslips: hrms/payroll.md
+  - HubHRMS (Company Admin):
+      - 01. Overview & RBAC: hrms/index.md
+      - 02. Company Dashboard: hrms/dashboard.md
+      - 03. Manage Employees: hrms/employees.md
+      - 04. Onboarding: hrms/onboarding.md
+      - 05. Manage Branches: hrms/branches.md
+      - 06. Departments: hrms/departments.md
+      - 07. Designations: hrms/designations.md
+      - 08. Employee Directory: hrms/directory.md
+      - 09. Attendance: hrms/attendance.md
+      - 10. Leave Management: hrms/leaves.md
+      - 11. Payroll: hrms/payroll.md
+      - 12. Tasks & Projects: hrms/tasks.md
+      - 13. Performance: hrms/performance.md
+      - 14. Learning (LMS): hrms/lms.md
+      - 15. Assets: hrms/assets.md
+      - 16. Documents: hrms/documents.md
+      - 17. Company Reports: hrms/reports.md
+      - 18. Notifications: hrms/notifications.md
+      - 19. Messages: hrms/messages.md
+      - 20. Help & Support: hrms/support.md
+      - 21. Company Settings: hrms/settings.md
+      - 22. Profile: hrms/profile.md
+
   - Calling Hub (VoIP):
       - Overview: calling/index.md
       - Softphone & Dialpad: calling/dialer.md
