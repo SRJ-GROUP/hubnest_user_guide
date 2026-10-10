@@ -11,8 +11,7 @@ The **HR Profile & Settings** module allows HR Specialists and HR Directors to m
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/profile -->
-> *[Screenshot Placeholder: HR Administrative Profile & Settings]*
+![HR Administrative Profile & Settings](../assets/images/HRMS/HR_/Profile.png){ width="100%" }
 
 ---
 

@@ -11,8 +11,7 @@ The **Attendance Tracking** module provides HR Specialists with real-time audita
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/attendance -->
-> *[Screenshot Placeholder: HR Attendance Tracking Console]*
+![HR Attendance Tracking Console](../assets/images/HRMS/HR_/Attendance.png){ width="100%" }
 
 ---
 

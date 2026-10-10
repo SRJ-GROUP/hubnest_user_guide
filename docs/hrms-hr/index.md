@@ -92,8 +92,7 @@ The HR Specialist sidebar features 13 purpose-built modules accessible across de
 
 ## 📸 Interface Screenshots
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/dashboard -->
-> *[Screenshot Placeholder: HR Management Suite Overview]*
+![HR Management Suite Overview](../assets/images/HRMS/HR_/dashbord.png){ width="100%" }
 
 ---
 

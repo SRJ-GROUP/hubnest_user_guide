@@ -11,8 +11,7 @@ The **Employee Management** module provides HR Specialists with total administra
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/employees -->
-> *[Screenshot Placeholder: HR Employee Master Directory]*
+![HR Employee Master Directory](../assets/images/HRMS/HR_/Employees.png){ width="100%" }
 
 ---
 

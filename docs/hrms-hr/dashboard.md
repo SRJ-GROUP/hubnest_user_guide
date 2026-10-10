@@ -11,8 +11,7 @@ The **HR Dashboard** serves as the central command cockpit for HR Specialists an
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/dashboard -->
-> *[Screenshot Placeholder: HR Specialist Dashboard Console]*
+![HR Specialist Dashboard](../assets/images/HRMS/HR_/dashbord.png){ width="100%" }
 
 ---
 

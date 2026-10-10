@@ -11,8 +11,7 @@ The **AI Console** delivers an enterprise-grade artificial intelligence co-pilot
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/ai -->
-> *[Screenshot Placeholder: HubNest AI HR Assistant]*
+![HubNest AI HR Assistant](../assets/images/HRMS/HR_/AIconsole.png){ width="100%" }
 
 ---
 

@@ -11,8 +11,7 @@ The **Reports & Analytics** module equips HR Specialists and Leadership with dat
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/reports -->
-> *[Screenshot Placeholder: HR Workforce Analytics & Reports]*
+![HR Workforce Analytics & Reports](../assets/images/HRMS/HR_/Analytics.png){ width="100%" }
 
 ---
 

@@ -11,8 +11,7 @@ The **Documentation** module provides a centralized, secure corporate repository
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/documentation -->
-> *[Screenshot Placeholder: HR Documentation & Policy Management]*
+![HR Documentation & Policy Management](../assets/images/HRMS/HR_/Documentation.png){ width="100%" }
 
 ---
 

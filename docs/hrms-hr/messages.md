@@ -11,8 +11,7 @@ The **Messages** module integrates real-time communications directly inside the 
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/messages -->
-> *[Screenshot Placeholder: HR Communication Console]*
+![HR Communication Console](../assets/images/HRMS/HR_/Message.png){ width="100%" }
 
 ---
 

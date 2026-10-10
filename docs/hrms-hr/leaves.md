@@ -11,8 +11,7 @@ The **Leave Management** module provides HR Specialists with centralized control
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/leaves -->
-> *[Screenshot Placeholder: HR Leave Administration Console]*
+![HR Leave Administration Console](../assets/images/HRMS/HR_/HR Leaves Console.png){ width="100%" }
 
 ---
 

@@ -11,8 +11,7 @@ The **Payroll Processing** module enables HR Specialists and Payroll Accountants
 
 ## 📸 Interface Screenshot
 
-<!-- SCREENSHOT_PLACEHOLDER: /hr/payroll -->
-> *[Screenshot Placeholder: HR Payroll Processing Console]*
+![HR Payroll Processing Console](../assets/images/HRMS/HR_/Payrool_management.png){ width="100%" }
 
 ---
 
