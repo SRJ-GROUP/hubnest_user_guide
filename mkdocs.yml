@@ -40,9 +40,11 @@ theme:
 
 extra_css:
   - assets/stylesheets/diagram-zoom.css
+  - assets/stylesheets/nav-tabs-scroll.css
 
 extra_javascript:
   - assets/javascripts/diagram-zoom.js
+  - assets/javascripts/nav-tabs-scroll.js
 
 markdown_extensions:
   - admonition

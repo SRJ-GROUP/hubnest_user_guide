@@ -1,0 +1,102 @@
+name: HubNest User Guide CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  AWS_REGION: ap-south-1
+  IMAGE_NAME: hubnest/docs
+
+jobs:
+  # ── 1. Quality Gate: Audit & Build Verification ──────────────
+  build-and-test:
+    name: MkDocs Strict Build & Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install MkDocs Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build Documentation (Strict Mode)
+        run: |
+          python -m mkdocs build --clean --strict
+
+      - name: Upload Built Documentation Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-artifact
+          path: site/
+          retention-days: 7
+
+  # ── 2. AWS EC2 Container Deployment (Runs on main push) ───────
+  deploy-aws:
+    name: Build Docker Image & Deploy to AWS EC2
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials (OIDC or Secret fallback)
+        uses: aws-actions/configure-aws-credentials@v4
+        continue-on-error: true
+        id: aws-creds
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN || vars.AWS_BUILD_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Docker Login ECR
+        if: steps.aws-creds.outcome == 'success'
+        uses: aws-actions/amazon-ecr-login@v2
+        id: ecr
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and Push Docker Image
+        if: steps.aws-creds.outcome == 'success'
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ${{ steps.ecr.outputs.registry }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ steps.ecr.outputs.registry }}/${{ env.IMAGE_NAME }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Deploy to Apps EC2 Instance via SSM
+        if: steps.aws-creds.outcome == 'success'
+        run: |
+          INSTANCE_ID="$(aws ec2 describe-instances \
+            --filters "Name=tag:Project,Values=hubnest" "Name=tag:Role,Values=apps" "Name=instance-state-name,Values=running" \
+            --query 'Reservations[0].Instances[0].InstanceId' --output text)"
+          
+          if [ -n "$INSTANCE_ID" ] && [ "$INSTANCE_ID" != "None" ]; then
+            echo "Deploying docs container to EC2 apps host $INSTANCE_ID..."
+            aws ssm send-command \
+              --instance-ids "$INSTANCE_ID" \
+              --document-name "AWS-RunShellScript" \
+              --comment "Deploy hubnest docs ${{ github.sha }}" \
+              --parameters '{"commands":["cd /opt/hubnest/stack && sudo docker compose pull docs && sudo docker compose up -d docs && sudo docker exec hubnest-caddy-1 caddy reload --config /etc/caddy/Caddyfile 2>/dev/null || true"]}'
+          fi

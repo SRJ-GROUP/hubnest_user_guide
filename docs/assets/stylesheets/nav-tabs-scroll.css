@@ -1,0 +1,149 @@
+/* ============================================================
+   HubNest Documentation - Horizontal Scrolling for Navigation Tabs
+   Allows smooth left-to-right scrolling, mouse wheel scrolling,
+   and drag-to-scroll across all top navigation tabs.
+   ============================================================ */
+
+/* Container overrides */
+.md-tabs {
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.md-tabs .md-grid {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 44px !important; /* Space for scroll buttons */
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+/* Horizontal Scrollable Tabs List */
+.md-tabs__list {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  white-space: nowrap !important;
+  -webkit-overflow-scrolling: touch !important;
+  scroll-behavior: smooth !important;
+  gap: 0.35rem !important;
+  padding: 0.4rem 0.5rem 0.5rem 0.5rem !important;
+  margin: 0 !important;
+  list-style: none !important;
+  cursor: grab;
+  user-select: none;
+}
+
+.md-tabs__list:active {
+  cursor: grabbing;
+}
+
+/* Each Tab item must never shrink or truncate */
+.md-tabs__item {
+  flex: 0 0 auto !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.md-tabs__link {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0.4rem 0.85rem !important;
+  border-radius: 6px !important;
+  font-size: 0.82rem !important;
+  font-weight: 550 !important;
+  letter-spacing: 0.01em !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.md-tabs__link:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  transform: translateY(-1px);
+}
+
+.md-tabs__item--active .md-tabs__link {
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  font-weight: 700 !important;
+}
+
+/* Sleek modern horizontal scrollbar */
+.md-tabs__list::-webkit-scrollbar {
+  height: 5px !important;
+}
+
+.md-tabs__list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.25) !important;
+  border-radius: 4px !important;
+}
+
+.md-tabs__list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.45) !important;
+  border-radius: 4px !important;
+}
+
+.md-tabs__list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Firefox scrollbar support */
+.md-tabs__list {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Interactive Left & Right Scroll Buttons */
+.md-tabs-scroll-btn {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(8px) !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  padding: 0 !important;
+}
+
+.md-tabs-scroll-btn:hover {
+  background: #6366f1 !important;
+  color: #ffffff !important;
+  transform: translateY(-50%) scale(1.1) !important;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.5) !important;
+}
+
+.md-tabs-scroll-btn--left {
+  left: 8px !important;
+}
+
+.md-tabs-scroll-btn--right {
+  right: 8px !important;
+}
+
+.md-tabs-scroll-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  fill: currentColor !important;
+}
+
+.md-tabs-scroll-btn.is-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-50%) scale(0.8) !important;
+}
