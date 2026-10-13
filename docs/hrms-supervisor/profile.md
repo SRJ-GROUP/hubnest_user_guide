@@ -13,10 +13,7 @@ The **Supervisor Profile & Settings** console manages personal identification, o
 
 Below is the live console layout of the **Supervisor Profile & Settings** workspace:
 
-<!-- UI SCREENSHOT PLACEHOLDER: supervisor_profile.png (Width 100%) - To be added at the end -->
-> 📸 **[UI Screenshot: Supervisor Profile, Banking & Security Console]**  
-> *Target Asset Location:* `docs/assets/images/HRMS/Supervisor_/profile.png`  
-> *(To be added at the end with live screenshots)*
+![Supervisor Profile & Settings Console](../assets/images/HRMS/Supervisor_/profile.png)
 
 ---
 
