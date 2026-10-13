@@ -13,10 +13,7 @@ The **Messages & Collaboration** module connects Operations Supervisors directly
 
 Below is the live console layout of the **Supervisor Messages & HubMeet Hub**:
 
-<!-- UI SCREENSHOT PLACEHOLDER: supervisor_messages.png (Width 100%) - To be added at the end -->
-> 📸 **[UI Screenshot: Supervisor Real-Time Messages & HubMeet Collaboration Console]**  
-> *Target Asset Location:* `docs/assets/images/HRMS/Supervisor_/messages.png`  
-> *(To be added at the end with live screenshots)*
+![Supervisor Real-Time Messages & HubMeet Collaboration Console](../assets/images/HRMS/Supervisor_/messages.png)
 
 ---
 

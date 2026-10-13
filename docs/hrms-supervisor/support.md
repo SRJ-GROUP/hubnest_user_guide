@@ -13,10 +13,7 @@ The **Help & Support Desk** connects Operations Supervisors directly with the en
 
 Below is the live console layout of the **Supervisor Help & Support Desk**:
 
-<!-- UI SCREENSHOT PLACEHOLDER: supervisor_support.png (Width 100%) - To be added at the end -->
-> 📸 **[UI Screenshot: Supervisor Help & Support Desk]**  
-> *Target Asset Location:* `docs/assets/images/HRMS/Supervisor_/support.png`  
-> *(To be added at the end with live screenshots)*
+![Supervisor Help & Support Desk Console](../assets/images/HRMS/Supervisor_/support.png)
 
 ---
 

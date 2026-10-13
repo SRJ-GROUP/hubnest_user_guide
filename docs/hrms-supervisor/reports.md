@@ -13,10 +13,7 @@ The **Team Reports & Analytics** module delivers comprehensive, data-driven oper
 
 Below is the live console layout of the **Supervisor Team Reports & Analytics** dashboard:
 
-<!-- UI SCREENSHOT PLACEHOLDER: supervisor_reports.png (Width 100%) - To be added at the end -->
-> 📸 **[UI Screenshot: Supervisor Team Reports & Analytics Console]**  
-> *Target Asset Location:* `docs/assets/images/HRMS/Supervisor_/reports.png`  
-> *(To be added at the end with live screenshots)*
+![Supervisor Team Reports & Analytics Console](../assets/images/HRMS/Supervisor_/reports.png)
 
 ---
 
