@@ -13,9 +13,7 @@ The **Crew & Team Roster** module provides Operations Supervisors with a central
 
 Below is the live console layout of the **Supervisor Team Directory**:
 
-> 📸 **[UI Screenshot: Supervisor Crew & Team Management Console]**  
-> *Target Asset Location:* `docs/assets/images/HRMS/Supervisor_/team.png`  
-> *(To be added at the end with live screenshots)*
+![Supervisor Crew & Team Management Console](../assets/images/HRMS/Supervisor_/team.png)
 
 ---
 

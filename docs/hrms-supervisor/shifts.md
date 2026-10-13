@@ -13,9 +13,7 @@ The **Shift Rosters & Rotations** module equips Operations Supervisors with end-
 
 Below is the live console layout of the **Supervisor Shift Roster & Rotation Console**:
 
-> 📸 **[UI Screenshot: Shift Roster Planning & Rotation Console]**  
-> *Target Asset Location:* `docs/assets/images/HRMS/Supervisor_/shifts.png`  
-> *(To be added at the end with live screenshots)*
+![Shift Roster Planning & Rotation Console](../assets/images/HRMS/Supervisor_/shifts.png)
 
 ---
 
