@@ -1,101 +1,129 @@
 ---
-title: Task Allocation, Sprints & Workload Balancing
-description: Step-by-step user guide for Department Managers to create deliverables, assign tasks to team members, track deadlines, and balance workloads.
+title: Task Control Center, Sprint Workloads & AI Insights
+description: Comprehensive user guide for the Department Manager Task Control Center — 4 Top KPI filter cards, AI Insight ribbon, 5 navigation view tabs (List, Calendar, Workload Map, Projects, AI Insights), Task Creation Modal, Task Review Drawer, and Multi-Format Exports in Hub HRMS.
 ---
 
-# 04. Task & Project Allocation (`/manager/tasks`)
+# 04. Task Control Center & Sprints (`/manager/tasks`)
 
-The **Task & Project Allocation** module is where Department Managers plan team deliverables, assign work items to specific employees, monitor sprint progress, track approaching deadlines on a calendar, and balance workloads across team members.
-
----
-
-## 📸 Interface Screenshot
-
-<!-- SCREENSHOT_PLACEHOLDER: /manager/tasks -->
-> *[Screenshot Placeholder: Department Manager Task Allocation Board]*
-> *(Image path to add: `docs/assets/images/HRMS/Manager_/tasks.png`)*
+The **Task Control Center** (`/manager/tasks`) is the operational project management engine for Department Managers in Hub HRMS. Built for agile work order distribution and sprint delivery, this console allows managers to provision deliverables, monitor execution across multi-view tabs (**List View**, **Calendar**, **Workload Map**, **Projects**, and **AI Cognitive Insights**), detect employee burnout thresholds, audit deliverables via the **Task Review Drawer**, and export pipeline data.
 
 ---
 
-## 🧭 Navigation Views & Workspaces
+## 🏛️ Live Interface Overview
 
-The console provides 4 specialized views across the top navigation bar:
+Below is the live console layout of the **Department Manager Task Control Center**:
+
+![Department Manager Task Control Center Console](../assets/images/HRMS/Manager_/tasks.png)
+
+---
+
+## 🧭 Page Anatomy & Interactive Controls
+
+The table below catalogs every button, filter dropdown, view tab, modal, and drawer control in the Task Control Center:
+
+| UI Component / Control | Visual Location | Functional Behavior & Impact |
+| :--- | :--- | :--- |
+| **Control Center Title & Date** | Header Top Left | Displays `Task Control Center` with an official Briefcase icon and live localized calendar date (e.g., `Monday, October 12, 2026`). |
+| **Export Dropdown** | Header Top Right | Exports filtered tasks in **Excel (.xlsx)**, **CSV**, or **PDF** format. |
+| **Create New Task Button** | Header Top Right (Solid Blue button w/ Plus icon) | Opens the **Task Creation Modal** to deploy work directly to team members. |
+| **Total Tasks KPI Card** | Top KPI Grid (Card 1) | Shows cumulative task count (e.g., `0` or `24`), Briefcase icon, and acts as an **All Tasks** reset filter. |
+| **Active Work KPI Card** | Top KPI Grid (Card 2) | Displays currently ongoing work orders (`In Progress` or `Pending`), blue pulse icon, and acts as an **Active Work** filter. |
+| **Completed KPI Card** | Top KPI Grid (Card 3) | Displays finished work orders, green CheckCircle icon, and acts as a **Completed** filter. |
+| **Overdue Risks KPI Card** | Top KPI Grid (Card 4) | Highlights missed deadline items (`Overdue`), red AlertTriangle icon, and acts as an **Overdue Risks** filter. |
+| **AI Insight Alert Ribbon** | Full-Width Ribbon Below KPIs | Machine-learning generated summary diagnosing sprint velocity (e.g., *"No active tasks assigned yet. Create tasks for your team to unlock automated workload balancing and delivery predictions"*). |
+| **List View Tab** | Navigation Tab Bar (Tab 1) | Displays deliverables in responsive cards with priority tags, status badges, employee initials, due dates, and 3-dot context menus. |
+| **Calendar Tab** | Navigation Tab Bar (Tab 2) | Monthly grid visualizer plotting tasks by deadline dates to identify sprint delivery crunches. |
+| **Workload Map Tab** | Navigation Tab Bar (Tab 3) | Interactive Recharts Bar Chart showing active task count per employee. Automatically turns red if an engineer holds $>5$ active tasks. |
+| **Projects Tab** | Navigation Tab Bar (Tab 4) | Organizes deliverables into parent projects, milestone deliverables, and department initiatives. |
+| **AI Insights Tab** | Navigation Tab Bar (Tab 5) | Neural cognitive engine diagnosing bottleneck audits, suggesting overdue mitigation sprints, and recommending subtask partitioning. |
+| **Search Tasks or Assignees** | List Toolbar Left | Live keyword search filtering tasks by deliverable title or assigned employee name. |
+| **All Priorities Dropdown** | List Toolbar Center | Filters tasks by severity: `All Priorities`, `High Priority`, `Medium Priority`, `Low Priority`. |
+| **All Statuses Dropdown** | List Toolbar Center | Filters tasks by lifecycle state: `All Statuses`, `Pending`, `In Progress`, `Completed`, `Overdue`. |
+| **All Team Members Dropdown** | List Toolbar Center | Filters tasks by specific assignee or department cadre. |
+| **Sort By Dropdown** | List Toolbar Right | Orders deliverables by: `Due Date (Earliest)`, `Due Date (Latest)`, `Priority Level`, `Title (A-Z)`. |
+| **Task Cards (Grid)** | List Canvas | Visual cards displaying priority pill, status badge, 3-dot menu (`View`, `Edit`, `Delete`), deliverable title, assignee avatar & name, and deadline timestamp. Clicking any card opens the **Task Review Drawer**. |
+| **Create Task Modal** | Center Screen Overlay | Dialog for task provisioning: **Task Title**, **Description**, **Assignee** (w/ AI easiest assignee recommendation), **Priority**, **Due Date**, **Attachment URL**, and **Link URL**. |
+| **Task Review Drawer** | Slide-Over Panel (Right 500px) | Slide-out audit console allowing managers to inspect submitted files, test links, add feedback comments, update status, or mark tasks as `Completed`. |
+
+---
+
+## 🧭 Task Lifecycle & Sprint Architecture
+
+The sequence diagram below illustrates how work orders progress from manager assignment to AI bottleneck analysis and deliverable review:
 
 ```mermaid
-graph TD
-    Tabs["Task Views Navigation"] --> V1["📋 List & Kanban View<br/>Active tasks grouped by status"]
-    Tabs --> V2["📅 Calendar View<br/>Deadlines mapped on monthly grid"]
-    Tabs --> V3["📁 Project View<br/>Tasks organized by milestones"]
-    Tabs --> V4["⚖️ Workload View<br/>Task distribution per team member"]
+sequenceDiagram
+    autonumber
+    actor Mgr as Department Manager
+    participant UI as Task Control Center
+    participant Engine as Task Execution Engine
+    participant AI as Cognitive Insight Engine
+    actor Emp as Team Member
+
+    Mgr->>UI: Click "+ Create New Task"
+    UI->>UI: Suggest Assignee based on lowest active workload
+    Mgr->>UI: Enter Title, Priority ("High"), Due Date & Submit
+    UI->>Engine: POST /api/manager/tasks
+    Engine-->>Emp: Dispatch In-App Alert & Email Notification
+    Emp->>Engine: Update Status to "In Progress" -> Submit Deliverable
+    Engine->>AI: Re-evaluate department sprint velocity
+    AI-->>UI: Update AI Insight Ribbon ("3 active tasks operating at optimal velocity")
+    Mgr->>UI: Click Task Card -> Slide out Task Review Drawer
+    Mgr->>UI: Inspect deliverable file -> Click "Mark Completed"
+    Engine-->>UI: Update Status to "Completed" & Increment KPI
 ```
 
-1. **List & Kanban View**: Displays tasks in structured table rows or status cards (`To Do`, `In Progress`, `Under Review`, `Completed`).
-2. **Calendar View**: Visual calendar plotting due dates, helping you spot project delivery crunches before they happen.
-3. **Project View**: Organizes deliverables under parent projects or departmental milestones.
-4. **Workload View**: An interactive bar chart comparing the number of active tasks assigned to each employee to avoid overloading individual contributors.
+---
+
+## ⚙️ Step-by-Step Task Management Procedures
+
+### 1. Creating and Assigning a Deliverable
+1. Click the blue **+ Create New Task** button in the top header.
+2. In the creation modal, fill in:
+   - **Task Title**: Concise, descriptive summary of the deliverable (e.g., *"Prepare Q4 Budget Audit Ledger"*).
+   - **Description**: Acceptance criteria, instructions, or scope definition.
+   - **Assignee**: Choose a team member from your department dropdown. Notice the system highlights the employee with the lowest active task count to assist workload balancing!
+   - **Priority Level**: Select `High` (🔴), `Medium` (🟡), or `Low` (🔵).
+   - **Due Date**: Pick the target completion deadline using the date picker.
+   - **Attachment URL / Link URL**: Optional URLs for technical blueprints, Figma designs, or document folders.
+3. Click **Create Task**. The task appears instantly in the pipeline.
+
+### 2. Auditing Sprints across the 5 View Tabs
+* **List View:** The default operational canvas. Filter tasks by priority, status, or assignee, and sort by due dates to focus on impending deadlines.
+* **Calendar:** Renders monthly calendar blocks with color-coded task pills, allowing you to identify milestone clustering.
+* **Workload Map:** Inspect the vertical bar chart. Bars color-code automatically:
+  - 🟢 **Primary/Blue:** 1 to 5 active tasks (Optimal load)
+  - 🔴 **Red Alert:** $>5$ active tasks (Burnout risk requiring task redistribution)
+  - ⚪ **Muted Grey:** 0 active tasks (Available bandwidth)
+* **Projects:** Groups tasks by project tags and parent initiatives.
+* **AI Insights:** Deep-dive into cognitive recommendations like **Subtask Partitioning** (breaking large tasks under 4 hours increases completion by 35%) and **Overdue Mitigation**.
+
+### 3. Reviewing Submitted Work (Task Review Drawer)
+When a team member marks a task as submitted or completed:
+1. Click on the task card in the **List View**.
+2. The **Task Review Drawer** slides open from the right.
+3. Inspect the deliverable submission details:
+   - Attached files or document links.
+   - Elapsed completion time and submission timestamp.
+4. If the work meets acceptance criteria, click **Mark Completed**.
+5. If revisions are required, change the status back to **In Progress** and enter feedback notes.
 
 ---
 
-## 🛠️ Step-by-Step Guide: How to Manage Tasks
+## 💡 Best Practices for Department Managers
 
-### Step 1: Create a New Task (`+ New Task`)
-1. Click the green **+ New Task** button at the top right.
-2. In the modal, fill in the following details:
-   * **Task Title**: Concise summary of the deliverable (e.g., *"Implement Stripe Payment Webhook"*).
-   * **Description**: Detailed acceptance criteria, links to documentation, or sprint guidelines.
-   * **Priority Level**: Select `Urgent` (🔴), `High` (🟠), `Medium` (🟡), or `Low` (🟢).
-   * **Assignee**: Choose an employee from your department roster dropdown.
-   * **Due Date**: Pick the target completion date using the calendar picker.
-   * **Estimated Hours**: Expected time commitment (e.g., `8 Hours`).
-3. Click **Create Task**. The assigned team member receives an instant in-app notification and email alert.
+> [!TIP] **Use the AI Insight Ribbon for Morning Briefings**  
+> Check the top **AI Insight Ribbon** before your daily standup. It synthesizes overdue alerts and active workload distributions into actionable 1-sentence summaries.
+
+> [!NOTE] **Quick Assignee Filtering via URL**  
+> Clicking **Review Tasks** or **Tasks** from the Team Management page automatically sets the `assignee` filter in the Task Control Center, immediately isolating that specific employee's deliverables.
 
 ---
 
-### Step 2: Filter and Search Active Tasks
-* **Filter by Employee**: Click the **Assignee Dropdown** to see tasks belonging exclusively to a single team member.
-* **Filter by Status**: View only `In Progress` items or `Under Review` items waiting for your sign-off.
-* **Filter by Priority**: Filter for `Urgent` or `High` priority items to focus on critical blockers.
-* **Search Box**: Search by keywords contained in the task title or description.
+## ❓ Frequently Asked Questions (FAQs)
 
----
+??? question "Can Department Managers assign tasks to employees in other departments?"
+    No. Hub HRMS enforces departmental boundaries. Department Managers can only assign tasks to personnel enrolled in their assigned department(s). Cross-departmental initiatives must be routed through Executive Admins.
 
-### Step 3: Review and Update Task Statuses
-As work progresses, tasks move through 4 lifecycle stages:
-
-```mermaid
-stateDiagram-v2
-    [*] --> ToDo: Manager Assigns Task
-    ToDo --> InProgress: Employee Starts Work
-    InProgress --> UnderReview: Work Submitted
-    UnderReview --> Completed: Manager Verifies & Signs Off
-    UnderReview --> InProgress: Manager Requests Revisions
-```
-
-1. When an employee completes a task, it appears with the status **Under Review**.
-2. Click on the task row to review attached deliverable files or notes.
-3. Click **Mark Completed** to close out the task, or update status back to **In Progress** with feedback remarks.
-
----
-
-### Step 4: Balance Team Workload (The Workload View)
-1. Switch to the **Workload** tab.
-2. Inspect the **Task Distribution Bar Chart**:
-   * If Employee A has **7 active tasks** while Employee B has only **1 task**, an orange **Workload Imbalance Alert** appears.
-3. Click on the overloaded employee's bar to see their open tasks, and click **Reassign** to distribute items evenly.
-
----
-
-## 📤 Exporting Task Reports
-
-* Click the **Export Dropdown** button at the top right to download task records in **Excel (.xlsx)**, **CSV**, or **PDF** format.
-* The exported file includes task titles, assigned employees, priority levels, creation dates, due dates, and completion timestamps for sprint retrospectives.
-
----
-
-## ❓ Frequently Asked Questions (FAQ)
-
-??? question "Can I assign a task to someone outside my department?"
-    Department Managers can only assign tasks to personnel within their own department. Cross-department tasks must be requested through HR or Company Admins.
-
-??? question "What triggers an automated task reminder to an employee?"
-    Hub HRMS sends an automated notification reminder to the assignee 24 hours prior to the due date, and a high-priority alert if the due date passes without completion.
+??? question "What happens when a task becomes overdue?"
+    The system automatically flags the status as `Overdue` (Red badge), increments the **Overdue Risks** KPI card, triggers an AI alert in the header ribbon, and sends a reminder push notification to the assignee.

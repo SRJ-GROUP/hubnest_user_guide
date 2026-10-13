@@ -1,11 +1,11 @@
 ---
 title: Tasks & Projects Management
-description: Comprehensive administrator and end-user guide for company task boards, agile Kanban workflows, workload capacity mapping, project tracking, and team collaboration in Hub HRMS.
+description: Comprehensive administrator and end-user guide for company task boards, agile task pipeline workflows, workload capacity mapping, project tracking, and team collaboration in Hub HRMS.
 ---
 
 # Tasks & Projects Management
 
-Bridging HR operations with daily execution, the **Tasks & Projects** module (`/admin/tasks`) in **Hub HRMS** provides an agile collaboration hub. It enables team leaders to delegate assignments, monitor progress through interactive Kanban boards, and balance team bandwidth using the real-time **Workload Capacity Map**.
+Bridging HR operations with daily execution, the **Tasks & Projects** module (`/admin/tasks`) in **Hub HRMS** provides an agile collaboration hub. It enables team leaders to delegate assignments, monitor progress through Interactive Task Pipeline Boards, and balance team bandwidth using the real-time **Workload Capacity Map**.
 
 Unlike standalone project management tools disconnected from employee profiles, Hub HRMS ties every task directly to departmental structures, active leave calendars, and performance OKRs.
 
@@ -25,7 +25,7 @@ Every task transitions through four standardized operational stages, supporting 
 
 ```mermaid
 graph LR
-    subgraph Stages["🔄 Four-Stage Agile Kanban Pipeline"]
+    subgraph Stages["🔄 Four-Stage Agile Task Pipeline"]
         direction LR
         S1["📝 TO DO / BACKLOG<br/>• Scoped tasks<br/>• Assigned owners<br/>• Target deadlines"]
         S2["⚡ IN PROGRESS<br/>• Active development<br/>• Time logging<br/>• Subtask checkoffs"]
@@ -45,7 +45,7 @@ graph LR
 
 The module provides three distinct views to accommodate different management styles:
 
-### 1. `Task Board` (Agile Kanban View)
+### 1. `Task Board` (Agile Pipeline View)
 * Visual column lanes: **TO DO / BACKLOG**, **IN PROGRESS**, **IN REVIEW / QA**, and **COMPLETED / DONE**.
 * Interactive card interface displaying task title, assignee avatar, due date badges (color-coded red for overdue items), and priority tags.
 * Supports intuitive drag-and-drop movement across lanes to update status in real time.
@@ -68,7 +68,7 @@ The module provides three distinct views to accommodate different management sty
 ## 🛠️ Step-by-Step Task Operations
 
 ### 1. Creating & Assigning a Task (`+ Quick Add` / Task Modal)
-1. Click **+ Quick Add** in the top navigation or click the **+** icon at the top of any Kanban lane.
+1. Click **+ Quick Add** in the top navigation or click the **+** icon at the top of any pipeline stage.
 2. Complete the task creation form:
    * **Task Title**: Clear, actionable summary (e.g., *Migrate Payroll Database to High-Availability Cluster*).
    * **Project / Department**: Select the functional business unit.
@@ -111,4 +111,4 @@ Refine your task board using the header filter bar:
 Yes, team members can collaborate by assigning tasks to peers within their department or cross-functional projects, subject to departmental permissions.
 
 #### Q2: What happens when a task exceeds its due date?
-Overdue tasks display an amber/red warning badge on the Kanban board, and automated daily digest notifications remind both the assignee and their supervisor.
+Overdue tasks display an amber/red warning badge on the pipeline board, and automated daily digest notifications remind both the assignee and their supervisor.

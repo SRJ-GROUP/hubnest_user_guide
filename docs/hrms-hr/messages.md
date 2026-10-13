@@ -19,7 +19,7 @@ The **Messages** module integrates real-time communications directly inside the 
 
 ```mermaid
 graph LR
-    HR["HR Specialist Console (/hr/messages)"] --> DMs["🔒 Direct Messages<br/>Private Inquiries with Staff"]
+    HR["HR Specialist Console<br/>(/hr/messages)"] --> DMs["🔒 Direct Messages<br/>Private Inquiries with Staff"]
     HR --> Channels["📢 Department Channels<br/>#hr-team, #all-hands, #recruitment"]
     HR --> Video["📹 HubMeet Video Bridge<br/>One-Click Instant Calls"]
     HR --> Vault["📎 Document Sharing<br/>Offer Letters, Policies, Tickets"]

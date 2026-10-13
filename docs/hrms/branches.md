@@ -25,16 +25,16 @@ A **Branch** is not merely an address label; it is an active operational contain
 
 ```mermaid
 graph TB
-    Company["🏢 Corporate Entity (Multi-Tenant Core)"]
+    Company["🏢 Corporate Entity (Multi-Tenant<br/>Core)"]
 
-    subgraph BranchLayer["📍 Regional Office Branches (/admin/branches)"]
+    subgraph BranchLayer["📍 Regional Office Branches<br/>(/admin/branches)"]
         direction TB
         B1["Branch: Mumbai HQ<br/>• Code: HQ-MUM-01<br/>• Status: ACTIVE"]
         B2["Branch: Bengaluru Tech Hub<br/>• Code: BLR-TECH-02<br/>• Status: ACTIVE"]
         B3["Branch: Remote / Virtual<br/>• Code: REM-WFX-99<br/>• Status: ACTIVE"]
     end
 
-    subgraph OperationalImpact["⚙️ Modules Governed by Branch Settings"]
+    subgraph OperationalImpact["⚙️ Modules Governed by Branch<br/>Settings"]
         direction TB
         M1["🕒 Attendance & Geofencing<br/>• Office GPS Radius<br/>• Whitelisted Wi-Fi IP Blocks"]
         M2["📅 Regional Holiday Calendar<br/>• State-Specific Public Holidays<br/>• Regional Festivals"]

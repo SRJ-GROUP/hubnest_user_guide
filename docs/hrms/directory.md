@@ -25,17 +25,17 @@ The Employee Directory synchronizes with multiple core engines in real time, del
 
 ```mermaid
 graph TB
-    DirectoryEngine["🗂️ Central Workforce Directory (/admin/employees-list)"]
+    DirectoryEngine["🗂️ Central Workforce Directory<br/>(/admin/employees-list)"]
 
     subgraph SearchFilters["🔍 Multi-Vector Search & Filters"]
         direction TB
-        F1["Instant Search: Name, Email, Emp ID"]
-        F2["Department Filter: Engineering, HR, Sales..."]
-        F3["Role / Title Filter: Manager, Specialist, Intern..."]
-        F4["Employment Status: ACTIVE vs INACTIVE"]
+        F1["Instant Search: Name, Email, Emp<br/>ID"]
+        F2["Department Filter: Engineering,<br/>HR, Sales..."]
+        F3["Role / Title Filter: Manager,<br/>Specialist, Intern..."]
+        F4["Employment Status: ACTIVE vs<br/>INACTIVE"]
     end
 
-    subgraph ProfileCard["👤 Interactive Employee Profile Card"]
+    subgraph ProfileCard["👤 Interactive Employee Profile<br/>Card"]
         direction TB
         P1["📸 High-Res Avatar & Legal Name"]
         P2["📧 Work Email & Direct Phone Number"]
@@ -49,7 +49,7 @@ graph TB
         direction TB
         A1["👁️ View Full Profile Drawer"]
         A2["✏️ Edit Contact & Role Data"]
-        A3["🔄 Status Toggle: Active / Deactivate"]
+        A3["🔄 Status Toggle: Active /<br/>Deactivate"]
         A4["📥 Export to CSV / PDF"]
         A5["📄 Bulk Import via CSV"]
     end

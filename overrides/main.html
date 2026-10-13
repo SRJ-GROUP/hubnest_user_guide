@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <script>
+    /* Intercept attachShadow before Material scripts execute to ensure access to closed Shadow DOMs */
+    (function () {
+      if (typeof Element !== 'undefined' && Element.prototype && Element.prototype.attachShadow) {
+        var _origAttach = Element.prototype.attachShadow;
+        Element.prototype.attachShadow = function (options) {
+          var opts = Object.assign({}, options, { mode: 'open' });
+          var shadow = _origAttach.call(this, opts);
+          try {
+            this._hubnestShadow = shadow;
+          } catch (e) {}
+          return shadow;
+        };
+      }
+    })();
+  </script>
+{% endblock %}

@@ -5,6 +5,7 @@ site_url: https://docs.srjhubnest.com
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/logos/hubnest_icon.png
   favicon: assets/logos/hubnest_icon.png
   language: en
@@ -88,11 +89,16 @@ nav:
       - Multi-Hub Navigation: desktop/navigation.md
       - Preferences & Auto-Update: desktop/preferences.md
   - HubMeet (Video & Audio):
-      - Overview: hubmeet/index.md
-      - Instant & Scheduled Meetings: hubmeet/scheduling.md
-      - In-Call Controls: hubmeet/in-call-controls.md
-      - Screen Sharing & Whiteboard: hubmeet/collaboration.md
-      - Cloud Recording & AI Summaries: hubmeet/recordings-ai.md
+      - 01. Overview & Setup: hubmeet/index.md
+      - 02. Instant & Scheduled Meetings: hubmeet/scheduling.md
+      - 03. In-Call Controls & Host Tools: hubmeet/in-call-controls.md
+      - 04. Screen Sharing & Presentation: hubmeet/collaboration.md
+      - 05. Live Video & Chat Translation: hubmeet/translation.md
+      - 06. Interactive Collaborative Whiteboard: hubmeet/whiteboard.md
+      - 07. Interactive Polls & Breakouts: hubmeet/polls-breakouts.md
+      - 08. Team & Workspace Management: hubmeet/team.md
+      - 09. Live Attendance & Records Export: hubmeet/attendance.md
+      - 10. Cloud Recordings & Smart Summaries: hubmeet/recordings-ai.md
   - HubCRM:
       - Overview: hubcrm/index.md
       - Leads & Pipeline: hubcrm/leads-pipeline.md
@@ -143,11 +149,47 @@ nav:
       - 03. Team Roster: hrms-manager/team.md
       - 04. Task & Project Allocation: hrms-manager/tasks.md
       - 05. Team Attendance: hrms-manager/attendance.md
-      - 06. Leave Approvals: hrms-manager/leaves.md
-      - 07. Team Performance & Reports: hrms-manager/reports.md
-      - 08. Team Communication: hrms-manager/messages.md
+      - 06. Shift Rosters & Duty Cycles: hrms-manager/shifts.md
+      - 07. Leave Approvals: hrms-manager/leaves.md
+      - 08. Team Performance & Reports: hrms-manager/reports.md
       - 09. Support & Grievances: hrms-manager/support.md
       - 10. Manager Profile: hrms-manager/profile.md
+  - HubHRMS (Operations Supervisor):
+      - 01. Overview & Workflows: hrms-supervisor/index.md
+      - 02. Operations Dashboard: hrms-supervisor/dashboard.md
+      - 03. Crew & Team Roster: hrms-supervisor/team.md
+      - 04. Work Orders & Task Pipeline: hrms-supervisor/tasks.md
+      - 05. Floor Attendance & Punches: hrms-supervisor/attendance.md
+      - 06. Shift Rosters & Rotations: hrms-supervisor/shifts.md
+      - 07. Shift Leave Approvals: hrms-supervisor/leaves.md
+      - 08. Productivity & Handover Reports: hrms-supervisor/reports.md
+      - 09. Crew Messages & Broadcasts: hrms-supervisor/messages.md
+      - 10. Safety & Maintenance Support: hrms-supervisor/support.md
+      - 11. Supervisor Profile: hrms-supervisor/profile.md
+  - HubHRMS (Finance & Accounts):
+      - 01. Overview & Fiscal Control: hrms-finance/index.md
+      - 02. Executive Dashboard: hrms-finance/dashboard.md
+      - 03. Company Payroll Processing: hrms-finance/payroll.md
+      - 04. Expense Claims & Approvals: hrms-finance/expenses.md
+      - 05. Statutory Deposits: hrms-finance/deposits.md
+      - 06. Advance Loans & Deductions: hrms-finance/loans.md
+      - 07. Document Hub & Vault: hrms-finance/documents.md
+      - 08. Statutory Tax & Compliance: hrms-finance/compliance.md
+      - 09. Financial Reports & Analytics: hrms-finance/reports.md
+      - 10. Finance AI Intelligence: hrms-finance/ai.md
+      - 11. Finance Communications: hrms-finance/messages.md
+      - 12. Finance Support Desk: hrms-finance/support.md
+      - 13. Finance Profile & Security: hrms-finance/profile.md
+  - HubHRMS (Government Compliance):
+      - 01. Overview & Audit Mandate: hrms-government/index.md
+      - 02. Statutory Compliance Dashboard: hrms-government/dashboard.md
+      - 03. Statutory Staff Registers: hrms-government/staff.md
+      - 04. Attendance Audit & Field Map: hrms-government/attendance.md
+      - 05. Compliance Task Pipeline: hrms-government/tasks.md
+      - 06. Statutory Filings & Challans: hrms-government/compliance.md
+      - 07. Official Notices & Liaison: hrms-government/messages.md
+      - 08. Audit Support & Disputes: hrms-government/support.md
+      - 09. Auditor Profile & Credentials: hrms-government/profile.md
   - HubHRMS (Employee Self-Service):
       - 01. Overview & Portal Guide: hrms-employee/index.md
       - 02. Employee Dashboard: hrms-employee/dashboard.md
@@ -162,6 +204,7 @@ nav:
       - 11. Internal Messages: hrms-employee/messages.md
       - 12. Helpdesk & Support: hrms-employee/support.md
       - 13. My Profile & Security: hrms-employee/profile.md
+
 
 
   - Calling Hub (VoIP):

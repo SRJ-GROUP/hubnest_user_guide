@@ -19,13 +19,13 @@ The **Leave Management** module provides HR Specialists with centralized control
 
 ```mermaid
 graph TD
-    Emp["Employee submits leave on ESS (/employee/leaves)"] --> Mgr{"Manager Review"}
+    Emp["Employee submits leave on ESS<br/>(/employee/leaves)"] --> Mgr{"Manager Review"}
     Mgr -->|Approved| HRGate{"HR Specialist Queue"}
     Mgr -->|Rejected| Denied["Request Rejected (Reason Logged)"]
     HRGate -->|Final Approval| Granted["Leave Approved & Balance Deducted"]
     HRGate -->|Reject with Note| RejectHR["Returned with HR Remarks"]
-    Granted --> AttSync["Auto-marked ON_LEAVE in Attendance Register"]
-    Granted --> PaySync["Payroll Loss of Pay (LOP) Evaluation"]
+    Granted --> AttSync["Auto-marked ON_LEAVE in Attendance<br/>Register"]
+    Granted --> PaySync["Payroll Loss of Pay (LOP)<br/>Evaluation"]
 ```
 
 ---

@@ -1,11 +1,11 @@
 ---
 title: Talent Acquisition & Recruitment Pipeline
-description: End-to-end recruitment guide for HR Specialists — job requisitions, 6-stage candidate Kanban pipeline, AI resume match scoring, and HubMeet interview scheduling.
+description: End-to-end recruitment guide for HR Specialists — job requisitions, 6-stage candidate Pipeline pipeline, AI resume match scoring, and HubMeet interview scheduling.
 ---
 
 # 02. Talent Acquisition & Recruitment (`/hr/recruitment`)
 
-The **Recruitment** module empowers HR Specialists and Hiring Managers to source talent, track applicants through an interactive 6-stage Kanban pipeline, leverage automated AI resume scoring, schedule video interviews, and release formal offer letters.
+The **Recruitment** module empowers HR Specialists and Hiring Managers to source talent, track applicants through an interactive 6-stage Pipeline pipeline, leverage automated AI resume scoring, schedule video interviews, and release formal offer letters.
 
 ---
 
@@ -22,8 +22,8 @@ The **Recruitment** module empowers HR Specialists and Hiring Managers to source
 graph LR
     Post["1. Post Job Opening<br/>Title, Department, Remote/On-site"] --> Source["2. Sourcing & Applications<br/>Public Portal & Referrals"]
     Source --> AIScore["3. AI Resume Screening<br/>Match Score 0-100%"]
-    AIScore --> Kanban["4. 6-Stage Kanban Pipeline<br/>Drag & Drop Evaluation"]
-    Kanban --> Interview["5. Schedule HubMeet Interview<br/>Video Link & Feedback"]
+    AIScore --> Pipeline["4. 6-Stage Pipeline Pipeline<br/>Drag & Drop Evaluation"]
+    Pipeline --> Interview["5. Schedule HubMeet Interview<br/>Video Link & Feedback"]
     Interview --> Offer["6. Issue Offer Letter<br/>CTC & Acceptance"]
 ```
 
@@ -46,7 +46,7 @@ Create and manage active vacancies across business divisions:
 
 ---
 
-### 2. 👥 `Candidate Pipeline` (Interactive Kanban Board)
+### 2. 👥 `Candidate Pipeline` (Interactive Task Pipeline Board)
 Visual board organizing applicants across 6 recruitment stages:
 
 ```mermaid

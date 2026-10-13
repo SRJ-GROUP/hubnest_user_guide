@@ -23,16 +23,16 @@ A **Designation** represents a standardized role and seniority tier within the c
 
 ```mermaid
 graph TB
-    subgraph LevelsLadder["🧗 Career Seniority Ladder (Standardized Levels)"]
+    subgraph LevelsLadder["🧗 Career Seniority Ladder<br/>(Standardized Levels)"]
         direction TB
-        L5["👑 Executive Level<br/>• Titles: VP, CTO, CFO, Director<br/>• Strategic Leadership & Financial Sign-off"]
-        L4["🚀 Lead Level<br/>• Titles: Engineering Lead, Product Manager, Scrum Master<br/>• Team Mentorship & Project Execution"]
-        L3["⭐ Senior Level<br/>• Titles: Senior Engineer, Senior Analyst, Senior Specialist<br/>• Autonomous Delivery & Complex Solutions"]
-        L2["🌱 Mid Level<br/>• Titles: Software Engineer, Associate Consultant, HR Specialist<br/>• Core Execution & Feature Delivery"]
-        L1["🎓 Entry Level<br/>• Titles: Junior Developer, Intern, Graduate Trainee<br/>• Learning, Support & Supervised Tasks"]
+        L5["👑 Executive Level<br/>• Titles: VP, CTO, CFO, Director<br/>• Strategic Leadership & Financial<br/>Sign-off"]
+        L4["🚀 Lead Level<br/>• Titles: Engineering Lead,<br/>Product Manager, Scrum Master<br/>• Team Mentorship & Project<br/>Execution"]
+        L3["⭐ Senior Level<br/>• Titles: Senior Engineer, Senior<br/>Analyst, Senior Specialist<br/>• Autonomous Delivery & Complex<br/>Solutions"]
+        L2["🌱 Mid Level<br/>• Titles: Software Engineer,<br/>Associate Consultant, HR<br/>Specialist<br/>• Core Execution & Feature<br/>Delivery"]
+        L1["🎓 Entry Level<br/>• Titles: Junior Developer,<br/>Intern, Graduate Trainee<br/>• Learning, Support & Supervised<br/>Tasks"]
     end
 
-    subgraph ImpactAreas["⚙️ Modules Governed by Designation Data"]
+    subgraph ImpactAreas["⚙️ Modules Governed by Designation<br/>Data"]
         direction TB
         I1["💰 Payroll & Pay Bands<br/>• Default Salary Ranges<br/>• Allowance Grading"]
         I2["🌳 Org Hierarchy & Reporting<br/>• Supervisorial Lineage<br/>• Approval Thresholds"]

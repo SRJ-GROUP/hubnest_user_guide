@@ -135,9 +135,9 @@ Click on **any topic or chapter** below to open its dedicated guide directly:
         * 👥 **[03. Department Team Roster](hrms-manager/team.md)**
         * 📋 **[04. Task & Project Allocation](hrms-manager/tasks.md)**
         * ⏰ **[05. Team Daily Attendance](hrms-manager/attendance.md)**
-        * 🏖️ **[06. Team Leave Approvals](hrms-manager/leaves.md)**
-        * 📈 **[07. Team Performance & Reports](hrms-manager/reports.md)**
-        * 💬 **[08. Team Communication](hrms-manager/messages.md)**
+        * 🔄 **[06. Shift Rosters & Duty Cycles](hrms-manager/shifts.md)**
+        * 🏖️ **[07. Team Leave Approvals](hrms-manager/leaves.md)**
+        * 📈 **[08. Team Performance & Reports](hrms-manager/reports.md)**
         * 🎧 **[09. Support & Grievances](hrms-manager/support.md)**
         * 👤 **[10. Manager Profile](hrms-manager/profile.md)**
 

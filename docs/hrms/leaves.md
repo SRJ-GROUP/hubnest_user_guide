@@ -25,7 +25,7 @@ When an employee submits a time-off request, the leave engine processes the tran
 
 ```mermaid
 graph TB
-    EmpRequest["👤 Employee Submits Leave Request<br/>(Category, Date Range, Reason, Handover Notes)"]
+    EmpRequest["👤 Employee Submits Leave Request<br/>(Category, Date Range, Reason,<br/>Handover Notes)"]
 
     subgraph BalanceEngine["⚙️ Policy & Balance Validation"]
         direction TB
@@ -36,8 +36,8 @@ graph TB
 
     subgraph ApprovalMatrix["👥 Multi-Tier Approval Chain"]
         direction TB
-        A1["1. Direct Reporting Manager<br/>(Evaluates team capacity & coverage)"]
-        A2["2. Head of Department (HOD)<br/>(Secondary sign-off for extended leaves > 3 days)"]
+        A1["1. Direct Reporting Manager<br/>(Evaluates team capacity &<br/>coverage)"]
+        A2["2. Head of Department (HOD)<br/>(Secondary sign-off for extended<br/>leaves > 3 days)"]
         A3["3. HR Operations Audit<br/>(Final compliance confirmation)"]
     end
 
@@ -49,7 +49,7 @@ graph TB
 
     EmpRequest --> BalanceEngine
     BalanceEngine -->|Balance Valid| ApprovalMatrix
-    BalanceEngine -->|Insufficient Balance| LOPPrompt["⚠️ Prompt: Apply as Loss of Pay (LOP)?"]
+    BalanceEngine -->|Insufficient Balance| LOPPrompt["⚠️ Prompt: Apply as Loss of Pay<br/>(LOP)?"]
     ApprovalMatrix -->|Approved| S1
     ApprovalMatrix -->|Declined| S2
 ```

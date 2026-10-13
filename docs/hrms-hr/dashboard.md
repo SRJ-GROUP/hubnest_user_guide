@@ -85,8 +85,8 @@ The dashboard features four interactive analytical charts powered by Recharts:
 ```mermaid
 graph TD
     subgraph Analytics["📈 Visual Analytics"]
-        F1["Recruitment Funnel<br/>Applied → Screening → Interview → Offer"]
-        F2["Skill Matrix Radar<br/>Competency calibration by Department"]
+        F1["Recruitment Funnel<br/>Applied → Screening → Interview →<br/>Offer"]
+        F2["Skill Matrix Radar<br/>Competency calibration by<br/>Department"]
         F3["Headcount Growth<br/>Net monthly hires vs. attrition"]
         F4["Department Distribution<br/>Engineering, Sales, HR, Operations"]
     end

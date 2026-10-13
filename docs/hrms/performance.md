@@ -27,23 +27,23 @@ graph TB
         direction TB
         C1["Company Strategic Goals (Annual)"]
         D1["Department Milestones (Quarterly)"]
-        I1["Individual Key Results (Measurable Metrics)"]
+        I1["Individual Key Results (Measurable<br/>Metrics)"]
         C1 --> D1 --> I1
     end
 
-    subgraph ReviewLayer["👥 2. 360-Degree Multi-Rater Appraisals"]
+    subgraph ReviewLayer["👥 2. 360-Degree Multi-Rater<br/>Appraisals"]
         direction TB
-        R1["Self Evaluation (Personal reflections & wins)"]
-        R2["Peer Reviews (Cross-functional team feedback)"]
-        R3["Manager Appraisal (Competency scoring)"]
-        R4["Direct Report Feedback (Upward leadership ratings)"]
+        R1["Self Evaluation (Personal<br/>reflections & wins)"]
+        R2["Peer Reviews (Cross-functional<br/>team feedback)"]
+        R3["Manager Appraisal (Competency<br/>scoring)"]
+        R4["Direct Report Feedback (Upward<br/>leadership ratings)"]
     end
 
-    subgraph TalentGridLayer["📊 3. 9-Box Talent Matrix Calibration"]
+    subgraph TalentGridLayer["📊 3. 9-Box Talent Matrix<br/>Calibration"]
         direction TB
-        G1["Performance Axis (X-Axis: Low, Med, High Deliverables)"]
-        G2["Potential Axis (Y-Axis: Growth, Leadership, Agility)"]
-        G3["Calibrated Succession & Promotion Pipelines"]
+        G1["Performance Axis (X-Axis: Low,<br/>Med, High Deliverables)"]
+        G2["Potential Axis (Y-Axis: Growth,<br/>Leadership, Agility)"]
+        G3["Calibrated Succession & Promotion<br/>Pipelines"]
     end
 
     OKRLayer --> ReviewLayer

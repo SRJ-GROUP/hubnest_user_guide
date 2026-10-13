@@ -27,19 +27,19 @@ In Hub HRMS, a **Department** connects organizational leadership directly to ind
 graph TB
     Company["🏢 Enterprise Company Tenant"]
 
-    subgraph DeptStructure["🏛️ Departmental Units (/admin/departments)"]
+    subgraph DeptStructure["🏛️ Departmental Units<br/>(/admin/departments)"]
         direction TB
         D1["Engineering & Technology<br/>• HOD: Priya Sharma (VP Engg)<br/>• Status: ACTIVE"]
         D2["Human Resources<br/>• HOD: Rajiv Mehta (Head HR)<br/>• Status: ACTIVE"]
         D3["Finance & Accounts<br/>• HOD: Ananya Roy (CFO)<br/>• Status: ACTIVE"]
     end
 
-    subgraph OperationsEngine["⚙️ Workflows Powered by Department Data"]
+    subgraph OperationsEngine["⚙️ Workflows Powered by Department<br/>Data"]
         direction TB
-        W1["📋 Tiered Approval Matrix<br/>• Leaves flow to Direct Lead → HOD<br/>• Expense claims route to Dept Budget"]
+        W1["📋 Tiered Approval Matrix<br/>• Leaves flow to Direct Lead → HOD<br/>• Expense claims route to Dept<br/>Budget"]
         W2["🌳 Interactive Org Chart<br/>• Automatic tree visualization<br/>• Departmental rollups"]
-        W3["🎯 OKRs & Performance Reviews<br/>• Department-wide quarterly objectives<br/>• Team KPI scorecards"]
-        W4["💰 Financial Budgets & Cost Centers<br/>• IT Budget, Marketing Budget, Travel<br/>• Payroll cost center attribution"]
+        W3["🎯 OKRs & Performance Reviews<br/>• Department-wide quarterly<br/>objectives<br/>• Team KPI scorecards"]
+        W4["💰 Financial Budgets & Cost Centers<br/>• IT Budget, Marketing Budget,<br/>Travel<br/>• Payroll cost center attribution"]
     end
 
     Company --> DeptStructure
@@ -126,9 +126,9 @@ Hub HRMS protects your organizational data integrity with two-tier removal optio
 flowchart TD
     Start["Action: Modify Department"] --> Check{"Are employees or historical records assigned?"}
     
-    Check -- "YES" --> Deactivate["Recommended: Set Status to INACTIVE<br/>• Keeps all employee histories intact<br/>• Preserves payroll & tax reports<br/>• Hides department from new onboarding"]
+    Check -- "YES" --> Deactivate["Recommended: Set Status to<br/>INACTIVE<br/>• Keeps all employee histories<br/>intact<br/>• Preserves payroll & tax reports<br/>• Hides department from new<br/>onboarding"]
     
-    Check -- "NO" --> Delete["Allowed: Hard Delete via Trash Icon<br/>• Permanently removes the empty unit<br/>• Clean database state"]
+    Check -- "NO" --> Delete["Allowed: Hard Delete via Trash<br/>Icon<br/>• Permanently removes the empty<br/>unit<br/>• Clean database state"]
 ```
 
 * **Deactivate (Set to `INACTIVE`)**: Always use this method when restructuring existing departments. Employees previously tagged to this division maintain their past payslips and appraisal history without database corruption.

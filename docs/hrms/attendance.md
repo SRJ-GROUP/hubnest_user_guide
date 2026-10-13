@@ -25,7 +25,7 @@ When an employee logs their daily attendance, Hub HRMS runs a multi-layered veri
 
 ```mermaid
 graph TB
-    UserPunch["📱 Employee Check-In<br/>(Mobile App / Web Portal / Biometric Device)"]
+    UserPunch["📱 Employee Check-In<br/>(Mobile App / Web Portal /<br/>Biometric Device)"]
 
     subgraph VerificationEngine["📍 Location & Security Verification"]
         direction TB
@@ -34,19 +34,19 @@ graph TB
         V3{"Biometric Hardware API<br/>Fingerprint / Facial Recognition Verified?"}
     end
 
-    subgraph PolicyEngine["⏱️ Shift Timing & Policy Evaluation"]
+    subgraph PolicyEngine["⏱️ Shift Timing & Policy<br/>Evaluation"]
         direction TB
         T1{"Is Check-In <= Shift Start?"}
         T2{"Within Grace Period<br/>(e.g., +15 mins)?"}
         T3{"Exceeds Half-Day Threshold<br/>(e.g., > 2 hours late)?"}
     end
 
-    subgraph StatusResult["🏷️ Attendance Status Classification"]
+    subgraph StatusResult["🏷️ Attendance Status<br/>Classification"]
         direction TB
         S1["🟢 PRESENT (On Time)"]
         S2["🟡 LATE (Flagged with timestamp)"]
         S3["🟠 HALF_DAY (Penalty Applied)"]
-        S4["🟣 ON_LEAVE (Approved Leave Deducted)"]
+        S4["🟣 ON_LEAVE (Approved Leave<br/>Deducted)"]
         S5["🔴 ABSENT (Unexcused Absence / LOP)"]
     end
 

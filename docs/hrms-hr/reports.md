@@ -24,7 +24,7 @@ graph TD
     Engine --> Chart2["💸 Payroll Cost & Average CTC"]
     Engine --> Chart3["🏖️ Absenteeism & Leave Burn Rate"]
     Engine --> Chart4["📉 Attrition & Retention Metrics"]
-    Chart1 --> Export["One-Click Export (Excel / CSV / PDF)"]
+    Chart1 --> Export["One-Click Export (Excel / CSV /<br/>PDF)"]
     Chart2 --> Export
     Chart3 --> Export
     Chart4 --> Export

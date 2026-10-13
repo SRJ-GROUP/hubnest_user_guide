@@ -7,3 +7,9 @@ venv/
 ENV/
 .DS_Store
 Thumbs.db
+scratch/
+.chrome_user_data/
+*.png
+!docs/**/*.png
+*.html
+!overrides/**/*.html

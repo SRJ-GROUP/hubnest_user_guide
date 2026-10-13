@@ -23,20 +23,20 @@ Notifications are dispatched dynamically across multiple channels based on urgen
 
 ```mermaid
 graph TB
-    EventTrigger["⚡ System Event Triggered<br/>(Leave Approval, Payroll Generated, Security Alert, Policy Update)"]
+    EventTrigger["⚡ System Event Triggered<br/>(Leave Approval, Payroll<br/>Generated, Security Alert, Policy<br/>Update)"]
 
-    subgraph Router["⚙️ Priority & Target Evaluation Engine"]
+    subgraph Router["⚙️ Priority & Target Evaluation<br/>Engine"]
         direction TB
         R1{"Is Event Critical / Emergency?"}
-        R2["Target Resolution: Entire Company, Branch, or Individual"]
+        R2["Target Resolution: Entire Company,<br/>Branch, or Individual"]
     end
 
-    subgraph Channels["📡 Multichannel Notification Delivery"]
+    subgraph Channels["📡 Multichannel Notification<br/>Delivery"]
         direction TB
-        C1["🔔 In-App Toast & Real-Time Header Bell (Web & Desktop)"]
-        C2["📱 Mobile Push Notification (iOS / Android)"]
+        C1["🔔 In-App Toast & Real-Time Header<br/>Bell (Web & Desktop)"]
+        C2["📱 Mobile Push Notification (iOS /<br/>Android)"]
         C3["📧 SMTP Corporate Email Dispatch"]
-        C4["💬 Team Chat & VoIP Alerts (HubMeet Integration)"]
+        C4["💬 Team Chat & VoIP Alerts (HubMeet<br/>Integration)"]
     end
 
     EventTrigger --> Router
@@ -92,6 +92,40 @@ When leadership needs to communicate emergency weather closures, holiday wishes,
      * `Specific Departments`: Reaches functional teams (e.g., *Sales Team Only*).
    * **Channels**: Toggle in-app alert, mobile push, and email dispatch.
 3. Click **Send Broadcast**. Delivery occurs across all active sessions within seconds.
+
+---
+
+## 🔗 Cross-Module Integration: How Hub Notifications Connects HubMeet & HRMS
+
+The Hub Notification Engine serves as the central nervous system connecting every role and application across the HubNest ecosystem:
+
+```mermaid
+flowchart TD
+    Engine["Central Hub Notification Engine<br/>(/admin/notifications)"]
+    
+    subgraph HRMSWorkflows["1. HubHRMS Role Automation"]
+        direction TB
+        H1["👤 Employee: Leave approved,<br/>Monthly Payslip ready, Shift assigned"]
+        H2["🛠️ Supervisor: Biometric punch alert,<br/>Shift swap requests, Task deadlines"]
+        H3["📊 Manager: Overtime threshold flags,<br/>Appraisals pending, Leave approvals"]
+        H4["💰 Finance: Expense claim submitted,<br/>Challan deposit deadline reminder"]
+    end
+
+    subgraph HubMeetWorkflows["2. HubMeet Video Conferencing"]
+        direction TB
+        M1["📅 Calendar Countdown: 'Meeting starting in 10m'<br/>with 1-Click Join action pill"]
+        M2["🚪 Host Lobby Ping: 'Guest waiting in lobby' audio chime"]
+        M3["📝 Post-Call Intelligence: 'AI Meeting Summary &<br/>Action Items Ready' link"]
+        M4["🚨 In-Call Emergency Broadcast: Non-intrusive floating<br/>admin notice during active video calls"]
+    end
+
+    Engine --> HRMSWorkflows
+    Engine --> HubMeetWorkflows
+```
+
+* **Interactive Action Pills (`Join Now`, `Approve`, `View Payslip`)**: Notifications are not just passive text—they render actionable buttons directly inside the notification flyout (`🔔`), allowing managers to approve leaves or join HubMeet rooms in a single click without navigating menus.
+* **Unified Notification Bell (`🔔`) Across All Layouts**: Whether you are inside `/employee/dashboard`, `/supervisor/attendance`, `/manager/team`, or `/admin/company`, the top header features the synchronized bell with live red counter badges.
+* **Smart Notification Grouping**: Repeated system events (e.g., 5 shift check-ins in 2 minutes) are intelligently grouped into a single digest card to prevent alert fatigue.
 
 ---
 

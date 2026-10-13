@@ -18,31 +18,31 @@ Unlike traditional web-wrapped shells that spawn multiple heavy Chromium process
 ```mermaid
 graph TD
     subgraph Windows Native Host
-        AppHost[HubNest OS Native Host - HubNestOS.exe]
-        WinMgr[Window Manager Service - Min 1100x650 / Default 1440x900]
-        TraySvc[Windows System Tray Service]
-        SecureStore[Secure Storage Engine - Windows DPAPI]
-        NetMonitor[Network Connectivity Monitor]
+        AppHost["HubNest OS Native Host<br/>(HubNestOS.exe)"]
+        WinMgr["Window Manager Service<br/>(Min 1100x650 / Default 1440x900)"]
+        TraySvc["Windows System Tray Service"]
+        SecureStore["Secure Storage Engine<br/>(Windows DPAPI)"]
+        NetMonitor["Network Connectivity Monitor"]
     end
 
     subgraph Desktop Shell UI
-        TitleBar[Enterprise Title Bar Widget]
-        Sidebar[Collapsible Sidebar - 230px / 68px]
-        CentralDash[Central App Dashboard]
+        TitleBar["Enterprise Title Bar Widget"]
+        Sidebar["Collapsible Sidebar<br/>(230px / 68px)"]
+        CentralDash["Central App Dashboard"]
     end
 
     subgraph High-Performance Runtime
-        WV2Pool[WebView2 Container Pool - Max 3 Active Containers]
-        SSOBridge[Platform Single Sign-On OTC Minting]
+        WV2Pool["WebView2 Container Pool<br/>(Max 3 Active Containers)"]
+        SSOBridge["Platform Single Sign-On<br/>OTC Minting"]
     end
 
     subgraph Enterprise Cloud Hubs
-        HRMS[Hub HRMS - hrms.srjhubnest.com]
-        CRM[Hub CRM - crm.srjhubnest.com]
-        Recruiter[Hub Recruiter - recruiter.srjjobnest.com]
-        Calling[Hub Calling - calling.srjhubnest.com]
-        Meet[Hub Meet - hubmeet.srjhubnest.com]
-        Notify[Hub Notification - hubnotification.srjhubnest.com]
+        HRMS["Hub HRMS<br/><code>hrms.srjhubnest.com</code>"]
+        CRM["Hub CRM<br/><code>crm.srjhubnest.com</code>"]
+        Recruiter["Hub Recruiter<br/><code>recruiter.srjjobnest.com</code>"]
+        Calling["Hub Calling<br/><code>calling.srjhubnest.com</code>"]
+        Meet["Hub Meet<br/><code>hubmeet.srjhubnest.com</code>"]
+        Notify["Hub Notification<br/><code>hubnotification.srjhubnest.com</code>"]
     end
 
     AppHost --> WinMgr

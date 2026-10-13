@@ -1,80 +1,78 @@
 ---
-title: HubNest AI HR Assistant & Predictive Talent Analytics
-description: Leveraging generative AI and predictive intelligence in Hub HRMS — talent assistant queries, predictive attrition risk, and coaching recommendations.
+title: Smart HR Assistant & Helpful Team Insights
+description: How HR Specialists can use the built-in smart assistant in Hub HRMS to quickly look up employee details, draft HR letters, and spot team burnout early.
 ---
 
-# 11. AI Console (`/hr/ai`)
+# 11. Smart HR Assistant (`/hr/ai`)
 
-The **AI Console** delivers an enterprise-grade artificial intelligence co-pilot built specifically for People Operations. Powered by large language models (LLMs) and vector-indexed company data (RAG), it enables HR Specialists to query organization metrics in natural language, detect employee turnover risks, and automate talent coaching.
-
----
-
-## 📸 Interface Screenshot
-
-![HubNest AI HR Assistant](../assets/images/HRMS/HR_/AIconsole.png){ width="100%" }
+The **Smart HR Assistant** is your day-to-day digital helper inside Hub HRMS. Built specifically for People Operations, it helps HR teams look up employee details in simple English, draft polite emails, and catch signs of team fatigue before people burn out.
 
 ---
 
-## 🧭 AI Engine Architecture
+## 📸 Screen Preview
+
+![HubNest Smart HR Assistant](../assets/images/HRMS/HR_/AIconsole.png){ width="100%" }
+
+---
+
+## 🧭 How the Assistant Works
+
+Here is a simple look at how your questions are answered securely from your company's own records:
 
 ```mermaid
 graph TD
-    HR["HR Specialist Query (Chat / Topic Selection)"] --> Gate["Cloudflare & API Security Layer"]
-    Gate --> FastAPI["FastAPI Python Microservice (:8000)"]
-    FastAPI --> Vector["PGVector Database (Company Policies & Handbooks)"]
-    FastAPI --> Data["PostgreSQL Analytics (Attendance, Leaves, Tenure)"]
-    Vector --> LLM["Groq / OpenAI Inference Engine"]
-    Data --> LLM
-    LLM --> Out["Synthesized Answer & Diagnostic Recommendations"]
+    HR["HR Specialist Types a Question<br/>(e.g., 'Who is on probation this<br/>month?')"] --> Check["Secure Permission Check"]
+    Check --> Search["Search Company Records & Handbooks"]
+    Search --> Answer["Clear, Simple Answer with Action<br/>Steps"]
 ```
 
 ---
 
-## 🤖 Core AI Capabilities
+## 💡 What You Can Do with the Assistant
 
-### 1. 💬 Conversational HR Talent Assistant
-An interactive conversational interface capable of answering ad-hoc HR questions instantly:
-* **Directory & Headcount Lookups**:
-  * *"How many frontend engineers do we currently have across the Mumbai and Remote branches?"*
-  * *"List all employees in Sales whose probation review is due this month."*
-* **Policy & Compliance Q&A**:
-  * *"What is our company policy on carry-forward leaves for resigning employees?"*
-  * *"Generate a polite rejection email for candidates who reached the interview stage."*
-* **Interview Question Formulation**:
-  * Input a job description to instantly receive tailored, competency-based interview questions with sample scoring criteria.
-
----
-
-### 2. 🔮 Predictive Diagnostic Insights
-Automated diagnostic cards continuously scan organizational telemetry to highlight operational friction:
-* **Recruitment Pipeline Diagnosis**:
-  * Analyzes funnel conversion velocity, flagging job requisitions where candidates remain stalled in the `Screening` stage for longer than 7 days.
-* **Attendance & Burnout Diagnosis**:
-  * Flags departments with chronic overtime (> 15 hours overtime/week per employee) combined with declining weekend rest, predicting high risk of burnout.
-* **Attrition Risk Scoring**:
-  * Evaluates multi-factor turnover signals: tenure length, time since last promotion, leave frequency, and recent manager changes.
+### 1. 💬 Ask Everyday HR Questions
+You don't need to dig through complex menus. Just ask questions in natural language:
+* **Find People & Roles**:
+  * *"How many frontend engineers do we have across our Mumbai and remote teams?"*
+  * *"Show me all employees in Sales whose probation review is due this month."*
+* **Policy & Handbook Questions**:
+  * *"What is our company rule for carrying forward unused leaves?"*
+  * *"Help me draft a polite interview invitation email for a developer candidate."*
+* **Interview Preparation**:
+  * Paste a job description to instantly get suggested interview questions and evaluation criteria.
 
 ---
 
-### 3. 🎯 Talent Coaching Recommender
-Select specialized organizational topics to generate personalized coaching blueprints:
-* **Topics**: `Performance Improvement`, `Leadership Development`, `Employee Retention`, `Conflict Resolution`.
-* **Actionable Output**:
-  * Step-by-step 30-60-90 day performance improvement plans (PIPs).
-  * 1-on-1 discussion talking points for department managers addressing disengaged staff.
-  * Recommended LMS learning modules to close specific technical or communication skill gaps.
+### 2. 🔍 Helpful Team Alerts & Trends
+The system quietly checks everyday patterns to help you support your team:
+* **Hiring Pipeline Alerts**:
+  * Flags candidates who have been waiting in the `Screening` stage for more than 7 days so no good applicant slips through.
+* **Workload & Burnout Warnings**:
+  * Highlights teams working excessive overtime week after week, helping managers step in before people get overwhelmed.
+* **Turnover Signs**:
+  * Helps you spot employees who might need extra support, such as long gaps without feedback or frequent unscheduled absences.
 
 ---
 
-## 🔒 Data Privacy & Cybersecurity Compliance
+### 3. 🎯 Manager Coaching & Support Guides
+Generate ready-to-use guidance for common workplace situations:
+* **Topics Available**: *Improving Performance*, *Leadership Tips*, *Keeping Good People*, and *Resolving Conflicts*.
+* **What You Get**:
+  * Step-by-step 30-60-90 day improvement plans.
+  * Simple conversation talking points for managers having difficult 1-on-1 chats.
+  * Recommended training courses for team members needing skill upgrades.
 
-* **Tenant Isolation**: AI queries strictly access data isolated to your specific `company_id`. Data is never shared across tenants.
-* **No Public Model Training**: Corporate documents and personal employee records processed by the RAG vector engine are never utilized to train public foundation models.
-* **PII Redaction**: Personally identifiable financial data (bank account numbers, PAN numbers) is masked prior to prompt transmission.
+---
+
+## 🔒 Privacy & Data Protection
+
+* **Your Data Stays Yours**: Questions and answers only search your own company's files. No other company can ever see your information.
+* **Never Used for Public Training**: Your internal documents and questions are never used to train public models.
+* **Confidential Details Protected**: Bank account numbers, government IDs, and private details are automatically masked for safety.
 
 ---
 
 ## ❓ Frequently Asked Questions (FAQ)
 
-??? question "Can employees access the AI HR Assistant console?"
-    No. The `/hr/ai` console is restricted to HR Specialists, Department Directors, and Company Admins. Employees have a separate, scoped Self-Service FAQ bot on their ESS portal.
+??? question "Can normal employees open this assistant console?"
+    No. The `/hr/ai` console is only accessible to HR Specialists, Department Managers, and Company Admins. Employees have their own simple FAQ section inside the Employee Portal.

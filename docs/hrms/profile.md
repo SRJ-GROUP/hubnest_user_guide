@@ -23,19 +23,19 @@ The user profile connects personal identity data with security credentials and o
 
 ```mermaid
 graph TB
-    subgraph ProfileIdentity["👤 Master User Profile (/admin/profile)"]
+    subgraph ProfileIdentity["👤 Master User Profile<br/>(/admin/profile)"]
         direction TB
         P1["Personal Bio & Contact Coordinates"]
-        P2["📸 Profile Avatar & Header Banner Customization"]
-        P3["🔐 Security & Two-Factor Authentication (2FA)"]
-        P4["🛡️ Role-Based Access Badges & Entitlements"]
+        P2["📸 Profile Avatar & Header Banner<br/>Customization"]
+        P3["🔐 Security & Two-Factor<br/>Authentication (2FA)"]
+        P4["🛡️ Role-Based Access Badges &<br/>Entitlements"]
     end
 
-    subgraph IntelligenceAndAudit["🧠 Profile Intelligence & Audit Logs"]
+    subgraph IntelligenceAndAudit["🧠 Profile Intelligence & Audit<br/>Logs"]
         direction TB
-        A1["📈 Profile Completeness Health Index (Target: > 90%)"]
-        A2["🛡️ Account Security Score (e.g. 65 / 100)"]
-        A3["🕒 Session History & Device Activity Logs"]
+        A1["📈 Profile Completeness Health<br/>Index (Target: > 90%)"]
+        A2["🛡️ Account Security Score (e.g. 65<br/>/ 100)"]
+        A3["🕒 Session History & Device<br/>Activity Logs"]
         A4["📑 Personal Document & Backup Vault"]
     end
 

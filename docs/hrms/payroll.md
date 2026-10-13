@@ -33,15 +33,15 @@ graph TB
         I4["💳 Loan & Advance Engine<br/>(Active EMI Recovery)"]
     end
 
-    subgraph PayrollEngine["⚙️ Hub HRMS Calculation Core (/admin/payroll)"]
+    subgraph PayrollEngine["⚙️ Hub HRMS Calculation Core<br/>(/admin/payroll)"]
         direction TB
-        C1["1. Base Earnings Assembly<br/>Basic + HRA + TA + DA + Special Allowances"]
-        C2["2. Overtime Addition<br/>Standard / 1.5x / 2.0x hourly rates"]
-        C3["3. Attendance Deductions<br/>Day-rate deduction for unexcused LOP"]
-        C4["4. Statutory Deductions<br/>PF (12%) + ESI (0.75%) + PT (State Slabs) + TDS"]
+        C1["1. Base Earnings Assembly<br/>Basic + HRA + TA + DA + Special<br/>Allowances"]
+        C2["2. Overtime Addition<br/>Standard / 1.5x / 2.0x hourly<br/>rates"]
+        C3["3. Attendance Deductions<br/>Day-rate deduction for unexcused<br/>LOP"]
+        C4["4. Statutory Deductions<br/>PF (12%) + ESI (0.75%) + PT (State<br/>Slabs) + TDS"]
     end
 
-    subgraph FinalOutputs["📤 Final Disbursals & Compliance Outputs"]
+    subgraph FinalOutputs["📤 Final Disbursals & Compliance<br/>Outputs"]
         direction TB
         O1["📄 Automated PDF Payslips<br/>(Secure self-service download)"]
         O2["🏦 Bank Transfer Batch File<br/>(Direct NEFT/RTGS format)"]

@@ -28,12 +28,12 @@ graph TB
     ClientA["👤 Employee A (Web / Desktop App)"]
     ClientB["👥 Team Channel / Employee B"]
 
-    subgraph ChatCore["⚡ Hub HRMS Real-Time Chat Engine (/admin/messages)"]
+    subgraph ChatCore["⚡ Hub HRMS Real-Time Chat Engine<br/>(/admin/messages)"]
         direction TB
-        W1["WebSocket Gateway (Real-Time Sub/Pub)"]
-        W2["Message Vault (Encrypted Storage & History)"]
-        W3["File Storage Pipeline (Images, Voice Notes, Docs)"]
-        W4["HubMeet Integration (One-Click VoIP / Video)"]
+        W1["WebSocket Gateway (Real-Time<br/>Sub/Pub)"]
+        W2["Message Vault (Encrypted Storage &<br/>History)"]
+        W3["File Storage Pipeline (Images,<br/>Voice Notes, Docs)"]
+        W4["HubMeet Integration (One-Click<br/>VoIP / Video)"]
     end
 
     ClientA <-->|Instant Typing & Message Frames| W1

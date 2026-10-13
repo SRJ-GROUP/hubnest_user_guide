@@ -19,14 +19,14 @@ The **Attendance Tracking** module provides HR Specialists with real-time audita
 
 ```mermaid
 graph TD
-    Staff["Employee Check-In (ESS / Desktop / Mobile)"] --> Check{"Validation Gate"}
+    Staff["Employee Check-In (ESS / Desktop /<br/>Mobile)"] --> Check{"Validation Gate"}
     Check -->|GPS Geofence| Geo["Branch Perimeter Check (±50m)"]
     Check -->|Biometric / Selfie| Bio["AI Face Match & Photo Capture"]
     Check -->|Corporate IP| IP["Whitelisted Office Wi-Fi"]
     Geo --> Engine["Attendance Calculation Engine"]
     Bio --> Engine
     IP --> Engine
-    Engine --> Logs["Live HR Daily Register (/hr/attendance)"]
+    Engine --> Logs["Live HR Daily Register<br/>(/hr/attendance)"]
     Engine --> Pay["Automated Payroll Cut-Off Sync"]
 ```
 

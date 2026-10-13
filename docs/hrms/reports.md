@@ -25,18 +25,18 @@ The reporting engine continuously aggregates live data from every functional sub
 graph TB
     subgraph DataSources["📥 Live Data Feeds"]
         direction TB
-        S1["👥 Employee Master Data (Demographics & Headcount)"]
-        S2["⏰ Attendance Logs (Punctuality & OT Hours)"]
-        S3["💰 Payroll Engine (Disbursements & Tax Liabilities)"]
-        S4["📢 Recruitment & ATS (Time-to-Hire & Offer Acceptance)"]
-        S5["🎯 Performance Appraisals (KPI Ratings & 9-Box)"]
+        S1["👥 Employee Master Data<br/>(Demographics & Headcount)"]
+        S2["⏰ Attendance Logs (Punctuality &<br/>OT Hours)"]
+        S3["💰 Payroll Engine (Disbursements &<br/>Tax Liabilities)"]
+        S4["📢 Recruitment & ATS (Time-to-Hire<br/>& Offer Acceptance)"]
+        S5["🎯 Performance Appraisals (KPI<br/>Ratings & 9-Box)"]
     end
 
-    subgraph IntelligenceEngine["⚙️ Hub HRMS Analytics Core (/admin/reports)"]
+    subgraph IntelligenceEngine["⚙️ Hub HRMS Analytics Core<br/>(/admin/reports)"]
         direction TB
-        E1["Workforce Growth & Attrition Curves"]
-        E2["Statutory Compliance Audit Aggregators"]
-        E3["Predictive Headcount & Stability Forecasting"]
+        E1["Workforce Growth & Attrition<br/>Curves"]
+        E2["Statutory Compliance Audit<br/>Aggregators"]
+        E3["Predictive Headcount & Stability<br/>Forecasting"]
         E4["Ad-hoc Custom Report Query Builder"]
     end
 

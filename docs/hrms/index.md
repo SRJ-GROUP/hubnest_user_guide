@@ -24,62 +24,44 @@ Hub HRMS eliminates these inefficiencies:
 
 ---
 
-## 🏛️ System Architecture & Technology Stack
+---
 
-Hub HRMS operates on a robust, multi-tenant microservices architecture designed for security, high concurrency, and low latency:
+## 🏛️ How Hub HRMS Works
+
+Hub HRMS connects all core workforce operations into a simple, unified workflow so employees, managers, and administrators stay aligned:
 
 ```mermaid
 graph TD
-    subgraph Client Layer
-        Web[Next.js 16 Web Portal - React 19]
-        Desk[HubNest OS Desktop Client]
-        Mob[Mobile Responsive PWA]
+    subgraph AccessChannels["1. Access Any Device"]
+        direction TB
+        Web["💻 Web Browser Portal"]
+        Desk["🖥️ HubNest Desktop App"]
+        Mob["📱 Mobile App / On-the-Go"]
     end
 
-    subgraph Security & Edge
-        CF[Cloudflare WAF - DDoS & Bot Mitigation]
-        KC[Keycloak Central IAM - OAuth2 & OIDC]
-        RL[Redis Sliding-Window Rate Limiter]
+    subgraph OperationsHub["2. HR & Operations Center"]
+        direction TB
+        Att["⏰ Smart Attendance & Shifts"]
+        Pay["💰 Automated Payroll & Taxes"]
+        Leave["🏖️ Leave & Approvals"]
+        Task["📋 Task & Project Pipelines"]
     end
 
-    subgraph Core Application Layer
-        Spring[Spring Boot 3 REST Core API - Java 21]
-        WS[STOMP / SockJS WebSocket Broker - :ws/chat]
-        Tier[TierGate Feature Gating Interceptor]
+    subgraph SecurityStorage["3. Secure Records & Storage"]
+        direction TB
+        Sec["🛡️ Role-Based Access Security"]
+        Doc["📁 Encrypted Document Vault"]
+        Notif["📢 Real-Time Alerts & Messages"]
     end
 
-    subgraph Artificial Intelligence Engine
-        FastAPI[FastAPI Python Microservice - :8000]
-        RAG[PGVector Document Search - LangChain]
-        LLM[Groq / OpenAI LLM Integration]
-    end
-
-    subgraph Persistence & Infrastructure
-        PG[(PostgreSQL 16 - Row-Level Tenancy by company_id)]
-        RD[(Redis 7 - Token Blacklist, Cache & Sessions)]
-        S3[(AWS S3 Storage - Encrypted Documents & Backups)]
-    end
-
-    Web --> CF
-    Desk --> CF
-    Mob --> CF
-    CF --> KC
-    CF --> Spring
-    Spring --> RL
-    Spring --> Tier
-    Spring --> WS
-    Spring --> FastAPI
-    Spring --> PG
-    Spring --> RD
-    Spring --> S3
-    FastAPI --> PG
-    FastAPI --> LLM
+    AccessChannels --> OperationsHub
+    OperationsHub --> SecurityStorage
 ```
 
-### Core Architecture Highlights
-1. **Row-Level Tenant Isolation**: Every database table (`users`, `attendance`, `leave_requests`, `payroll`, `shifts`) enforces a strict `company_id` foreign key. One company can never access another company's records.
-2. **Stateless JWT Security with Instant Blacklist**: Tokens use cryptographic `HS512` signing. When a user logs out, their token is immediately pushed to a Redis blacklist to prevent token replay attacks.
-3. **AI-Powered HR Assistant**: Built-in LangChain pipeline translates natural language questions into database queries (e.g. *"Show me all engineers on leave this week"*) and answers policy questions from uploaded company handbooks.
+### Core System Benefits
+1. **Multi-Branch & Department Separation**: Keeps department and branch data neatly organized so managers only see their assigned teams, while company admins retain complete visibility.
+2. **Instant Sign-In Security**: Secure enterprise single sign-on (SSO) with automatic session management keeps company records safe across all devices.
+3. **Smart HR Assistant**: Quickly search company handbooks, look up leave balances, and get answers to policy questions in plain English.
 
 ---
 
@@ -98,7 +80,7 @@ The dashboard is structured into six functional operating zones:
 #### 1. Executive Welcome & System Telemetry Card
 * **Personalized Greeting**: Greets the administrator dynamically (`Good Afternoon, hubnest 👋`) with avatar online status.
 * **Company Context & Real-Time Clock**: Confirms the active tenant organization (**SRJ GLOBAL**) alongside a live server-synchronized date and time ticker (`Saturday, October 10, 2026 at 05:54 PM`).
-* **System Status Health Indicator (`Optimal 🟢`)**: Continuously monitors backend microservices (Spring Boot API, PostgreSQL database connection pool, Redis cache, and WebSocket gateway). When all services operate within nominal thresholds (`< 300ms` latency), it displays **Optimal**.
+* **System Status Health Indicator (`Optimal 🟢`)**: Shows the live connection status of your company workspace. When all features are working smoothly without delay, it displays **Optimal**.
 * **Export Dashboard Action**: One-click download button (`Export Dashboard`) that generates an executive executive summary report (PDF/Excel) summarizing current workforce availability and pending items.
 * **Notification Bell**: Direct access to high-priority system alerts and pending operational requests.
 
@@ -171,7 +153,7 @@ graph LR
 * **Attendance & Geo-Fence (`/admin/attendance`)**: Live daily punch monitoring, GPS geo-fence radius verification, grace periods, overtime hours, and half-day penalty rules.
 * **Leave Management (`/admin/leaves`)**: Annual quota allocations (Casual Leave, Sick Leave, Paid Leave), holiday calendars, sandwich rule enforcement, and multi-tier approval logs.
 * **Payroll Engine (`/admin/payroll`)**: End-to-end automated salary processing. Computes Basic, HRA, Allowances, PF (12%), ESI, Professional Tax, and TDS with 1-click bulk payslip distribution. *(Growth & Enterprise Tier)*
-* **Tasks & Projects (`/admin/tasks`)**: Cross-department task management board with Kanban status (To Do, In Progress, Review, Completed), assignees, milestones, and deadlines.
+* **Tasks & Projects (`/admin/tasks`)**: Cross-department task management board with pipeline status (To Do, In Progress, Review, Completed), assignees, milestones, and deadlines.
 
 #### 4. Growth, Talent & Assets
 * **Performance (`/admin/performance`)**: Conduct 360-degree appraisal cycles, configure manager review forms, self-appraisals, and track company Objectives & Key Results (OKRs). *(Growth & Enterprise Tier)*
@@ -209,17 +191,17 @@ Company Administrators configure operational rules through the **Company Setting
 Hub HRMS features an advanced **8-Tier Role Hierarchy**. Every user account is bound to a specific operational role and data access scope:
 
 ```mermaid
-graph TD
-    User[User Authenticates] --> RoleCheck{Role & Scope Verification}
+flowchart TD
+    User["User Authenticates"] --> RoleCheck{"Role & Scope Verification"}
 
-    RoleCheck -->|ROLE_MASTER_ADMIN| ScopeAll[Master Admin: Global Scope Across All Tenants]
-    RoleCheck -->|ROLE_SUPER_ADMIN| ScopeSuper[Super Admin: Company + Multi-Branch Scope]
-    RoleCheck -->|ROLE_COMPANY_ADMIN| ScopeCo[Company Admin: Full Company Tenant Scope]
-    RoleCheck -->|ROLE_HR_MANAGER| ScopeHR[HR Specialist: Company-Wide HR & Staff Operations]
-    RoleCheck -->|ROLE_MANAGER| ScopeSub[Department Manager: Subordinate Reports Scope]
-    RoleCheck -->|ROLE_FINANCE| ScopeFin[Finance Officer: Company-Wide Financial Data]
-    RoleCheck -->|ROLE_GOVERNMENT_OFFICER| ScopeGov[Statutory Auditor: Read-Only Compliance Data]
-    RoleCheck -->|ROLE_EMPLOYEE| ScopeSelf[Employee: Self-Service ESS Portal Only]
+    RoleCheck -->|ROLE_MASTER_ADMIN| ScopeAll["Master Admin<br/>Global Across All Tenants"]
+    RoleCheck -->|ROLE_SUPER_ADMIN| ScopeSuper["Super Admin<br/>Company + Multi-Branch Scope"]
+    RoleCheck -->|ROLE_COMPANY_ADMIN| ScopeCo["Company Admin<br/>Full Company Tenant Scope"]
+    RoleCheck -->|ROLE_HR_MANAGER| ScopeHR["HR Specialist<br/>Company-Wide HR Operations"]
+    RoleCheck -->|ROLE_MANAGER| ScopeSub["Department Manager<br/>Subordinate Reports Scope"]
+    RoleCheck -->|ROLE_FINANCE| ScopeFin["Finance Officer<br/>Company-Wide Financial Data"]
+    RoleCheck -->|ROLE_GOVERNMENT_OFFICER| ScopeGov["Statutory Auditor<br/>Read-Only Compliance Data"]
+    RoleCheck -->|ROLE_EMPLOYEE| ScopeSelf["Employee<br/>Self-Service ESS Portal"]
 ```
 
 ### Role Descriptions & Data Boundaries
@@ -301,7 +283,7 @@ Hub HRMS automatically adapts available features based on your company's active 
 | **Learning Management System (LMS)** | ❌ | ✅ | ✅ |
 | **Asset Management & Tracking** | ❌ | ✅ | ✅ |
 | **Multi-Branch Location Management** | ❌ | ✅ | ✅ |
-| **AI HR Assistant (LangChain + RAG)** | ❌ | ❌ | ✅ |
+| **Smart HR Assistant** | ❌ | ❌ | ✅ |
 | **Automated Background Verification (BGV)**| ❌ | ❌ | ✅ |
 | **Digital Contract e-Sign** | ❌ | ❌ | ✅ |
 | **Single Sign-On (Keycloak OIDC / SAML)** | ❌ | ❌ | ✅ |

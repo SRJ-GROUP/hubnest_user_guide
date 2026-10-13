@@ -38,7 +38,7 @@ graph TB
         Tax["Statutory & Tax Records<br/>• PAN Card<br/>• UAN / PF Number<br/>• ESI Insurance Number"]
     end
 
-    subgraph S3["3. Operational Attachments & Assets"]
+    subgraph S3["3. Operational Attachments &<br/>Assets"]
         direction TB
         Docs["Digital Vault<br/>• Aadhaar / Govt ID<br/>• Educational Certificates<br/>• Signed NDA & Offer Letter"]
         Assets["Assigned Company Assets<br/>• Laptop Serial & Spec<br/>• External Monitor<br/>• Office Access Card"]

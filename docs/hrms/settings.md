@@ -23,20 +23,20 @@ Settings configured in this module propagate dynamically across every active mod
 
 ```mermaid
 graph TB
-    subgraph MasterSettings["⚙️ Company Settings Core (/admin/settings)"]
+    subgraph MasterSettings["⚙️ Company Settings Core<br/>(/admin/settings)"]
         direction TB
-        S1["General (Identity, Locale, Office Hours)"]
-        S2["Budget (Financial Targets & Cost Centers)"]
-        S3["Security (2FA, Sessions, Password Rules)"]
-        S4["Integrations (Keycloak OIDC, SMTP, Webhooks)"]
+        S1["General (Identity, Locale, Office<br/>Hours)"]
+        S2["Budget (Financial Targets & Cost<br/>Centers)"]
+        S3["Security (2FA, Sessions, Password<br/>Rules)"]
+        S4["Integrations (Keycloak OIDC, SMTP,<br/>Webhooks)"]
     end
 
-    subgraph OperationalImpact["🎯 Modules Governed by Global Settings"]
+    subgraph OperationalImpact["🎯 Modules Governed by Global<br/>Settings"]
         direction TB
-        M1["⏰ Attendance: Grace Windows & Shift Boundaries"]
-        M2["💰 Payroll: Fiscal Year Calendars & Budget Ceilings"]
-        M3["🏖️ Leaves: Sandwich Rules & Notice Thresholds"]
-        M4["🔒 Auth & Access: Two-Factor Enforcements & IP Blocks"]
+        M1["⏰ Attendance: Grace Windows &<br/>Shift Boundaries"]
+        M2["💰 Payroll: Fiscal Year Calendars &<br/>Budget Ceilings"]
+        M3["🏖️ Leaves: Sandwich Rules & Notice<br/>Thresholds"]
+        M4["🔒 Auth & Access: Two-Factor<br/>Enforcements & IP Blocks"]
     end
 
     MasterSettings --> OperationalImpact

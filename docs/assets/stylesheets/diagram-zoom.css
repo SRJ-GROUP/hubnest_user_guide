@@ -1,190 +1,332 @@
 /* ============================================================
-   HubNest Diagram & Image Pan-Zoom Lightbox
+   HubNest In-Page Interactive Popup Lightbox & Eye Button
    ============================================================ */
 
-/* Wrapper on mermaid / diagram blocks */
+/* 1. Prevent paragraph clipping for image wrappers */
+p:has(> .image-zoom-wrapper) {
+  position: relative !important;
+}
+
+/* 2. Image Wrapper */
+.image-zoom-wrapper {
+  position: relative !important;
+  display: inline-block !important;
+  max-width: 100% !important;
+  margin: 0.5em 0 !important;
+  border-radius: 12px !important;
+  padding: 6px !important;
+  background: var(--md-code-bg-color, #f8fafc) !important;
+  border: 1px solid var(--md-default-fg-color--lightest, #e2e8f0) !important;
+  box-sizing: border-box !important;
+  vertical-align: middle !important;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+
+.image-zoom-wrapper img {
+  display: block !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+}
+
+.image-zoom-wrapper:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+  border-color: #10B981 !important;
+}
+
+/* 3. Mermaid & Diagram Containers */
+.mermaid,
+pre.mermaid,
+div.mermaid,
 .diagram-zoom-wrapper {
-  position: relative;
-  display: block;
-  margin: 1.5em 0;
-  border-radius: 10px;
-  background: var(--md-code-bg-color, #f8fafc);
-  border: 1px solid var(--md-default-fg-color--lightest, #e2e8f0);
-  padding: 1rem;
-  overflow: hidden;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Outer wrapper for diagrams if injected */
+.diagram-zoom-wrapper {
+  display: block !important;
+  margin: 1.25em 0 !important;
+  border-radius: 12px !important;
+  background: var(--md-code-bg-color, #f8fafc) !important;
+  border: 1px solid var(--md-default-fg-color--lightest, #e2e8f0) !important;
+  padding: 16px !important;
+  padding-top: 28px !important;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
 .diagram-zoom-wrapper:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-color: #10B981;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+  border-color: #10B981 !important;
 }
 
-/* Floating button on diagram */
-.diagram-zoom-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(15, 23, 42, 0.85);
+/* 4. Floating Eye Buttons */
+.diagram-eye-btn,
+.image-eye-btn {
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  z-index: 9999 !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: #0f172a !important;
   color: #ffffff !important;
-  font-family: inherit;
-  font-size: 11.5px;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
-  transition: all 0.2s ease;
-  user-select: none;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  padding: 0 !important;
+  outline: none !important;
 }
 
-.diagram-zoom-btn:hover {
-  background: #10B981;
+.diagram-eye-btn:hover,
+.image-eye-btn:hover {
+  background: #10B981 !important;
   color: #ffffff !important;
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+  transform: scale(1.15) !important;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.5) !important;
+  border-color: #ffffff !important;
 }
 
-.diagram-zoom-btn svg {
-  width: 14px;
-  height: 14px;
-  fill: currentColor;
+.diagram-eye-btn svg,
+.image-eye-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  stroke: #ffffff !important;
+  display: block !important;
 }
 
-/* Modal Overlay */
-.diagram-modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  background: rgba(11, 15, 25, 0.88);
-  backdrop-filter: blur(12px);
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+/* 5. Backdrop Modal */
+.hubnest-popup-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999999 !important;
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(8px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.2s ease, visibility 0.2s ease !important;
 }
 
-.diagram-modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
+.hubnest-popup-overlay.active {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-/* Modal Header Bar */
-.diagram-modal-header {
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  background: rgba(15, 23, 42, 0.95);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: #f8fafc;
-  user-select: none;
-  z-index: 10;
+/* 6. Centered Popup Window */
+.hubnest-popup-window {
+  width: 92vw !important;
+  max-width: 1100px !important;
+  height: 84vh !important;
+  max-height: 850px !important;
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  transform: scale(0.96) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-.diagram-modal-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 13.5px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  color: #f8fafc;
+.hubnest-popup-overlay.active .hubnest-popup-window {
+  transform: scale(1) !important;
 }
 
-.diagram-modal-hint {
-  font-size: 12px;
-  color: #94a3b8;
-  font-weight: 500;
+[data-md-color-scheme="slate"] .hubnest-popup-window {
+  background: #1e293b !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8) !important;
 }
 
-.diagram-modal-controls {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* 7. Header */
+.hubnest-popup-header {
+  height: 52px !important;
+  padding: 0 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  background: #f8fafc !important;
+  flex-shrink: 0 !important;
 }
 
-.diagram-ctrl-btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #f8fafc;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  transition: background 0.15s ease, transform 0.1s ease;
+[data-md-color-scheme="slate"] .hubnest-popup-header {
+  background: #0f172a !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-.diagram-ctrl-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
+.hubnest-popup-title-area {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
 }
 
-.diagram-ctrl-btn.close-btn {
-  background: #ef4444;
-  border-color: #dc2626;
-  color: #ffffff;
-  padding: 6px 14px;
+[data-md-color-scheme="slate"] .hubnest-popup-title-area {
+  color: #f1f5f9 !important;
 }
 
-.diagram-ctrl-btn.close-btn:hover {
-  background: #dc2626;
+.hubnest-popup-icon {
+  display: flex !important;
+  align-items: center !important;
+  color: #10B981 !important;
 }
 
-/* Modal Viewport (Canvas Area) */
-.diagram-modal-viewport {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  cursor: grab;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-  background: radial-gradient(circle at center, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.95) 100%);
+.hubnest-popup-controls {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
 }
 
-.diagram-modal-viewport.dragging {
-  cursor: grabbing;
+.hubnest-zoom-badge {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.1) !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
+  margin-right: 4px !important;
 }
 
-/* Inner zoom container that transforms */
-.diagram-modal-canvas {
-  transform-origin: center center;
-  transition: transform 0.05s ease-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  will-change: transform;
+.hubnest-popup-btn {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  color: #475569 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  padding: 0 !important;
 }
 
-/* Diagram card inside canvas */
-.diagram-canvas-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #1e293b;
+[data-md-color-scheme="slate"] .hubnest-popup-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #cbd5e1 !important;
 }
 
-.diagram-canvas-card svg {
-  display: block;
-  overflow: visible;
+.hubnest-popup-btn:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #0f172a !important;
 }
+
+[data-md-color-scheme="slate"] .hubnest-popup-btn:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+
+.hubnest-popup-btn.hubnest-popup-close-btn {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border-color: rgba(239, 68, 68, 0.2) !important;
+  color: #ef4444 !important;
+  margin-left: 4px !important;
+}
+
+.hubnest-popup-btn.hubnest-popup-close-btn:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+/* 8. Body */
+.hubnest-popup-body {
+  flex: 1 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: grab !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: radial-gradient(circle at center, rgba(241, 245, 249, 0.8) 0%, rgba(226, 232, 240, 0.9) 100%) !important;
+  user-select: none !important;
+}
+
+[data-md-color-scheme="slate"] .hubnest-popup-body {
+  background: radial-gradient(circle at center, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%) !important;
+}
+
+.hubnest-popup-body.dragging {
+  cursor: grabbing !important;
+}
+
+.hubnest-popup-canvas {
+  transform-origin: center center !important;
+  transition: transform 0.05s ease-out !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hubnest-popup-diagram-card {
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  padding: 24px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-md-color-scheme="slate"] .hubnest-popup-diagram-card {
+  background: #0f172a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-md-color-scheme="slate"] .diagram-zoom-wrapper {
+  background: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.hubnest-popup-image-card img {
+  border-radius: 10px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* 9. Footer */
+.hubnest-popup-footer {
+  height: 32px !important;
+  padding: 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #f8fafc !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+  font-size: 11px !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+  flex-shrink: 0 !important;
+}
+
+[data-md-color-scheme="slate"] .hubnest-popup-footer {
+  background: #0f172a !important;
+  border-top-color: rgba(255, 255, 255, 0.06) !important;
+  color: #94a3b8 !important;
+}
+
+/* 10. Mermaid Node Label Formatting: Clean alignment without distorting box calculations */
+.mermaid .node foreignObject div,
+.hubnest-popup-diagram-card foreignObject div {
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+.mermaid .node foreignObject code,
+.hubnest-popup-diagram-card foreignObject code {
+  font-size: 0.85em !important;
+  padding: 1px 4px !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+  border-radius: 4px !important;
+  display: inline-block !important;
+  margin: 2px 0 !important;
+}
+
 

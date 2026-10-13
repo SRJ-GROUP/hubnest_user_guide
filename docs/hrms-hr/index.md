@@ -18,15 +18,15 @@ graph TD
     subgraph Sourcing["📢 1. Talent Acquisition"]
         Jobs["Job Postings (/hr/recruitment)"]
         AI_Screen["AI Resume Scoring & Match"]
-        Kanban["6-Stage Recruitment Kanban"]
+        Pipeline["6-Stage Recruitment Pipeline"]
         Meet["HubMeet Interview Schedules"]
     end
 
     subgraph Operations["👥 2. People & Operations"]
         EmpMaster["Master Directory (/hr/employees)"]
         Onboard["Digital KYC & Onboarding"]
-        Att["Daily Geo & Biometric Attendance (/hr/attendance)"]
-        Leaves["Leave Accruals & Approvals (/hr/leaves)"]
+        Att["Daily Geo & Biometric Attendance<br/>(/hr/attendance)"]
+        Leaves["Leave Accruals & Approvals<br/>(/hr/leaves)"]
     end
 
     subgraph Finance["💰 3. Payroll & Rewards"]
@@ -37,10 +37,10 @@ graph TD
     end
 
     subgraph Strategy["🎯 4. Performance & Intelligence"]
-        NineBox["McKinsey 9-Box Matrix (/hr/performance)"]
+        NineBox["McKinsey 9-Box Matrix<br/>(/hr/performance)"]
         OKRs["Company & Department OKRs"]
         AICons["AI HR Talent Assistant (/hr/ai)"]
-        Docs["Policy Vault & Handbooks (/hr/documentation)"]
+        Docs["Policy Vault & Handbooks<br/>(/hr/documentation)"]
     end
 
     Sourcing --> Operations

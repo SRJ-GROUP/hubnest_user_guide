@@ -20,9 +20,9 @@ The **Tasks & Projects** module allows HR Specialists to organize human resource
 
 ```mermaid
 graph TD
-    Initiative["HR Strategic Initiative<br/>(e.g., Annual Appraisal 2026, POSH Audit)"] --> Tasks["Sub-Tasks & Work Packages"]
-    Tasks --> Assignee["Assign to HR Associates / Dept Leads"]
-    Assignee --> Board["Interactive Kanban Board<br/>Todo → In Progress → Review → Done"]
+    Initiative["HR Strategic Initiative<br/>(e.g., Annual Appraisal 2026, POSH<br/>Audit)"] --> Tasks["Sub-Tasks & Work Packages"]
+    Tasks --> Assignee["Assign to HR Associates / Dept<br/>Leads"]
+    Assignee --> Board["Interactive Task Pipeline Board<br/>Todo → In Progress → Review → Done"]
     Board --> Review["HR Director Audit & Sign-Off"]
 ```
 
@@ -30,7 +30,7 @@ graph TD
 
 ## 📋 Key Features & Capabilities
 
-### 1. 🗂️ Interactive Task Kanban Board
+### 1. 🗂️ Interactive Task pipeline board
 Organize assignments visually across 4 standard stages:
 * **To Do**: Newly created tasks awaiting commencement.
 * **In Progress**: Active assignments undergoing execution.

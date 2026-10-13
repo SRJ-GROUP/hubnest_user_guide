@@ -23,28 +23,28 @@ The Document Vault manages corporate records through encrypted storage and role-
 
 ```mermaid
 graph TB
-    subgraph StorageLayer["🗄️ Central Document Vault (/admin/documents)"]
+    subgraph StorageLayer["🗄️ Central Document Vault<br/>(/admin/documents)"]
         direction TB
         D1["9 Core Functional Categories"]
         D2["AES-256 Cloud Storage Encryption"]
-        D3["Granular Access Control (Public vs Confidential)"]
+        D3["Granular Access Control (Public vs<br/>Confidential)"]
     end
 
     subgraph Categories["📂 Organizational Folders"]
         direction TB
-        C1["📜 Company Policies (Employee Code, WFH Guidelines)"]
-        C2["✍️ Employee Contracts (Signed NDAs, Offer Letters)"]
-        C3["📑 Tax Forms (Form 16, Investment Declarations)"]
-        C4["📢 Internal Memos & Executive Announcements"]
-        C5["⚖️ Compliance & Statutory Audit Certifications"]
-        C6["📋 HR Templates (Appraisal Forms, Requisition Docs)"]
+        C1["📜 Company Policies (Employee Code,<br/>WFH Guidelines)"]
+        C2["✍️ Employee Contracts (Signed<br/>NDAs, Offer Letters)"]
+        C3["📑 Tax Forms (Form 16, Investment<br/>Declarations)"]
+        C4["📢 Internal Memos & Executive<br/>Announcements"]
+        C5["⚖️ Compliance & Statutory Audit<br/>Certifications"]
+        C6["📋 HR Templates (Appraisal Forms,<br/>Requisition Docs)"]
     end
 
     subgraph AccessControls["🔒 Access Control Policies"]
         direction TB
-        A1["Public to Organization (All Employees Can Read)"]
-        A2["Departmental Scoped (Only Engineering, Sales, etc.)"]
-        A3["Strictly Confidential (Company Admin & HR Only)"]
+        A1["Public to Organization (All<br/>Employees Can Read)"]
+        A2["Departmental Scoped (Only<br/>Engineering, Sales, etc.)"]
+        A3["Strictly Confidential (Company<br/>Admin & HR Only)"]
     end
 
     StorageLayer --> Categories

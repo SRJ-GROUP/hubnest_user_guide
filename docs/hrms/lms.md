@@ -25,24 +25,24 @@ From new hire onboarding to executive leadership development, the LMS engine man
 graph TB
     subgraph Authoring["✍️ 1. Course Authoring & Setup"]
         direction TB
-        C1["Course Creation: Title, Modules, Videos, Docs"]
+        C1["Course Creation: Title, Modules,<br/>Videos, Docs"]
         C2["Category & Competency Tagging"]
-        C3["Quiz & Knowledge Check Configuration"]
+        C3["Quiz & Knowledge Check<br/>Configuration"]
     end
 
     subgraph EnrollmentEngine["👥 2. Target Enrollment Engine"]
         direction TB
-        E1["Mandatory Compliance (Automated on Onboarding)"]
-        E2["Departmental Skill Tracks (Assigned by HOD)"]
-        E3["Self-Service Electives (Voluntary Enrollment)"]
+        E1["Mandatory Compliance (Automated on<br/>Onboarding)"]
+        E2["Departmental Skill Tracks<br/>(Assigned by HOD)"]
+        E3["Self-Service Electives (Voluntary<br/>Enrollment)"]
     end
 
-    subgraph TrackingEngine["📈 3. Progress Tracking & Certification"]
+    subgraph TrackingEngine["📈 3. Progress Tracking &<br/>Certification"]
         direction TB
-        T1["Module Completion Tracking (Video / Reading)"]
-        T2["Automated Quiz Scoring (> 80% passing score)"]
-        T3["Digital Certificate of Completion Issued"]
-        T4["Skill Matrix Updated on Employee Profile"]
+        T1["Module Completion Tracking (Video<br/>/ Reading)"]
+        T2["Automated Quiz Scoring (> 80%<br/>passing score)"]
+        T3["Digital Certificate of Completion<br/>Issued"]
+        T4["Skill Matrix Updated on Employee<br/>Profile"]
     end
 
     Authoring --> EnrollmentEngine

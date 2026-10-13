@@ -92,11 +92,11 @@ HubNest OS safeguards sensitive corporate session tokens using Microsoft Windows
 
 ```mermaid
 graph TD
-    AppLayer[HubNest OS Application Layer - Dart & Flutter]
-    Bridge[flutter_secure_storage Windows Native Bridge]
-    DPAPI[Windows CryptProtectData API - DPAPI]
-    HardwareKey[Windows User Logon Key & TPM Hardware Module]
-    Storage[Encrypted Token Vault on Disk - %LOCALAPPDATA%\HubNestOS\SecureStorage]
+    AppLayer["HubNest OS Application Layer<br/>(Dart & Flutter)"]
+    Bridge["flutter_secure_storage<br/>Windows Native Bridge"]
+    DPAPI["Windows CryptProtectData API<br/>(DPAPI)"]
+    HardwareKey["Windows User Logon Key &<br/>TPM Hardware Module"]
+    Storage["Encrypted Token Vault on Disk<br/><code>%LOCALAPPDATA%\HubNestOS\SecureStorage</code>"]
 
     AppLayer --> Bridge
     Bridge --> DPAPI
