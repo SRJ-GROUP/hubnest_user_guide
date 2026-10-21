@@ -7,6 +7,10 @@ description: Master keyboard shortcuts, universal command palette, and WebView2 
 
 HubNest OS transforms multiple disparate enterprise web portals into a fast, desktop-integrated environment. With dedicated keyboard shortcuts, a global search command palette, and an intelligent **WebView2 Concurrency Pool Manager**, you can glide between complex sales pipelines, employee databases, and live video meetings with zero friction.
 
+> [!TIP]
+> **Need a deep dive on shortcuts and navigation?**
+> - For everyday usage workflows and multi-tasking tips, see [Multi-Hub Instant Switching](../desktop-user/multi-hub-navigation.md) and [Command Palette & Shortcuts](../desktop-user/command-palette-shortcuts.md).
+
 ---
 
 ## ⚡ Global Keyboard Shortcuts Matrix

@@ -84,27 +84,133 @@ nav:
       - 07. Integrations & Configuration: getting-started/integrations.md
       - 08. First Task Checklist: getting-started/first-tasks.md
       - 09. Common Setup Problems: getting-started/common-problems.md
-  - HubNest OS (Desktop):
-      - Workspace Overview: desktop/workspace.md
-      - Multi-Hub Navigation: desktop/navigation.md
-      - Preferences & Auto-Update: desktop/preferences.md
-  - HubMeet (Video & Audio):
-      - 01. Overview & Setup: hubmeet/index.md
-      - 02. Instant & Scheduled Meetings: hubmeet/scheduling.md
-      - 03. In-Call Controls & Host Tools: hubmeet/in-call-controls.md
-      - 04. Screen Sharing & Presentation: hubmeet/collaboration.md
-      - 05. Live Video & Chat Translation: hubmeet/translation.md
-      - 06. Interactive Collaborative Whiteboard: hubmeet/whiteboard.md
-      - 07. Interactive Polls & Breakouts: hubmeet/polls-breakouts.md
-      - 08. Team & Workspace Management: hubmeet/team.md
-      - 09. Live Attendance & Records Export: hubmeet/attendance.md
-      - 10. Cloud Recordings & Smart Summaries: hubmeet/recordings-ai.md
-  - HubCRM:
-      - Overview: hubcrm/index.md
-      - Leads & Pipeline: hubcrm/leads-pipeline.md
-      - Contacts & Accounts: hubcrm/contacts.md
-      - Deals & Quotations: hubcrm/deals.md
-      - Reports & Dashboards: hubcrm/reports.md
+  - HubNest OS (Desktop User):
+      - 01. Overview & Daily Checklist: desktop-user/index.md
+      - 02. Installation & Seamless SSO: desktop-user/installation-login.md
+      - 03. Multi-Hub Instant Switching: desktop-user/multi-hub-navigation.md
+      - 04. Command Palette & Shortcuts: desktop-user/command-palette-shortcuts.md
+      - 05. System Tray & Windows Alerts: desktop-user/system-tray-background.md
+      - 06. Audio, Video & Offline Resilience: desktop-user/hardware-offline-mode.md
+  - HubNest OS (IT Administrator):
+      - 01. IT Command Center Overview: desktop-admin/index.md
+      - 02. Silent MSI & Intune Deployment: desktop-admin/msi-enterprise-deployment.md
+      - 03. Edge WebView2 & Hardware Specs: desktop-admin/system-requirements-webview2.md
+      - 04. Custom Protocol & Deep Linking: desktop-admin/protocol-deep-linking.md
+      - 05. Network, Proxies & Auto-Update: desktop-admin/network-proxy-updates.md
+  - HubNest OS (Ecosystem Overview):
+      - Workspace Architecture & Windowing: desktop/workspace.md
+      - Multi-Hub Navigation & Pool Concurrency: desktop/navigation.md
+      - Preferences, Tray & Auto-Updates: desktop/preferences.md
+  - HubMeet (Participant & Attendee):
+      - 01. Overview & Daily Checklist: hubmeet-attendee/index.md
+      - 02. Audio, Video Setup & Shortcuts: hubmeet-attendee/audio-video-setup.md
+      - 03. Virtual Backgrounds & AI Noise: hubmeet-attendee/virtual-backgrounds-noise.md
+      - 04. Screen Sharing & System Audio: hubmeet-attendee/screen-sharing.md
+      - 05. Chat, Reactions & File Sharing: hubmeet-attendee/chat-reactions-files.md
+      - 06. Live Captions & Translation: hubmeet-attendee/live-captions-translation.md
+      - 07. Whiteboard, Polls & Breakouts: hubmeet-attendee/whiteboard-polls-breakouts.md
+  - HubMeet (Host & Event Organizer):
+      - 01. Host Overview & Leadership: hubmeet-host/index.md
+      - 02. Scheduling & Calendar Invites: hubmeet-host/scheduling-invites.md
+      - 03. Room Security & Waiting Room: hubmeet-host/room-security-waiting-room.md
+      - 04. In-Meeting Host Controls: hubmeet-host/in-meeting-host-controls.md
+      - 05. Live Polls & Quizzes: hubmeet-host/live-polls-quizzes.md
+      - 06. Breakout Rooms Management: hubmeet-host/breakout-rooms-management.md
+      - 07. Cloud Recording & Attendance: hubmeet-host/cloud-recording-attendance.md
+  - HubMeet (Enterprise Administrator):
+      - 01. Admin Overview & Architecture: hubmeet-admin/index.md
+      - 02. User Roster & Host Licenses: hubmeet-admin/user-roster-licenses.md
+      - 03. Security & Meeting Policies: hubmeet-admin/security-meeting-policies.md
+      - 04. AI Copilot & Speech Engine: hubmeet-admin/ai-copilot-settings.md
+      - 05. Recording Vault & S3 Storage: hubmeet-admin/recording-vault-storage.md
+      - 06. Cluster Telemetry & Health: hubmeet-admin/cluster-telemetry-health.md
+      - 07. Subscription Plans & Invoices: hubmeet-admin/billing-plans-invoices.md
+  - HubMeet (Developer & Integrator):
+      - 01. Developer Portal Overview: hubmeet-developer/index.md
+      - 02. API Keys & Scoped Auth: hubmeet-developer/api-keys-authentication.md
+      - 03. Meeting Creation & Token API: hubmeet-developer/meeting-creation-api.md
+      - 04. Webhook Event Listeners: hubmeet-developer/webhook-event-listeners.md
+      - 05. Enterprise SSO Federation: hubmeet-developer/sso-enterprise-federation.md
+  - HubMeet (Ecosystem Overview):
+      - Cross-Module Meeting Hub: hubmeet/index.md
+      - Scheduling Quick Reference: hubmeet/scheduling.md
+      - In-Call Controls Reference: hubmeet/in-call-controls.md
+      - Collaboration Reference: hubmeet/collaboration.md
+      - Translation Quick Reference: hubmeet/translation.md
+      - Whiteboard Quick Reference: hubmeet/whiteboard.md
+      - Polls & Breakouts Reference: hubmeet/polls-breakouts.md
+      - Team Management Reference: hubmeet/team.md
+      - Attendance Quick Reference: hubmeet/attendance.md
+      - Recordings & AI Reference: hubmeet/recordings-ai.md
+  - HubCRM (Sales Executive):
+      - 01. Overview & Daily Routine: crm-sales/index.md
+      - 02. Sales Dashboard: crm-sales/dashboard.md
+      - 03. Lead Qualification & Scoring: crm-sales/lead-qualification.md
+      - 04. Deal Pipeline & Kanban Board: crm-sales/deal-pipeline.md
+      - 05. Converting Leads to Deals: crm-sales/lead-conversion.md
+      - 06. Accounts & Contacts Directory: crm-sales/accounts-contacts.md
+      - 07. VoIP, WhatsApp & SMS: crm-sales/omnichannel-engagement.md
+      - 08. Tasks & Follow-up Scheduling: crm-sales/task-management.md
+      - 09. Quotations & Price Proposals: crm-sales/quotations-proposals.md
+      - 10. Targets & Quota Tracking: crm-sales/profile-targets.md
+  - HubCRM (Sales Manager):
+      - 01. Command Center & Team Oversight: crm-manager/index.md
+      - 02. Manager Dashboard & Leaderboard: crm-manager/dashboard.md
+      - 03. Team Roster & Quotas: crm-manager/team-roster.md
+      - 04. Lead Routing & Round-Robin: crm-manager/lead-distribution.md
+      - 05. Deal & Discount Approvals: crm-manager/deal-approvals.md
+      - 06. Pipeline Velocity & Bottlenecks: crm-manager/pipeline-velocity.md
+      - 07. Activity Audits & Coaching: crm-manager/activity-audit.md
+      - 08. Revenue Forecasting: crm-manager/reports-forecasting.md
+  - HubCRM (Marketing Specialist):
+      - 01. Overview & Strategy: crm-marketing/index.md
+      - 02. Marketing Dashboard: crm-marketing/dashboard.md
+      - 03. Multi-Channel Campaigns: crm-marketing/campaign-manager.md
+      - 04. AI Content Studio: crm-marketing/ai-studio.md
+      - 05. Lead Capture Forms: crm-marketing/forms-builder.md
+      - 06. Landing Page Builder: crm-marketing/landing-pages.md
+      - 07. Templates & Media Vault: crm-marketing/templates-media.md
+      - 08. UTM Attribution & Analytics: crm-marketing/analytics-attribution.md
+  - HubCRM (Finance & Accounts):
+      - 01. Overview & Billing Operations: crm-finance/index.md
+      - 02. Finance Dashboard: crm-finance/dashboard.md
+      - 03. Generating GST & VAT Invoices: crm-finance/invoice-generation.md
+      - 04. Online Customer Payment Portals: crm-finance/public-payments.md
+      - 05. Payment Reconciliation & Receipts: crm-finance/payment-verification.md
+      - 06. Company Expense Tracking: crm-finance/expense-management.md
+      - 07. Vendor Contracts & Directory: crm-finance/vendor-contracts.md
+      - 08. Financial Reports & Ledgers: crm-finance/financial-reports.md
+  - HubCRM (Customer Support):
+      - 01. Overview & Helpdesk Guide: crm-support/index.md
+      - 02. Support Dashboard & SLAs: crm-support/dashboard.md
+      - 03. Ticket Conversations & Notes: crm-support/ticket-management.md
+      - 04. Tier-2 Escalations: crm-support/ticket-escalation.md
+      - 05. Knowledge Base Help Articles: crm-support/knowledge-base.md
+      - 06. Customer 360 History: crm-support/customer-history.md
+      - 07. Agent Profile & CSAT Scores: crm-support/profile-sla.md
+  - HubCRM (Company Admin):
+      - 01. Workspace Architecture: crm-admin/index.md
+      - 02. User Onboarding & Seats: crm-admin/users-onboarding.md
+      - 03. Roles & Permissions (RBAC): crm-admin/roles-permissions.md
+      - 04. Teams & Hierarchies: crm-admin/teams-hierarchy.md
+      - 05. Pipeline Control & Custom Fields: crm-admin/crm-control.md
+      - 06. Salesforce Migration Engine: crm-admin/salesforce-migration.md
+      - 07. CSV Import & Rollback: crm-admin/csv-migration.md
+      - 08. Security Audit Logs: crm-admin/audit-logs.md
+      - 09. Ecosystem Integrations: crm-admin/integrations.md
+      - 10. Billing & Subscriptions: crm-admin/billing-subscriptions.md
+      - 11. Workspace Settings & Branding: crm-admin/profile-settings.md
+  - HubCRM (Platform Super Admin):
+      - 01. Control Plane Overview: crm-super-admin/index.md
+      - 02. Tenant Provisioning: crm-super-admin/tenants.md
+      - 03. Global Plans & SaaS Revenue: crm-super-admin/billing-plans.md
+      - 04. Platform Admins & Delegated Access: crm-super-admin/admins-rbac.md
+      - 05. Developer API Keys (hn_live_*): crm-super-admin/api-management.md
+      - 06. Central SMS Gateway: crm-super-admin/sms-gateway.md
+      - 07. AI Telemetry & Cost Controls: crm-super-admin/ai-telemetry.md
+      - 08. System Health & Infrastructure: crm-super-admin/audit-system.md
+      - 09. Root Security & Hardware MFA: crm-super-admin/profile-security.md
+
   - HubHRMS (Company Admin):
       - 01. Overview & RBAC: hrms/index.md
       - 02. Company Dashboard: hrms/dashboard.md
@@ -207,16 +313,120 @@ nav:
 
 
 
-  - Calling Hub (VoIP):
-      - Overview: calling/index.md
-      - Softphone & Dialpad: calling/dialer.md
-      - Call Logs & Recordings: calling/logs.md
-  - HubNotification:
-      - Overview: notification/index.md
-      - Campaigns & Templates: notification/campaigns.md
+  - Calling Hub (Call Center Agent):
+      - 01. Overview & Daily Routine: calling-agent/index.md
+      - 02. Softphone & Web Dialpad: calling-agent/softphone-dialer.md
+      - 03. Active Call Controls: calling-agent/call-controls.md
+      - 04. Agent CRM & Dispositions: calling-agent/agent-crm-disposition.md
+      - 05. Call Notes & Follow-up Tasks: calling-agent/call-notes-tasks.md
+      - 06. Call Logs & Audio Playback: calling-agent/call-logs-recordings.md
+  - Calling Hub (Campaign & AI Specialist):
+      - 01. Overview & Voice Automation: calling-campaigns/index.md
+      - 02. Bulk Outbound Dialer: calling-campaigns/bulk-call-dialer.md
+      - 03. Visual IVR Call Flow Builder: calling-campaigns/ivr-call-flow-builder.md
+      - 04. Conversational AI Voice Agents: calling-campaigns/ai-voice-agents.md
+      - 05. Website Voice Agent Widget: calling-campaigns/website-voice-widget.md
+      - 06. Two-Way SMS & Broadcasting: calling-campaigns/sms-broadcasting.md
+      - 07. Campaign Analytics & Reports: calling-campaigns/campaign-analytics.md
+  - Calling Hub (Telephony & Compliance):
+      - 01. Overview & Telephony Governance: calling-telephony/index.md
+      - 02. Virtual DID Numbers Marketplace: calling-telephony/did-phone-numbers.md
+      - 03. Regulatory Telecom KYC: calling-telephony/kyc-verification.md
+      - 04. Enterprise SIP Trunk Interconnect: calling-telephony/sip-trunk-interconnect.md
+      - 05. Credit Wallet & Usage Tariffs: calling-telephony/credit-wallet-tariffs.md
+  - Calling Hub (Platform Super Admin):
+      - 01. Overview & Architecture: calling-admin/index.md
+      - 02. User Accounts & Agent Roster: calling-admin/user-agent-management.md
+      - 03. Carrier Gateways & AI Integrations: calling-admin/carrier-integrations.md
+      - 04. Credit Plans & Usage Pricing: calling-admin/credit-plans-pricing.md
+      - 05. Payment Gateways Setup: calling-admin/payment-gateways.md
+      - 06. Master CDR & System Operations: calling-admin/system-logs-cdr.md
+  - Calling Hub (Ecosystem Overview):
+      - Cross-Module Voice Integration: calling/index.md
+      - Softphone Quick Reference: calling/dialer.md
+      - CDR Logs Quick Reference: calling/logs.md
+  - HubNotification (Support Agent):
+      - 01. Overview & Daily Routine: notification-agent/index.md
+      - 02. Navigating 3-Pane Inbox: notification-agent/unified-inbox.md
+      - 03. Replying, Media & Products: notification-agent/chat-handling.md
+      - 04. Speeding Up with Canned Replies: notification-agent/canned-replies.md
+      - 05. Team Notes & Assignment: notification-agent/collaboration-notes.md
+      - 06. Managing AI Bot Handover: notification-agent/bot-handover.md
+      - 07. Mobile Agent App: notification-agent/mobile-agent-app.md
+  - HubNotification (Marketing Specialist):
+      - 01. Overview & Growth Strategies: notification-marketing/index.md
+      - 02. Multi-Channel Broadcasts: notification-marketing/broadcast-campaigns.md
+      - 03. Meta WhatsApp Templates: notification-marketing/whatsapp-templates.md
+      - 04. AI Copywriting Assistant: notification-marketing/ai-copywriter.md
+      - 05. Audience Segments & Reach: notification-marketing/audience-segmentation.md
+      - 06. Multi-Network Social Posting: notification-marketing/social-composer.md
+      - 07. Social Calendar & Scheduling: notification-marketing/social-calendar.md
+      - 08. B2B Leads Scraper: notification-marketing/b2b-leads-scraper.md
+      - 09. Campaign Funnel Analytics: notification-marketing/campaign-analytics.md
+  - HubNotification (Automation & AI):
+      - 01. Overview & Autonomous AI: notification-automation/index.md
+      - 02. Visual Flow Builder: notification-automation/visual-flow-builder.md
+      - 03. AI Knowledge Base & RAG: notification-automation/ai-knowledge-base.md
+      - 04. AI Chatbot Studio & Personas: notification-automation/ai-chatbot-studio.md
+      - 05. Testing Playground & Channels: notification-automation/chatbot-playground.md
+      - 06. Keyword & After-Hours Replies: notification-automation/keyword-auto-replies.md
+      - 07. Website WhatsApp Chat Widget: notification-automation/website-chat-widget.md
+  - HubNotification (E-Commerce Specialist):
+      - 01. Overview & Conversational Commerce: notification-ecommerce/index.md
+      - 02. Connecting Shopify & WooCommerce: notification-ecommerce/store-connections.md
+      - 03. Product Catalog & Live Chat Sharing: notification-ecommerce/catalog-management.md
+      - 04. Customer Purchase History: notification-ecommerce/order-tracking.md
+      - 05. Automated Order & Courier Alerts: notification-ecommerce/order-notifications.md
+  - HubNotification (Company Administrator):
+      - 01. Overview & 7-Step Onboarding: notification-admin/index.md
+      - 02. WhatsApp Meta Embedded Signup: notification-admin/meta-embedded-signup.md
+      - 03. Corporate Email SMTP Setup: notification-admin/email-smtp-setup.md
+      - 04. SMS Gateways & Indian DLT: notification-admin/sms-gateway-setup.md
+      - 05. Team Roster & Permissions: notification-admin/team-management.md
+      - 06. Contact Directory & CSV Import: notification-admin/contacts-management.md
+      - 07. Subscriptions, Quotas & Invoices: notification-admin/billing-plans.md
+      - 08. Developer API Tokens & Webhooks: notification-admin/developer-webhooks.md
+      - 09. 2FA Security & Audit Logs: notification-admin/security-audit-logs.md
+  - HubNotification (Platform Super Admin):
+      - 01. Overview & SaaS Command Center: notification-super-admin/index.md
+      - 02. Tenant Management & Impersonation: notification-super-admin/client-management.md
+      - 03. SaaS Pricing Plans & Coupons: notification-super-admin/saas-pricing-plans.md
+      - 04. Global Payment Gateways: notification-super-admin/payment-gateways.md
+      - 05. Master Platform Integrations: notification-super-admin/global-integrations.md
+      - 06. Master SMTP & Email Templates: notification-super-admin/system-email-templates.md
+      - 07. Redis Queues & Cron Health: notification-super-admin/queue-system-health.md
+      - 08. Admin RBAC & Master Audit Logs: notification-super-admin/admin-security-rbac.md
+  - HubNotification (Ecosystem Overview):
+      - Cross-Module Integration: notification/index.md
   - Billing & Administration:
       - Plans & Invoices: billing/plans-invoices.md
       - Team Management & Roles: billing/team-management.md
+  - HubNest Platform (Super Admin):
+      - 01. Super Admin Command Center: platform-super-admin/index.md
+      - 02. Master Tenant Provisioning: platform-super-admin/tenant-lifecycle-management.md
+      - 03. Tenant Impersonation & SSO: platform-super-admin/tenant-impersonation-sso.md
+      - 04. Multi-Product Hub Provisioning: platform-super-admin/product-consoles-activation.md
+      - 05. Administrative Audit Logs: platform-super-admin/security-audit-trails.md
+      - 06. Master Settings & Central SMTP: platform-super-admin/system-settings-smtp.md
+  - HubNest Platform (Tenant Operations):
+      - 01. Tenant Operations Overview: platform-tenants/index.md
+      - 02. Organization Profiles & Domains: platform-tenants/organization-profiles-domains.md
+      - 03. Trial Extensions & Seat Quotas: platform-tenants/trial-extensions-limits.md
+      - 04. Feature Flags & Entitlements: platform-tenants/feature-flags-entitlements.md
+      - 05. Demo Requests & Qualification: platform-tenants/demo-leads-pipeline.md
+  - HubNest Platform (Billing & Finance):
+      - 01. Financial Operations Center: platform-billing/index.md
+      - 02. Hub Plans & Feature Gating: platform-billing/hub-plans-feature-gating.md
+      - 03. Payment Gateways Setup: platform-billing/payment-gateways-config.md
+      - 04. Manual Bank Transfer Clearance: platform-billing/offline-payments-clearance.md
+      - 05. Promotional Coupons Engine: platform-billing/coupons-discount-engine.md
+      - 06. Pre-Paid Usage Credits: platform-billing/credits-wallet-usage.md
+  - HubNest Platform (Security & IAM):
+      - 01. Security & IAM Command Center: platform-security/index.md
+      - 02. Global User Registry: platform-security/global-user-registry.md
+      - 03. Live Sessions & 2FA Governance: platform-security/session-management-mfa.md
+      - 04. Master RBAC Permission Matrix: platform-security/master-rbac-permission-matrix.md
+      - 05. Master Admin Password Security: platform-security/admin-credentials-recovery.md
   - Help & FAQs:
       - Troubleshooting: help/troubleshooting.md
       - Contact Support: help/support.md

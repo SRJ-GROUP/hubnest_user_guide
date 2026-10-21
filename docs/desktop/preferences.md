@@ -7,6 +7,11 @@ description: Comprehensive guide to Windows System Tray integration, auto-update
 
 HubNest OS is engineered for reliable, enterprise-grade deployment on Windows. It operates silently in the background, continuously keeps itself updated with cryptographically verified binaries, and provides one-click sanitized diagnostic bundles for IT administrators.
 
+> [!TIP]
+> **Role-Specific Quick Guides:**
+> - For everyday background presence and toast notifications, explore [System Tray & Windows Alerts](../desktop-user/system-tray-background.md).
+> - For enterprise proxy rules, firewall ports, and update channels, explore [Network, Proxies & Auto-Update](../desktop-admin/network-proxy-updates.md).
+
 ---
 
 ## 🔔 Windows System Tray Integration

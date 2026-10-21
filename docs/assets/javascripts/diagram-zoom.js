@@ -496,17 +496,32 @@
     scanImages();
   }
 
+  let scanRafId = null;
+  function debouncedScanAll() {
+    if (scanRafId) return;
+    scanRafId = requestAnimationFrame(() => {
+      scanRafId = null;
+      scanAll();
+    });
+  }
+
   function init() {
     ensurePopupModal();
     scanAll();
 
-    // Continuous polling check to catch async Mermaid SVG replacement
-    const interval = setInterval(scanAll, 200);
-    setTimeout(() => clearInterval(interval), 6000);
+    // Polling check to catch async Mermaid SVG replacement
+    const interval = setInterval(debouncedScanAll, 300);
+    setTimeout(() => clearInterval(interval), 4000);
 
     if (document.body) {
-      const observer = new MutationObserver(() => {
-        scanAll();
+      const observer = new MutationObserver((mutations) => {
+        // Ignore mutations triggered by our own popup overlay
+        const isSelfMutation = mutations.every((m) => {
+          return m.target && (m.target.closest?.('.hubnest-popup-overlay') || m.target.classList?.contains('hubnest-popup-overlay'));
+        });
+        if (!isSelfMutation) {
+          debouncedScanAll();
+        }
       });
       observer.observe(document.body, { childList: true, subtree: true });
     }

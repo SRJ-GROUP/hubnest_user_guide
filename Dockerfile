@@ -10,6 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy documentation sources and configuration
 COPY mkdocs.yml .
+COPY overrides/ ./overrides/
 COPY docs/ ./docs/
 
 # Build static HTML site with strict verification

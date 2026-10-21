@@ -52,21 +52,77 @@ Jump directly to your designated operational workspace:
 
     [:octicons-arrow-right-24: Open Employee Guide (13 Chapters)](hrms-employee/index.md)
 
--   :material-video:{ .lg .middle style="color: #ec4899;" } **[HubMeet (Video Calls)](hubmeet/index.md)**
+-   :material-video:{ .lg .middle style="color: #ec4899;" } **[HubMeet (4 Roles)](hubmeet-attendee/index.md)**
 
     ---
 
-    Ultra-HD WebRTC conferencing, AI noise cancellation, instant meeting links, screen sharing, and cloud recordings.
+    Ultra-HD WebRTC conferencing, AI noise cancellation, waiting rooms, interactive whiteboards, live polls, and E2EE encryption.
 
-    [:octicons-arrow-right-24: Open HubMeet Guide](hubmeet/index.md)
+    [:octicons-arrow-right-24: Open HubMeet Guide (26 Chapters)](hubmeet-attendee/index.md)
 
--   :material-chart-timeline-variant:{ .lg .middle style="color: #8b5cf6;" } **[HubCRM (Sales & Deals)](hubcrm/index.md)**
+-   :material-chart-timeline-variant:{ .lg .middle style="color: #8b5cf6;" } **[HubCRM (Sales & 7 Roles)](crm-sales/index.md)**
 
     ---
 
-    Sales pipelines, client accounts, deal forecasting, quotations, and automated customer communication.
+    Role-based manuals for Sales Reps, Managers, Marketing, Finance, Support, and Administrators.
 
-    [:octicons-arrow-right-24: Open HubCRM Guide](hubcrm/index.md)
+    [:octicons-arrow-right-24: Open HubCRM Sales Guide (61 Chapters)](crm-sales/index.md)
+
+-   :material-bell-ring:{ .lg .middle style="color: #10b981;" } **[HubNotification (6 Roles)](notification-agent/index.md)**
+
+    ---
+
+    Omnichannel Live Inbox, WhatsApp Cloud API, AI Chatbots, Multi-Channel Broadcasts, and E-Commerce Sync.
+
+    [:octicons-arrow-right-24: Open HubNotification Guide (45 Chapters)](notification-agent/index.md)
+
+-   :material-phone-in-talk:{ .lg .middle style="color: #06b6d4;" } **[Calling Hub (4 Roles)](calling-agent/index.md)**
+
+    ---
+
+    Cloud VoIP Softphone, Visual IVR Trees, Conversational AI Voice Bots, Bulk Dialer, Virtual DIDs & SIP Trunks.
+
+    [:octicons-arrow-right-24: Open Calling Hub Guide (24 Chapters)](calling-agent/index.md)
+
+-   :material-laptop:{ .lg .middle style="color: #0284c7;" } **[HubNest OS (Desktop User)](desktop-user/index.md)**
+
+    ---
+
+    Native Windows workstation: multi-hub instant switching, Command Palette (Ctrl+K), tray alerts, and offline sync.
+
+    [:octicons-arrow-right-24: Open Desktop User Guide (6 Chapters)](desktop-user/index.md)
+
+-   :material-server-security:{ .lg .middle style="color: #475569;" } **[HubNest OS (IT Admin)](desktop-admin/index.md)**
+
+    ---
+
+    Enterprise endpoint control: silent MSI Intune deployment, Edge WebView2 evergreen runtime, and deep links.
+
+    [:octicons-arrow-right-24: Open IT Admin Guide (5 Chapters)](desktop-admin/index.md)
+
+-   :material-crown:{ .lg .middle style="color: #e11d48;" } **[Platform Super Admin](platform-super-admin/index.md)**
+
+    ---
+
+    SaaS monorepo command center: global tenant provisioning, one-click impersonation, and master audit trails.
+
+    [:octicons-arrow-right-24: Open Super Admin Guide (6 Chapters)](platform-super-admin/index.md)
+
+-   :material-cash-register:{ .lg .middle style="color: #059669;" } **[Billing & Finance Controller](platform-billing/index.md)**
+
+    ---
+
+    Commercial monetization: multi-hub plan tiers, payment gateways (PhonePe, Razorpay), and wire transfer approvals.
+
+    [:octicons-arrow-right-24: Open Billing & Finance Guide (6 Chapters)](platform-billing/index.md)
+
+-   :material-shield-key:{ .lg .middle style="color: #d97706;" } **[Security & IAM Officer](platform-security/index.md)**
+
+    ---
+
+    Identity & zero-trust control: cross-tenant user registry, remote session termination, and master RBAC matrix.
+
+    [:octicons-arrow-right-24: Open Security & IAM Guide (5 Chapters)](platform-security/index.md)
 
 </div>
 
@@ -179,13 +235,34 @@ Click on **any topic or chapter** below to open its dedicated guide directly:
         * ✅ **[08. First Day Task Checklist](getting-started/first-tasks.md)**
         * ⚠️ **[09. Common Setup Problems & Fixes](getting-started/common-problems.md)**
 
-    -   **💻 HubNest OS (Desktop Client)**
+    -   **💻 HubNest OS (Desktop User & Remote Employee)**
 
         ---
 
-        * 🖥️ **[Workspace Architecture & WebView2](desktop/workspace.md)**
-        * 🗂️ **[Multi-Hub Switching & Navigation](desktop/navigation.md)**
-        * ⚙️ **[Preferences, Performance & Auto-Update](desktop/preferences.md)**
+        * 🚀 **[01. Overview & Daily Checklist](desktop-user/index.md)**
+        * 🔑 **[02. Installation & Seamless SSO](desktop-user/installation-login.md)**
+        * 🗂️ **[03. Multi-Hub Instant Switching](desktop-user/multi-hub-navigation.md)**
+        * ⚡ **[04. Command Palette & Shortcuts](desktop-user/command-palette-shortcuts.md)**
+        * 🔔 **[05. System Tray & Windows Alerts](desktop-user/system-tray-background.md)**
+        * 🎙️ **[06. Audio, Video & Offline Resilience](desktop-user/hardware-offline-mode.md)**
+
+    -   **🛡️ HubNest OS (IT Administrator & Deployment)**
+
+        ---
+
+        * 🏢 **[01. IT Command Center Overview](desktop-admin/index.md)**
+        * 📦 **[02. Silent MSI & Intune Deployment](desktop-admin/msi-enterprise-deployment.md)**
+        * 🖥️ **[03. Edge WebView2 & Hardware Specs](desktop-admin/system-requirements-webview2.md)**
+        * 🔗 **[04. Custom Protocol & Deep Linking](desktop-admin/protocol-deep-linking.md)**
+        * 🌐 **[05. Network, Proxies & Auto-Update](desktop-admin/network-proxy-updates.md)**
+
+    -   **⚙️ HubNest OS (Ecosystem Deep Dive)**
+
+        ---
+
+        * 🏗️ **[Workspace Architecture & WebView2 Pool](desktop/workspace.md)**
+        * 🧭 **[Multi-Hub Switching & Key Shortcuts](desktop/navigation.md)**
+        * 🔄 **[Preferences, Tray & Update Engine](desktop/preferences.md)**
 
     </div>
 
@@ -193,25 +270,27 @@ Click on **any topic or chapter** below to open its dedicated guide directly:
 
     <div class="grid cards" markdown>
 
-    -   **🎥 HubMeet (Video Conferencing)**
+    -   **🎥 HubMeet (4 Dedicated Role Manuals)**
 
         ---
 
-        * 🌐 **[HubMeet Overview & Architecture](hubmeet/index.md)**
-        * 📅 **[Instant & Scheduled Meetings](hubmeet/scheduling.md)**
-        * 🎛️ **[In-Call Controls, Mic & Camera Settings](hubmeet/in-call-controls.md)**
-        * 🖥️ **[Screen Sharing & Collaborative Whiteboard](hubmeet/collaboration.md)**
-        * 🤖 **[Cloud Recording & AI Transcription Summaries](hubmeet/recordings-ai.md)**
+        * 🎧 **[Meeting Participant & Attendee (7 Guides)](hubmeet-attendee/index.md)**
+        * 🎙️ **[Meeting Host & Event Organizer (7 Guides)](hubmeet-host/index.md)**
+        * 👑 **[Enterprise Meeting Administrator (7 Guides)](hubmeet-admin/index.md)**
+        * 💻 **[Developer & API Integrator (5 Guides)](hubmeet-developer/index.md)**
+        * 🌐 **[Ecosystem Video Architecture](hubmeet/index.md)**
 
-    -   **📊 HubCRM (Customer Relationship Management)**
+    -   **📊 HubCRM (7 Dedicated Role Manuals)**
 
         ---
 
-        * 📈 **[HubCRM Overview & Architecture](hubcrm/index.md)**
-        * 🎯 **[Leads Pipeline & Kanban Stages](hubcrm/leads-pipeline.md)**
-        * 👥 **[Contacts & Organization Accounts](hubcrm/contacts.md)**
-        * 💼 **[Deals, Quotations & Proposals](hubcrm/deals.md)**
-        * 📊 **[Sales Reports & Performance Dashboards](hubcrm/reports.md)**
+        * 💼 **[Sales Executive Manual (10 Guides)](crm-sales/index.md)**
+        * 📊 **[Sales Manager Manual (8 Guides)](crm-manager/index.md)**
+        * 📣 **[Marketing Specialist Manual (8 Guides)](crm-marketing/index.md)**
+        * 💰 **[Finance & Invoicing Manual (8 Guides)](crm-finance/index.md)**
+        * 🎧 **[Customer Support Manual (7 Guides)](crm-support/index.md)**
+        * 🏢 **[Company Administrator Manual (11 Guides)](crm-admin/index.md)**
+        * 👑 **[Platform Super Admin Manual (9 Guides)](crm-super-admin/index.md)**
 
     </div>
 
@@ -219,20 +298,27 @@ Click on **any topic or chapter** below to open its dedicated guide directly:
 
     <div class="grid cards" markdown>
 
-    -   **📞 Calling Hub (VoIP Cloud Telephony)**
+    -   **📞 Calling Hub (4 Dedicated Role Manuals)**
 
         ---
 
-        * 📞 **[Calling Hub Overview](calling/index.md)**
-        * 🔢 **[Softphone Web Dialpad & DTMF](calling/dialer.md)**
-        * 🎙️ **[Call Logs, Recordings & CDR Analytics](calling/logs.md)**
+        * 🎧 **[Call Center Agent & Telecaller (6 Guides)](calling-agent/index.md)**
+        * 📢 **[Campaign & AI Voice Specialist (7 Guides)](calling-campaigns/index.md)**
+        * 📱 **[Telephony Operations & Compliance (5 Guides)](calling-telephony/index.md)**
+        * 👑 **[Platform Super Administrator (6 Guides)](calling-admin/index.md)**
+        * 🌐 **[Ecosystem Voice Architecture](calling/index.md)**
 
-    -   **🔔 HubNotification (WhatsApp & Alerts)**
+    -   **🔔 HubNotification (6 Dedicated Role Manuals)**
 
         ---
 
-        * 📣 **[Notification Gateway Overview](notification/index.md)**
-        * 💬 **[WhatsApp Meta Campaigns & Webhook Templates](notification/campaigns.md)**
+        * 🎧 **[Customer Support Agent Manual (7 Guides)](notification-agent/index.md)**
+        * 📢 **[Marketing & Campaigns Manual (9 Guides)](notification-marketing/index.md)**
+        * 🤖 **[Automation & AI Specialist Manual (7 Guides)](notification-automation/index.md)**
+        * 🛒 **[E-Commerce Operations Manual (5 Guides)](notification-ecommerce/index.md)**
+        * 🏢 **[Company Administrator Manual (9 Guides)](notification-admin/index.md)**
+        * 👑 **[Platform Super Admin Manual (8 Guides)](notification-super-admin/index.md)**
+        * 🌐 **[Cross-Module Integration & Architecture](notification/index.md)**
 
     -   **💳 Billing, Invoices & Administration**
 
@@ -247,6 +333,54 @@ Click on **any topic or chapter** below to open its dedicated guide directly:
 
         * 🔧 **[System Troubleshooting & Error Codes](help/troubleshooting.md)**
         * 💬 **[Contacting Official Technical Support](help/support.md)**
+
+    </div>
+
+=== "👑 Master Admin & Platform Governance (4 Roles)"
+
+    <div class="grid cards" markdown>
+
+    -   **👑 1. Platform Super Admin (SaaS Owner)**
+
+        ---
+
+        * 🚀 **[01. Super Admin Command Center](platform-super-admin/index.md)**
+        * 🏢 **[02. Master Tenant Provisioning](platform-super-admin/tenant-lifecycle-management.md)**
+        * 🔑 **[03. Tenant Impersonation & SSO](platform-super-admin/tenant-impersonation-sso.md)**
+        * 🧩 **[04. Multi-Product Hub Provisioning](platform-super-admin/product-consoles-activation.md)**
+        * 📋 **[05. Administrative Audit Logs](platform-super-admin/security-audit-trails.md)**
+        * ⚙️ **[06. Master Settings & Central SMTP](platform-super-admin/system-settings-smtp.md)**
+
+    -   **🏢 2. Tenant Operations Specialist**
+
+        ---
+
+        * 🧭 **[01. Tenant Operations Overview](platform-tenants/index.md)**
+        * 🏷️ **[02. Organization Profiles & Domains](platform-tenants/organization-profiles-domains.md)**
+        * ⏳ **[03. Trial Extensions & Seat Quotas](platform-tenants/trial-extensions-limits.md)**
+        * 🚩 **[04. Feature Flags & Entitlements](platform-tenants/feature-flags-entitlements.md)**
+        * 📢 **[05. Demo Requests & Qualification](platform-tenants/demo-leads-pipeline.md)**
+
+    -   **💳 3. Billing & Finance Controller**
+
+        ---
+
+        * 💰 **[01. Financial Operations Center](platform-billing/index.md)**
+        * 📦 **[02. Hub Plans & Feature Gating](platform-billing/hub-plans-feature-gating.md)**
+        * 💳 **[03. Payment Gateways Setup](platform-billing/payment-gateways-config.md)**
+        * 🏦 **[04. Manual Bank Transfer Clearance](platform-billing/offline-payments-clearance.md)**
+        * 🎟️ **[05. Promotional Coupons Engine](platform-billing/coupons-discount-engine.md)**
+        * 🪙 **[06. Pre-Paid Usage Credits](platform-billing/credits-wallet-usage.md)**
+
+    -   **🛡️ 4. Platform Security & IAM Officer**
+
+        ---
+
+        * 🔐 **[01. Security & IAM Command Center](platform-security/index.md)**
+        * 👥 **[02. Global User Registry](platform-security/global-user-registry.md)**
+        * 💻 **[03. Live Sessions & 2FA Governance](platform-security/session-management-mfa.md)**
+        * 🛡️ **[04. Master RBAC Permission Matrix](platform-security/master-rbac-permission-matrix.md)**
+        * 🔑 **[05. Master Admin Password Security](platform-security/admin-credentials-recovery.md)**
 
     </div>
 
@@ -289,12 +423,7 @@ graph TD
 | **🧑‍💻 Employee Portal** | [https://hrms.srjhubnest.com/employee/dashboard](https://hrms.srjhubnest.com/employee/dashboard) | Protected Staff Route |
 | **🎥 HubMeet** | [https://meet.srjhubnest.com](https://meet.srjhubnest.com) | WebRTC RTC Signaling |
 | **📊 HubCRM** | [https://crm.srjhubnest.com](https://crm.srjhubnest.com) | Client Sales Suite |
+| **🚀 CI/CD Orchestrator** | [https://staging-jenkins.srjhubnest.com](https://staging-jenkins.srjhubnest.com) | Jenkins Automated Delivery |
+| **🧪 Staging Gateway** | [https://staging-docs.srjhubnest.com](https://staging-docs.srjhubnest.com) | Dedicated Staging Portal |
 
 ---
-
-## 📞 Enterprise Helpdesk & Assistance
-
-* 📧 **Official Support Email**: `support@srjhubnest.com`
-* 📞 **Helpline**: `+918031830008`
-* ⏰ **Operating Hours**: Monday to Saturday, 10:00 AM – 7:00 PM IST
-* 🏢 **SRJ HubNest Enterprise Solutions Pvt. Ltd.**

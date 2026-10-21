@@ -5,7 +5,8 @@
   <script>
     /* Intercept attachShadow before Material scripts execute to ensure access to closed Shadow DOMs */
     (function () {
-      if (typeof Element !== 'undefined' && Element.prototype && Element.prototype.attachShadow) {
+      if (typeof Element !== 'undefined' && Element.prototype && Element.prototype.attachShadow && !window.__hubnestShadowPatched) {
+        window.__hubnestShadowPatched = true;
         var _origAttach = Element.prototype.attachShadow;
         Element.prototype.attachShadow = function (options) {
           var opts = Object.assign({}, options, { mode: 'open' });

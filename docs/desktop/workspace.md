@@ -9,6 +9,11 @@ description: Complete user guide to the HubNest OS Windows desktop shell, window
 
 ![HubNest Header Logo](../assets/logos/hubnest_heaader_logo.png){ width="260" }
 
+> [!TIP]
+> **Role-Specific Quick Guides:**
+> - Looking for daily shortcuts, tray alerts, and multi-hub switching? Explore the [Desktop User & Remote Employee Guide](../desktop-user/index.md).
+> - Managing enterprise MSI rollouts, GPO, or network firewalls? Visit the [IT Administrator & Deployment Guide](../desktop-admin/index.md).
+
 ---
 
 ## 🏗️ Desktop Architecture & Runtime Model
