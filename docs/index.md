@@ -60,13 +60,13 @@ Jump directly to your designated operational workspace:
 
     [:octicons-arrow-right-24: Open HubMeet Guide (26 Chapters)](hubmeet-attendee/index.md)
 
--   :material-chart-timeline-variant:{ .lg .middle style="color: #8b5cf6;" } **[HubCRM (Sales & 7 Roles)](crm-sales/index.md)**
+-   :material-chart-timeline-variant:{ .lg .middle style="color: #8b5cf6;" } **[HubCRM Workspace Guide](hubcrm/index.md)**
 
     ---
 
-    Role-based manuals for Sales Reps, Managers, Marketing, Finance, Support, and Administrators.
+    Leads, follow-ups, pipelines, automations, calls & messaging, lead capture, quotes & invoices, reports, integrations and settings.
 
-    [:octicons-arrow-right-24: Open HubCRM Sales Guide (61 Chapters)](crm-sales/index.md)
+    [:octicons-arrow-right-24: Open HubCRM Workspace Guide (15 Chapters)](hubcrm/index.md)
 
 -   :material-bell-ring:{ .lg .middle style="color: #10b981;" } **[HubNotification (6 Roles)](notification-agent/index.md)**
 
@@ -280,17 +280,15 @@ Click on **any topic or chapter** below to open its dedicated guide directly:
         * 💻 **[Developer & API Integrator (5 Guides)](hubmeet-developer/index.md)**
         * 🌐 **[Ecosystem Video Architecture](hubmeet/index.md)**
 
-    -   **📊 HubCRM (7 Dedicated Role Manuals)**
+    -   **📊 HubCRM Workspace Guide**
 
         ---
 
-        * 💼 **[Sales Executive Manual (10 Guides)](crm-sales/index.md)**
-        * 📊 **[Sales Manager Manual (8 Guides)](crm-manager/index.md)**
-        * 📣 **[Marketing Specialist Manual (8 Guides)](crm-marketing/index.md)**
-        * 💰 **[Finance & Invoicing Manual (8 Guides)](crm-finance/index.md)**
-        * 🎧 **[Customer Support Manual (7 Guides)](crm-support/index.md)**
-        * 🏢 **[Company Administrator Manual (11 Guides)](crm-admin/index.md)**
-        * 👑 **[Platform Super Admin Manual (9 Guides)](crm-super-admin/index.md)**
+        * 📇 **[Leads](hubcrm/leads.md)** · **[Follow-ups & Calendar](hubcrm/followups.md)** · **[Pipelines & Kanban](hubcrm/pipelines-kanban.md)**
+        * 📞 **[Calls, WhatsApp & SMS](hubcrm/calls-messaging.md)** · **[Automations](hubcrm/automations.md)** · **[Email, Sequences & AI SDR](hubcrm/email-outreach.md)**
+        * 🧲 **[Lead Capture](hubcrm/lead-capture.md)** · **[Meetings & Booking](hubcrm/meetings.md)** · **[Quotes & Invoices](hubcrm/sales-documents.md)**
+        * 📈 **[Reports & Audit Log](hubcrm/reports.md)** · **[Integrations & API](hubcrm/integrations-api.md)**
+        * ⚙️ **[Settings](hubcrm/settings.md)** · **[Team, Roles & Security](hubcrm/team-security.md)** · **[Account & Billing](hubcrm/account-billing.md)**
 
     </div>
 

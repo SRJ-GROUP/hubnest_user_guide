@@ -142,75 +142,24 @@ nav:
       - Team Management Reference: hubmeet/team.md
       - Attendance Quick Reference: hubmeet/attendance.md
       - Recordings & AI Reference: hubmeet/recordings-ai.md
-  - HubCRM (Sales Executive):
-      - 01. Overview & Daily Routine: crm-sales/index.md
-      - 02. Sales Dashboard: crm-sales/dashboard.md
-      - 03. Lead Qualification & Scoring: crm-sales/lead-qualification.md
-      - 04. Deal Pipeline & Kanban Board: crm-sales/deal-pipeline.md
-      - 05. Converting Leads to Deals: crm-sales/lead-conversion.md
-      - 06. Accounts & Contacts Directory: crm-sales/accounts-contacts.md
-      - 07. VoIP, WhatsApp & SMS: crm-sales/omnichannel-engagement.md
-      - 08. Tasks & Follow-up Scheduling: crm-sales/task-management.md
-      - 09. Quotations & Price Proposals: crm-sales/quotations-proposals.md
-      - 10. Targets & Quota Tracking: crm-sales/profile-targets.md
-  - HubCRM (Sales Manager):
-      - 01. Command Center & Team Oversight: crm-manager/index.md
-      - 02. Manager Dashboard & Leaderboard: crm-manager/dashboard.md
-      - 03. Team Roster & Quotas: crm-manager/team-roster.md
-      - 04. Lead Routing & Round-Robin: crm-manager/lead-distribution.md
-      - 05. Deal & Discount Approvals: crm-manager/deal-approvals.md
-      - 06. Pipeline Velocity & Bottlenecks: crm-manager/pipeline-velocity.md
-      - 07. Activity Audits & Coaching: crm-manager/activity-audit.md
-      - 08. Revenue Forecasting: crm-manager/reports-forecasting.md
-  - HubCRM (Marketing Specialist):
-      - 01. Overview & Strategy: crm-marketing/index.md
-      - 02. Marketing Dashboard: crm-marketing/dashboard.md
-      - 03. Multi-Channel Campaigns: crm-marketing/campaign-manager.md
-      - 04. AI Content Studio: crm-marketing/ai-studio.md
-      - 05. Lead Capture Forms: crm-marketing/forms-builder.md
-      - 06. Landing Page Builder: crm-marketing/landing-pages.md
-      - 07. Templates & Media Vault: crm-marketing/templates-media.md
-      - 08. UTM Attribution & Analytics: crm-marketing/analytics-attribution.md
-  - HubCRM (Finance & Accounts):
-      - 01. Overview & Billing Operations: crm-finance/index.md
-      - 02. Finance Dashboard: crm-finance/dashboard.md
-      - 03. Generating GST & VAT Invoices: crm-finance/invoice-generation.md
-      - 04. Online Customer Payment Portals: crm-finance/public-payments.md
-      - 05. Payment Reconciliation & Receipts: crm-finance/payment-verification.md
-      - 06. Company Expense Tracking: crm-finance/expense-management.md
-      - 07. Vendor Contracts & Directory: crm-finance/vendor-contracts.md
-      - 08. Financial Reports & Ledgers: crm-finance/financial-reports.md
-  - HubCRM (Customer Support):
-      - 01. Overview & Helpdesk Guide: crm-support/index.md
-      - 02. Support Dashboard & SLAs: crm-support/dashboard.md
-      - 03. Ticket Conversations & Notes: crm-support/ticket-management.md
-      - 04. Tier-2 Escalations: crm-support/ticket-escalation.md
-      - 05. Knowledge Base Help Articles: crm-support/knowledge-base.md
-      - 06. Customer 360 History: crm-support/customer-history.md
-      - 07. Agent Profile & CSAT Scores: crm-support/profile-sla.md
-  - HubCRM (Company Admin):
-      - 01. Workspace Architecture: crm-admin/index.md
-      - 02. User Onboarding & Seats: crm-admin/users-onboarding.md
-      - 03. Roles & Permissions (RBAC): crm-admin/roles-permissions.md
-      - 04. Teams & Hierarchies: crm-admin/teams-hierarchy.md
-      - 05. Pipeline Control & Custom Fields: crm-admin/crm-control.md
-      - 06. Salesforce Migration Engine: crm-admin/salesforce-migration.md
-      - 07. CSV Import & Rollback: crm-admin/csv-migration.md
-      - 08. Security Audit Logs: crm-admin/audit-logs.md
-      - 09. Ecosystem Integrations: crm-admin/integrations.md
-      - 10. Billing & Subscriptions: crm-admin/billing-subscriptions.md
-      - 11. Workspace Settings & Branding: crm-admin/profile-settings.md
-  - HubCRM (Platform Super Admin):
-      - 01. Control Plane Overview: crm-super-admin/index.md
-      - 02. Tenant Provisioning: crm-super-admin/tenants.md
-      - 03. Global Plans & SaaS Revenue: crm-super-admin/billing-plans.md
-      - 04. Platform Admins & Delegated Access: crm-super-admin/admins-rbac.md
-      - 05. Developer API Keys (hn_live_*): crm-super-admin/api-management.md
-      - 06. Central SMS Gateway: crm-super-admin/sms-gateway.md
-      - 07. AI Telemetry & Cost Controls: crm-super-admin/ai-telemetry.md
-      - 08. System Health & Infrastructure: crm-super-admin/audit-system.md
-      - 09. Root Security & Hardware MFA: crm-super-admin/profile-security.md
-
+  - HubCRM Workspace Guide:
+      - Overview: hubcrm/index.md
+      - 01. Getting Started: hubcrm/getting-started.md
+      - 02. Leads: hubcrm/leads.md
+      - 03. Follow-ups & Calendar: hubcrm/followups.md
+      - 04. Pipelines & Kanban: hubcrm/pipelines-kanban.md
+      - 05. Calls, WhatsApp & SMS: hubcrm/calls-messaging.md
+      - 06. Automations: hubcrm/automations.md
+      - 07. Email, Sequences & AI SDR: hubcrm/email-outreach.md
+      - 08. Lead Capture: hubcrm/lead-capture.md
+      - 09. Meetings & Booking: hubcrm/meetings.md
+      - 10. Quotes & Invoices: hubcrm/sales-documents.md
+      - 11. Reports & Audit Log: hubcrm/reports.md
+      - 12. Integrations & API: hubcrm/integrations-api.md
+      - 13. Settings: hubcrm/settings.md
+      - 14. Team, Roles & Security: hubcrm/team-security.md
+      - 15. Account & Billing: hubcrm/account-billing.md
+      - Screenshot Checklist: hubcrm/screenshots-checklist.md
   - HubHRMS (Company Admin):
       - 01. Overview & RBAC: hrms/index.md
       - 02. Company Dashboard: hrms/dashboard.md
